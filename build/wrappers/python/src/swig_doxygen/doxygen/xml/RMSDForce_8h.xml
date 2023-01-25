@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="RMSDForce_8h" kind="file" language="C++">
+    <compoundname>RMSDForce.h</compoundname>
+    <includes refid="Force_8h" local="yes">Force.h</includes>
+    <includes refid="Vec3_8h" local="yes">Vec3.h</includes>
+    <includes local="no">vector</includes>
+    <includes local="yes">internal/windowsExport.h</includes>
+    <includedby refid="OpenMM_8h" local="yes">/tmp/openmm/openmmapi/include/OpenMM.h</includedby>
+    <incdepgraph>
+      <node id="620">
+        <label>internal/windowsExport.h</label>
+      </node>
+      <node id="622">
+        <label>cassert</label>
+      </node>
+      <node id="619">
+        <label>Force.h</label>
+        <link refid="Force_8h_source"/>
+        <childnode refid="620" relation="include">
+        </childnode>
+      </node>
+      <node id="618">
+        <label>/tmp/openmm/openmmapi/include/openmm/RMSDForce.h</label>
+        <link refid="RMSDForce_8h"/>
+        <childnode refid="619" relation="include">
+        </childnode>
+        <childnode refid="621" relation="include">
+        </childnode>
+        <childnode refid="624" relation="include">
+        </childnode>
+        <childnode refid="620" relation="include">
+        </childnode>
+      </node>
+      <node id="624">
+        <label>vector</label>
+      </node>
+      <node id="623">
+        <label>iosfwd</label>
+      </node>
+      <node id="621">
+        <label>Vec3.h</label>
+        <link refid="Vec3_8h_source"/>
+        <childnode refid="622" relation="include">
+        </childnode>
+        <childnode refid="623" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="626">
+        <label>/tmp/openmm/openmmapi/include/OpenMM.h</label>
+        <link refid="OpenMM_8h_source"/>
+      </node>
+      <node id="625">
+        <label>/tmp/openmm/openmmapi/include/openmm/RMSDForce.h</label>
+        <link refid="RMSDForce_8h"/>
+        <childnode refid="626" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classOpenMM_1_1RMSDForce" prot="public">OpenMM::RMSDForce</innerclass>
+    <innernamespace refid="namespaceOpenMM">OpenMM</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/tmp/openmm/openmmapi/include/openmm/RMSDForce.h"/>
+  </compounddef>
+</doxygen>

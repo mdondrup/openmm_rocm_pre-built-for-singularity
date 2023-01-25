@@ -1,0 +1,212 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="Integrator_8h" kind="file" language="C++">
+    <compoundname>Integrator.h</compoundname>
+    <includes refid="State_8h" local="yes">State.h</includes>
+    <includes refid="Vec3_8h" local="yes">Vec3.h</includes>
+    <includes local="yes">openmm/serialization/SerializationNode.h</includes>
+    <includes local="no">iosfwd</includes>
+    <includes local="no">map</includes>
+    <includes local="no">vector</includes>
+    <includes local="yes">internal/windowsExport.h</includes>
+    <includedby refid="BrownianIntegrator_8h" local="yes">/tmp/openmm/openmmapi/include/openmm/BrownianIntegrator.h</includedby>
+    <includedby refid="CompoundIntegrator_8h" local="yes">/tmp/openmm/openmmapi/include/openmm/CompoundIntegrator.h</includedby>
+    <includedby refid="Context_8h" local="yes">/tmp/openmm/openmmapi/include/openmm/Context.h</includedby>
+    <includedby refid="CustomIntegrator_8h" local="yes">/tmp/openmm/openmmapi/include/openmm/CustomIntegrator.h</includedby>
+    <includedby refid="LangevinIntegrator_8h" local="yes">/tmp/openmm/openmmapi/include/openmm/LangevinIntegrator.h</includedby>
+    <includedby refid="LangevinMiddleIntegrator_8h" local="yes">/tmp/openmm/openmmapi/include/openmm/LangevinMiddleIntegrator.h</includedby>
+    <includedby refid="NoseHooverIntegrator_8h" local="yes">/tmp/openmm/openmmapi/include/openmm/NoseHooverIntegrator.h</includedby>
+    <includedby refid="VariableLangevinIntegrator_8h" local="yes">/tmp/openmm/openmmapi/include/openmm/VariableLangevinIntegrator.h</includedby>
+    <includedby refid="VariableVerletIntegrator_8h" local="yes">/tmp/openmm/openmmapi/include/openmm/VariableVerletIntegrator.h</includedby>
+    <includedby refid="VerletIntegrator_8h" local="yes">/tmp/openmm/openmmapi/include/openmm/VerletIntegrator.h</includedby>
+    <includedby refid="OpenMM_8h" local="yes">/tmp/openmm/openmmapi/include/OpenMM.h</includedby>
+    <incdepgraph>
+      <node id="352">
+        <label>internal/windowsExport.h</label>
+      </node>
+      <node id="343">
+        <label>/tmp/openmm/openmmapi/include/openmm/Integrator.h</label>
+        <link refid="Integrator_8h"/>
+        <childnode refid="344" relation="include">
+        </childnode>
+        <childnode refid="345" relation="include">
+        </childnode>
+        <childnode refid="348" relation="include">
+        </childnode>
+        <childnode refid="347" relation="include">
+        </childnode>
+        <childnode refid="349" relation="include">
+        </childnode>
+        <childnode refid="351" relation="include">
+        </childnode>
+        <childnode refid="352" relation="include">
+        </childnode>
+      </node>
+      <node id="346">
+        <label>cassert</label>
+      </node>
+      <node id="350">
+        <label>string</label>
+      </node>
+      <node id="349">
+        <label>map</label>
+      </node>
+      <node id="344">
+        <label>State.h</label>
+        <link refid="State_8h"/>
+        <childnode refid="345" relation="include">
+        </childnode>
+        <childnode refid="348" relation="include">
+        </childnode>
+        <childnode refid="349" relation="include">
+        </childnode>
+        <childnode refid="350" relation="include">
+        </childnode>
+        <childnode refid="351" relation="include">
+        </childnode>
+        <childnode refid="352" relation="include">
+        </childnode>
+      </node>
+      <node id="351">
+        <label>vector</label>
+      </node>
+      <node id="347">
+        <label>iosfwd</label>
+      </node>
+      <node id="348">
+        <label>openmm/serialization/SerializationNode.h</label>
+      </node>
+      <node id="345">
+        <label>Vec3.h</label>
+        <link refid="Vec3_8h"/>
+        <childnode refid="346" relation="include">
+        </childnode>
+        <childnode refid="347" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="364">
+        <label>/tmp/openmm/openmmapi/include/openmm/NoseHooverIntegrator.h</label>
+        <link refid="NoseHooverIntegrator_8h"/>
+        <childnode refid="355" relation="include">
+        </childnode>
+      </node>
+      <node id="360">
+        <label>/tmp/openmm/openmmapi/include/openmm/NonbondedForce.h</label>
+        <link refid="NonbondedForce_8h"/>
+        <childnode refid="355" relation="include">
+        </childnode>
+      </node>
+      <node id="353">
+        <label>/tmp/openmm/openmmapi/include/openmm/Integrator.h</label>
+        <link refid="Integrator_8h"/>
+        <childnode refid="354" relation="include">
+        </childnode>
+        <childnode refid="356" relation="include">
+        </childnode>
+        <childnode refid="357" relation="include">
+        </childnode>
+        <childnode refid="361" relation="include">
+        </childnode>
+        <childnode refid="362" relation="include">
+        </childnode>
+        <childnode refid="363" relation="include">
+        </childnode>
+        <childnode refid="364" relation="include">
+        </childnode>
+        <childnode refid="365" relation="include">
+        </childnode>
+        <childnode refid="366" relation="include">
+        </childnode>
+        <childnode refid="367" relation="include">
+        </childnode>
+        <childnode refid="355" relation="include">
+        </childnode>
+      </node>
+      <node id="355">
+        <label>/tmp/openmm/openmmapi/include/OpenMM.h</label>
+        <link refid="OpenMM_8h"/>
+      </node>
+      <node id="358">
+        <label>/tmp/openmm/openmmapi/include/openmm/GayBerneForce.h</label>
+        <link refid="GayBerneForce_8h"/>
+        <childnode refid="355" relation="include">
+        </childnode>
+      </node>
+      <node id="367">
+        <label>/tmp/openmm/openmmapi/include/openmm/VerletIntegrator.h</label>
+        <link refid="VerletIntegrator_8h"/>
+        <childnode refid="355" relation="include">
+        </childnode>
+      </node>
+      <node id="365">
+        <label>/tmp/openmm/openmmapi/include/openmm/VariableLangevinIntegrator.h</label>
+        <link refid="VariableLangevinIntegrator_8h"/>
+        <childnode refid="355" relation="include">
+        </childnode>
+      </node>
+      <node id="354">
+        <label>/tmp/openmm/openmmapi/include/openmm/BrownianIntegrator.h</label>
+        <link refid="BrownianIntegrator_8h"/>
+        <childnode refid="355" relation="include">
+        </childnode>
+      </node>
+      <node id="366">
+        <label>/tmp/openmm/openmmapi/include/openmm/VariableVerletIntegrator.h</label>
+        <link refid="VariableVerletIntegrator_8h"/>
+        <childnode refid="355" relation="include">
+        </childnode>
+      </node>
+      <node id="356">
+        <label>/tmp/openmm/openmmapi/include/openmm/CompoundIntegrator.h</label>
+        <link refid="CompoundIntegrator_8h"/>
+        <childnode refid="355" relation="include">
+        </childnode>
+      </node>
+      <node id="357">
+        <label>/tmp/openmm/openmmapi/include/openmm/Context.h</label>
+        <link refid="Context_8h"/>
+        <childnode refid="358" relation="include">
+        </childnode>
+        <childnode refid="359" relation="include">
+        </childnode>
+        <childnode refid="360" relation="include">
+        </childnode>
+        <childnode refid="355" relation="include">
+        </childnode>
+      </node>
+      <node id="362">
+        <label>/tmp/openmm/openmmapi/include/openmm/LangevinIntegrator.h</label>
+        <link refid="LangevinIntegrator_8h"/>
+        <childnode refid="355" relation="include">
+        </childnode>
+      </node>
+      <node id="363">
+        <label>/tmp/openmm/openmmapi/include/openmm/LangevinMiddleIntegrator.h</label>
+        <link refid="LangevinMiddleIntegrator_8h"/>
+        <childnode refid="355" relation="include">
+        </childnode>
+      </node>
+      <node id="359">
+        <label>/tmp/openmm/openmmapi/include/openmm/LocalEnergyMinimizer.h</label>
+        <link refid="LocalEnergyMinimizer_8h"/>
+        <childnode refid="355" relation="include">
+        </childnode>
+      </node>
+      <node id="361">
+        <label>/tmp/openmm/openmmapi/include/openmm/CustomIntegrator.h</label>
+        <link refid="CustomIntegrator_8h"/>
+        <childnode refid="355" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classOpenMM_1_1Integrator" prot="public">OpenMM::Integrator</innerclass>
+    <innernamespace refid="namespaceOpenMM">OpenMM</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/tmp/openmm/openmmapi/include/openmm/Integrator.h"/>
+  </compounddef>
+</doxygen>

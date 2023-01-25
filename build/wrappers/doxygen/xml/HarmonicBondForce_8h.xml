@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="HarmonicBondForce_8h" kind="file" language="C++">
+    <compoundname>HarmonicBondForce.h</compoundname>
+    <includes refid="Force_8h" local="yes">Force.h</includes>
+    <includes refid="Vec3_8h" local="yes">Vec3.h</includes>
+    <includes local="no">map</includes>
+    <includes local="no">vector</includes>
+    <includes local="yes">internal/windowsExport.h</includes>
+    <includedby refid="OpenMM_8h" local="yes">/tmp/openmm/openmmapi/include/OpenMM.h</includedby>
+    <incdepgraph>
+      <node id="335">
+        <label>internal/windowsExport.h</label>
+      </node>
+      <node id="333">
+        <label>/tmp/openmm/openmmapi/include/openmm/HarmonicBondForce.h</label>
+        <link refid="HarmonicBondForce_8h"/>
+        <childnode refid="334" relation="include">
+        </childnode>
+        <childnode refid="336" relation="include">
+        </childnode>
+        <childnode refid="339" relation="include">
+        </childnode>
+        <childnode refid="340" relation="include">
+        </childnode>
+        <childnode refid="335" relation="include">
+        </childnode>
+      </node>
+      <node id="337">
+        <label>cassert</label>
+      </node>
+      <node id="339">
+        <label>map</label>
+      </node>
+      <node id="334">
+        <label>Force.h</label>
+        <link refid="Force_8h"/>
+        <childnode refid="335" relation="include">
+        </childnode>
+      </node>
+      <node id="340">
+        <label>vector</label>
+      </node>
+      <node id="338">
+        <label>iosfwd</label>
+      </node>
+      <node id="336">
+        <label>Vec3.h</label>
+        <link refid="Vec3_8h"/>
+        <childnode refid="337" relation="include">
+        </childnode>
+        <childnode refid="338" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="341">
+        <label>/tmp/openmm/openmmapi/include/openmm/HarmonicBondForce.h</label>
+        <link refid="HarmonicBondForce_8h"/>
+        <childnode refid="342" relation="include">
+        </childnode>
+      </node>
+      <node id="342">
+        <label>/tmp/openmm/openmmapi/include/OpenMM.h</label>
+        <link refid="OpenMM_8h"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classOpenMM_1_1HarmonicBondForce" prot="public">OpenMM::HarmonicBondForce</innerclass>
+    <innerclass refid="classOpenMM_1_1HarmonicBondForce_1_1BondInfo" prot="private">OpenMM::HarmonicBondForce::BondInfo</innerclass>
+    <innernamespace refid="namespaceOpenMM">OpenMM</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/tmp/openmm/openmmapi/include/openmm/HarmonicBondForce.h"/>
+  </compounddef>
+</doxygen>

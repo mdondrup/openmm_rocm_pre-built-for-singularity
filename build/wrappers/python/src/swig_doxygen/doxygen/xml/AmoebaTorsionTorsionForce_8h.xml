@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="AmoebaTorsionTorsionForce_8h" kind="file" language="C++">
+    <compoundname>AmoebaTorsionTorsionForce.h</compoundname>
+    <includes refid="Force_8h" local="yes">openmm/Force.h</includes>
+    <includes local="yes">internal/windowsExportAmoeba.h</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">cmath</includes>
+    <includedby refid="OpenMMAmoeba_8h" local="yes">/tmp/openmm/plugins/amoeba/openmmapi/include/OpenMMAmoeba.h</includedby>
+    <incdepgraph>
+      <node id="879">
+        <label>internal/windowsExportAmoeba.h</label>
+      </node>
+      <node id="878">
+        <label>internal/windowsExport.h</label>
+      </node>
+      <node id="881">
+        <label>cmath</label>
+      </node>
+      <node id="877">
+        <label>openmm/Force.h</label>
+        <link refid="Force_8h_source"/>
+        <childnode refid="878" relation="include">
+        </childnode>
+      </node>
+      <node id="880">
+        <label>vector</label>
+      </node>
+      <node id="876">
+        <label>/tmp/openmm/plugins/amoeba/openmmapi/include/openmm/AmoebaTorsionTorsionForce.h</label>
+        <link refid="AmoebaTorsionTorsionForce_8h"/>
+        <childnode refid="877" relation="include">
+        </childnode>
+        <childnode refid="879" relation="include">
+        </childnode>
+        <childnode refid="880" relation="include">
+        </childnode>
+        <childnode refid="881" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="882">
+        <label>/tmp/openmm/plugins/amoeba/openmmapi/include/openmm/AmoebaTorsionTorsionForce.h</label>
+        <link refid="AmoebaTorsionTorsionForce_8h"/>
+        <childnode refid="883" relation="include">
+        </childnode>
+      </node>
+      <node id="883">
+        <label>/tmp/openmm/plugins/amoeba/openmmapi/include/OpenMMAmoeba.h</label>
+        <link refid="OpenMMAmoeba_8h_source"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classOpenMM_1_1AmoebaTorsionTorsionForce" prot="public">OpenMM::AmoebaTorsionTorsionForce</innerclass>
+    <innerclass refid="classOpenMM_1_1AmoebaTorsionTorsionForce_1_1TorsionTorsionInfo" prot="private">OpenMM::AmoebaTorsionTorsionForce::TorsionTorsionInfo</innerclass>
+    <innerclass refid="classOpenMM_1_1AmoebaTorsionTorsionForce_1_1TorsionTorsionGridInfo" prot="private">OpenMM::AmoebaTorsionTorsionForce::TorsionTorsionGridInfo</innerclass>
+    <innernamespace refid="namespaceOpenMM">OpenMM</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/tmp/openmm/plugins/amoeba/openmmapi/include/openmm/AmoebaTorsionTorsionForce.h"/>
+  </compounddef>
+</doxygen>

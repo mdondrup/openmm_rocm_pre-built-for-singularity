@@ -1,0 +1,195 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="DrudeForce_8h" kind="file" language="C++">
+    <compoundname>DrudeForce.h</compoundname>
+    <includes refid="Context_8h" local="yes">openmm/Context.h</includes>
+    <includes refid="Force_8h" local="yes">openmm/Force.h</includes>
+    <includes local="no">vector</includes>
+    <includes local="yes">internal/windowsExportDrude.h</includes>
+    <includedby refid="OpenMMDrude_8h" local="yes">/tmp/openmm/plugins/drude/openmmapi/include/OpenMMDrude.h</includedby>
+    <incdepgraph>
+      <node id="957">
+        <label>internal/OSRngSeed.h</label>
+      </node>
+      <node id="947">
+        <label>openmm/serialization/SerializationProxy.h</label>
+        <link refid="SerializationProxy_8h_source"/>
+        <childnode refid="948" relation="include">
+        </childnode>
+        <childnode refid="949" relation="include">
+        </childnode>
+        <childnode refid="950" relation="include">
+        </childnode>
+        <childnode refid="951" relation="include">
+        </childnode>
+      </node>
+      <node id="939">
+        <label>/tmp/openmm/plugins/drude/openmmapi/include/openmm/DrudeForce.h</label>
+        <link refid="DrudeForce_8h"/>
+        <childnode refid="940" relation="include">
+        </childnode>
+        <childnode refid="958" relation="include">
+        </childnode>
+        <childnode refid="954" relation="include">
+        </childnode>
+        <childnode refid="959" relation="include">
+        </childnode>
+      </node>
+      <node id="955">
+        <label>internal/windowsExport.h</label>
+      </node>
+      <node id="941">
+        <label>Integrator.h</label>
+        <link refid="Integrator_8h_source"/>
+        <childnode refid="942" relation="include">
+        </childnode>
+        <childnode refid="943" relation="include">
+        </childnode>
+        <childnode refid="946" relation="include">
+        </childnode>
+        <childnode refid="945" relation="include">
+        </childnode>
+        <childnode refid="949" relation="include">
+        </childnode>
+        <childnode refid="954" relation="include">
+        </childnode>
+        <childnode refid="955" relation="include">
+        </childnode>
+      </node>
+      <node id="944">
+        <label>cassert</label>
+      </node>
+      <node id="950">
+        <label>string</label>
+      </node>
+      <node id="949">
+        <label>map</label>
+      </node>
+      <node id="942">
+        <label>State.h</label>
+        <link refid="State_8h_source"/>
+        <childnode refid="943" relation="include">
+        </childnode>
+        <childnode refid="946" relation="include">
+        </childnode>
+        <childnode refid="949" relation="include">
+        </childnode>
+        <childnode refid="950" relation="include">
+        </childnode>
+        <childnode refid="954" relation="include">
+        </childnode>
+        <childnode refid="955" relation="include">
+        </childnode>
+      </node>
+      <node id="958">
+        <label>openmm/Force.h</label>
+        <link refid="Force_8h_source"/>
+        <childnode refid="955" relation="include">
+        </childnode>
+      </node>
+      <node id="946">
+        <label>openmm/serialization/SerializationNode.h</label>
+        <link refid="SerializationNode_8h_source"/>
+        <childnode refid="947" relation="include">
+        </childnode>
+        <childnode refid="952" relation="include">
+        </childnode>
+        <childnode refid="948" relation="include">
+        </childnode>
+        <childnode refid="949" relation="include">
+        </childnode>
+        <childnode refid="950" relation="include">
+        </childnode>
+        <childnode refid="954" relation="include">
+        </childnode>
+      </node>
+      <node id="953">
+        <label>exception</label>
+      </node>
+      <node id="951">
+        <label>typeinfo</label>
+      </node>
+      <node id="952">
+        <label>openmm/OpenMMException.h</label>
+        <link refid="OpenMMException_8h_source"/>
+        <childnode refid="953" relation="include">
+        </childnode>
+        <childnode refid="950" relation="include">
+        </childnode>
+      </node>
+      <node id="954">
+        <label>vector</label>
+      </node>
+      <node id="948">
+        <label>openmm/internal/windowsExport.h</label>
+      </node>
+      <node id="945">
+        <label>iosfwd</label>
+      </node>
+      <node id="940">
+        <label>openmm/Context.h</label>
+        <link refid="Context_8h_source"/>
+        <childnode refid="941" relation="include">
+        </childnode>
+        <childnode refid="942" relation="include">
+        </childnode>
+        <childnode refid="956" relation="include">
+        </childnode>
+        <childnode refid="945" relation="include">
+        </childnode>
+        <childnode refid="949" relation="include">
+        </childnode>
+        <childnode refid="950" relation="include">
+        </childnode>
+        <childnode refid="954" relation="include">
+        </childnode>
+        <childnode refid="955" relation="include">
+        </childnode>
+        <childnode refid="957" relation="include">
+        </childnode>
+      </node>
+      <node id="956">
+        <label>System.h</label>
+        <link refid="System_8h_source"/>
+        <childnode refid="943" relation="include">
+        </childnode>
+        <childnode refid="954" relation="include">
+        </childnode>
+        <childnode refid="955" relation="include">
+        </childnode>
+      </node>
+      <node id="959">
+        <label>internal/windowsExportDrude.h</label>
+      </node>
+      <node id="943">
+        <label>Vec3.h</label>
+        <link refid="Vec3_8h_source"/>
+        <childnode refid="944" relation="include">
+        </childnode>
+        <childnode refid="945" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="960">
+        <label>/tmp/openmm/plugins/drude/openmmapi/include/openmm/DrudeForce.h</label>
+        <link refid="DrudeForce_8h"/>
+        <childnode refid="961" relation="include">
+        </childnode>
+      </node>
+      <node id="961">
+        <label>/tmp/openmm/plugins/drude/openmmapi/include/OpenMMDrude.h</label>
+        <link refid="OpenMMDrude_8h_source"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classOpenMM_1_1DrudeForce" prot="public">OpenMM::DrudeForce</innerclass>
+    <innerclass refid="classOpenMM_1_1DrudeForce_1_1ParticleInfo" prot="private">OpenMM::DrudeForce::ParticleInfo</innerclass>
+    <innerclass refid="classOpenMM_1_1DrudeForce_1_1ScreenedPairInfo" prot="private">OpenMM::DrudeForce::ScreenedPairInfo</innerclass>
+    <innernamespace refid="namespaceOpenMM">OpenMM</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/tmp/openmm/plugins/drude/openmmapi/include/openmm/DrudeForce.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,149 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="VerletIntegrator_8h" kind="file" language="C++">
+    <compoundname>VerletIntegrator.h</compoundname>
+    <includes refid="Integrator_8h" local="yes">Integrator.h</includes>
+    <includes local="yes">openmm/Kernel.h</includes>
+    <includes local="yes">internal/windowsExport.h</includes>
+    <includedby refid="OpenMM_8h" local="yes">/tmp/openmm/openmmapi/include/OpenMM.h</includedby>
+    <incdepgraph>
+      <node id="789">
+        <label>openmm/serialization/SerializationProxy.h</label>
+        <link refid="SerializationProxy_8h_source"/>
+        <childnode refid="790" relation="include">
+        </childnode>
+        <childnode refid="791" relation="include">
+        </childnode>
+        <childnode refid="792" relation="include">
+        </childnode>
+        <childnode refid="793" relation="include">
+        </childnode>
+      </node>
+      <node id="797">
+        <label>internal/windowsExport.h</label>
+      </node>
+      <node id="783">
+        <label>Integrator.h</label>
+        <link refid="Integrator_8h_source"/>
+        <childnode refid="784" relation="include">
+        </childnode>
+        <childnode refid="785" relation="include">
+        </childnode>
+        <childnode refid="788" relation="include">
+        </childnode>
+        <childnode refid="787" relation="include">
+        </childnode>
+        <childnode refid="791" relation="include">
+        </childnode>
+        <childnode refid="796" relation="include">
+        </childnode>
+        <childnode refid="797" relation="include">
+        </childnode>
+      </node>
+      <node id="786">
+        <label>cassert</label>
+      </node>
+      <node id="798">
+        <label>openmm/Kernel.h</label>
+      </node>
+      <node id="792">
+        <label>string</label>
+      </node>
+      <node id="782">
+        <label>/tmp/openmm/openmmapi/include/openmm/VerletIntegrator.h</label>
+        <link refid="VerletIntegrator_8h"/>
+        <childnode refid="783" relation="include">
+        </childnode>
+        <childnode refid="798" relation="include">
+        </childnode>
+        <childnode refid="797" relation="include">
+        </childnode>
+      </node>
+      <node id="791">
+        <label>map</label>
+      </node>
+      <node id="784">
+        <label>State.h</label>
+        <link refid="State_8h_source"/>
+        <childnode refid="785" relation="include">
+        </childnode>
+        <childnode refid="788" relation="include">
+        </childnode>
+        <childnode refid="791" relation="include">
+        </childnode>
+        <childnode refid="792" relation="include">
+        </childnode>
+        <childnode refid="796" relation="include">
+        </childnode>
+        <childnode refid="797" relation="include">
+        </childnode>
+      </node>
+      <node id="788">
+        <label>openmm/serialization/SerializationNode.h</label>
+        <link refid="SerializationNode_8h_source"/>
+        <childnode refid="789" relation="include">
+        </childnode>
+        <childnode refid="794" relation="include">
+        </childnode>
+        <childnode refid="790" relation="include">
+        </childnode>
+        <childnode refid="791" relation="include">
+        </childnode>
+        <childnode refid="792" relation="include">
+        </childnode>
+        <childnode refid="796" relation="include">
+        </childnode>
+      </node>
+      <node id="795">
+        <label>exception</label>
+      </node>
+      <node id="793">
+        <label>typeinfo</label>
+      </node>
+      <node id="794">
+        <label>openmm/OpenMMException.h</label>
+        <link refid="OpenMMException_8h_source"/>
+        <childnode refid="795" relation="include">
+        </childnode>
+        <childnode refid="792" relation="include">
+        </childnode>
+      </node>
+      <node id="796">
+        <label>vector</label>
+      </node>
+      <node id="790">
+        <label>openmm/internal/windowsExport.h</label>
+      </node>
+      <node id="787">
+        <label>iosfwd</label>
+      </node>
+      <node id="785">
+        <label>Vec3.h</label>
+        <link refid="Vec3_8h_source"/>
+        <childnode refid="786" relation="include">
+        </childnode>
+        <childnode refid="787" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="800">
+        <label>/tmp/openmm/openmmapi/include/OpenMM.h</label>
+        <link refid="OpenMM_8h_source"/>
+      </node>
+      <node id="799">
+        <label>/tmp/openmm/openmmapi/include/openmm/VerletIntegrator.h</label>
+        <link refid="VerletIntegrator_8h"/>
+        <childnode refid="800" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classOpenMM_1_1VerletIntegrator" prot="public">OpenMM::VerletIntegrator</innerclass>
+    <innernamespace refid="namespaceOpenMM">OpenMM</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/tmp/openmm/openmmapi/include/openmm/VerletIntegrator.h"/>
+  </compounddef>
+</doxygen>

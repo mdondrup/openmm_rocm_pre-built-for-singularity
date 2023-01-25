@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="System_8h" kind="file" language="C++">
+    <compoundname>System.h</compoundname>
+    <includes refid="Vec3_8h" local="yes">Vec3.h</includes>
+    <includes local="no">vector</includes>
+    <includes local="yes">internal/windowsExport.h</includes>
+    <includedby refid="Context_8h" local="yes">/tmp/openmm/openmmapi/include/openmm/Context.h</includedby>
+    <includedby refid="OpenMM_8h" local="yes">/tmp/openmm/openmmapi/include/OpenMM.h</includedby>
+    <incdepgraph>
+      <node id="547">
+        <label>internal/windowsExport.h</label>
+      </node>
+      <node id="544">
+        <label>cassert</label>
+      </node>
+      <node id="546">
+        <label>vector</label>
+      </node>
+      <node id="545">
+        <label>iosfwd</label>
+      </node>
+      <node id="542">
+        <label>/tmp/openmm/openmmapi/include/openmm/System.h</label>
+        <link refid="System_8h"/>
+        <childnode refid="543" relation="include">
+        </childnode>
+        <childnode refid="546" relation="include">
+        </childnode>
+        <childnode refid="547" relation="include">
+        </childnode>
+      </node>
+      <node id="543">
+        <label>Vec3.h</label>
+        <link refid="Vec3_8h"/>
+        <childnode refid="544" relation="include">
+        </childnode>
+        <childnode refid="545" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="553">
+        <label>/tmp/openmm/openmmapi/include/openmm/NonbondedForce.h</label>
+        <link refid="NonbondedForce_8h"/>
+        <childnode refid="551" relation="include">
+        </childnode>
+      </node>
+      <node id="551">
+        <label>/tmp/openmm/openmmapi/include/OpenMM.h</label>
+        <link refid="OpenMM_8h"/>
+      </node>
+      <node id="550">
+        <label>/tmp/openmm/openmmapi/include/openmm/GayBerneForce.h</label>
+        <link refid="GayBerneForce_8h"/>
+        <childnode refid="551" relation="include">
+        </childnode>
+      </node>
+      <node id="549">
+        <label>/tmp/openmm/openmmapi/include/openmm/Context.h</label>
+        <link refid="Context_8h"/>
+        <childnode refid="550" relation="include">
+        </childnode>
+        <childnode refid="552" relation="include">
+        </childnode>
+        <childnode refid="553" relation="include">
+        </childnode>
+        <childnode refid="551" relation="include">
+        </childnode>
+      </node>
+      <node id="548">
+        <label>/tmp/openmm/openmmapi/include/openmm/System.h</label>
+        <link refid="System_8h"/>
+        <childnode refid="549" relation="include">
+        </childnode>
+        <childnode refid="551" relation="include">
+        </childnode>
+      </node>
+      <node id="552">
+        <label>/tmp/openmm/openmmapi/include/openmm/LocalEnergyMinimizer.h</label>
+        <link refid="LocalEnergyMinimizer_8h"/>
+        <childnode refid="551" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classOpenMM_1_1System" prot="public">OpenMM::System</innerclass>
+    <innernamespace refid="namespaceOpenMM">OpenMM</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/tmp/openmm/openmmapi/include/openmm/System.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,149 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="CompoundIntegrator_8h" kind="file" language="C++">
+    <compoundname>CompoundIntegrator.h</compoundname>
+    <includes refid="Integrator_8h" local="yes">Integrator.h</includes>
+    <includes local="yes">openmm/Kernel.h</includes>
+    <includes local="yes">internal/windowsExport.h</includes>
+    <includedby refid="OpenMM_8h" local="yes">/tmp/openmm/openmmapi/include/OpenMM.h</includedby>
+    <incdepgraph>
+      <node id="123">
+        <label>openmm/serialization/SerializationProxy.h</label>
+        <link refid="SerializationProxy_8h_source"/>
+        <childnode refid="124" relation="include">
+        </childnode>
+        <childnode refid="125" relation="include">
+        </childnode>
+        <childnode refid="126" relation="include">
+        </childnode>
+        <childnode refid="127" relation="include">
+        </childnode>
+      </node>
+      <node id="131">
+        <label>internal/windowsExport.h</label>
+      </node>
+      <node id="117">
+        <label>Integrator.h</label>
+        <link refid="Integrator_8h_source"/>
+        <childnode refid="118" relation="include">
+        </childnode>
+        <childnode refid="119" relation="include">
+        </childnode>
+        <childnode refid="122" relation="include">
+        </childnode>
+        <childnode refid="121" relation="include">
+        </childnode>
+        <childnode refid="125" relation="include">
+        </childnode>
+        <childnode refid="130" relation="include">
+        </childnode>
+        <childnode refid="131" relation="include">
+        </childnode>
+      </node>
+      <node id="120">
+        <label>cassert</label>
+      </node>
+      <node id="132">
+        <label>openmm/Kernel.h</label>
+      </node>
+      <node id="126">
+        <label>string</label>
+      </node>
+      <node id="125">
+        <label>map</label>
+      </node>
+      <node id="118">
+        <label>State.h</label>
+        <link refid="State_8h_source"/>
+        <childnode refid="119" relation="include">
+        </childnode>
+        <childnode refid="122" relation="include">
+        </childnode>
+        <childnode refid="125" relation="include">
+        </childnode>
+        <childnode refid="126" relation="include">
+        </childnode>
+        <childnode refid="130" relation="include">
+        </childnode>
+        <childnode refid="131" relation="include">
+        </childnode>
+      </node>
+      <node id="122">
+        <label>openmm/serialization/SerializationNode.h</label>
+        <link refid="SerializationNode_8h_source"/>
+        <childnode refid="123" relation="include">
+        </childnode>
+        <childnode refid="128" relation="include">
+        </childnode>
+        <childnode refid="124" relation="include">
+        </childnode>
+        <childnode refid="125" relation="include">
+        </childnode>
+        <childnode refid="126" relation="include">
+        </childnode>
+        <childnode refid="130" relation="include">
+        </childnode>
+      </node>
+      <node id="129">
+        <label>exception</label>
+      </node>
+      <node id="127">
+        <label>typeinfo</label>
+      </node>
+      <node id="128">
+        <label>openmm/OpenMMException.h</label>
+        <link refid="OpenMMException_8h_source"/>
+        <childnode refid="129" relation="include">
+        </childnode>
+        <childnode refid="126" relation="include">
+        </childnode>
+      </node>
+      <node id="130">
+        <label>vector</label>
+      </node>
+      <node id="116">
+        <label>/tmp/openmm/openmmapi/include/openmm/CompoundIntegrator.h</label>
+        <link refid="CompoundIntegrator_8h"/>
+        <childnode refid="117" relation="include">
+        </childnode>
+        <childnode refid="132" relation="include">
+        </childnode>
+        <childnode refid="131" relation="include">
+        </childnode>
+      </node>
+      <node id="124">
+        <label>openmm/internal/windowsExport.h</label>
+      </node>
+      <node id="121">
+        <label>iosfwd</label>
+      </node>
+      <node id="119">
+        <label>Vec3.h</label>
+        <link refid="Vec3_8h_source"/>
+        <childnode refid="120" relation="include">
+        </childnode>
+        <childnode refid="121" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="134">
+        <label>/tmp/openmm/openmmapi/include/OpenMM.h</label>
+        <link refid="OpenMM_8h_source"/>
+      </node>
+      <node id="133">
+        <label>/tmp/openmm/openmmapi/include/openmm/CompoundIntegrator.h</label>
+        <link refid="CompoundIntegrator_8h"/>
+        <childnode refid="134" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classOpenMM_1_1CompoundIntegrator" prot="public">OpenMM::CompoundIntegrator</innerclass>
+    <innernamespace refid="namespaceOpenMM">OpenMM</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/tmp/openmm/openmmapi/include/openmm/CompoundIntegrator.h"/>
+  </compounddef>
+</doxygen>

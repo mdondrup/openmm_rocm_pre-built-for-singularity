@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="XmlSerializer_8h" kind="file" language="C++">
+    <compoundname>XmlSerializer.h</compoundname>
+    <includes refid="SerializationNode_8h" local="yes">openmm/serialization/SerializationNode.h</includes>
+    <includes refid="SerializationProxy_8h" local="yes">openmm/serialization/SerializationProxy.h</includes>
+    <includes refid="OpenMMException_8h" local="yes">openmm/OpenMMException.h</includes>
+    <includes local="yes">openmm/internal/windowsExport.h</includes>
+    <includes local="no">iosfwd</includes>
+    <includedby refid="OpenMM_8h" local="yes">/tmp/openmm/openmmapi/include/OpenMM.h</includedby>
+    <incdepgraph>
+      <node id="1174">
+        <label>openmm/serialization/SerializationProxy.h</label>
+        <link refid="SerializationProxy_8h_source"/>
+        <childnode refid="1175" relation="include">
+        </childnode>
+        <childnode refid="1176" relation="include">
+        </childnode>
+        <childnode refid="1177" relation="include">
+        </childnode>
+        <childnode refid="1178" relation="include">
+        </childnode>
+      </node>
+      <node id="1177">
+        <label>string</label>
+      </node>
+      <node id="1176">
+        <label>map</label>
+      </node>
+      <node id="1173">
+        <label>openmm/serialization/SerializationNode.h</label>
+        <link refid="SerializationNode_8h_source"/>
+        <childnode refid="1174" relation="include">
+        </childnode>
+        <childnode refid="1179" relation="include">
+        </childnode>
+        <childnode refid="1175" relation="include">
+        </childnode>
+        <childnode refid="1176" relation="include">
+        </childnode>
+        <childnode refid="1177" relation="include">
+        </childnode>
+        <childnode refid="1181" relation="include">
+        </childnode>
+      </node>
+      <node id="1180">
+        <label>exception</label>
+      </node>
+      <node id="1172">
+        <label>/tmp/openmm/serialization/include/openmm/serialization/XmlSerializer.h</label>
+        <link refid="XmlSerializer_8h"/>
+        <childnode refid="1173" relation="include">
+        </childnode>
+        <childnode refid="1174" relation="include">
+        </childnode>
+        <childnode refid="1179" relation="include">
+        </childnode>
+        <childnode refid="1175" relation="include">
+        </childnode>
+        <childnode refid="1182" relation="include">
+        </childnode>
+      </node>
+      <node id="1178">
+        <label>typeinfo</label>
+      </node>
+      <node id="1179">
+        <label>openmm/OpenMMException.h</label>
+        <link refid="OpenMMException_8h_source"/>
+        <childnode refid="1180" relation="include">
+        </childnode>
+        <childnode refid="1177" relation="include">
+        </childnode>
+      </node>
+      <node id="1181">
+        <label>vector</label>
+      </node>
+      <node id="1175">
+        <label>openmm/internal/windowsExport.h</label>
+      </node>
+      <node id="1182">
+        <label>iosfwd</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1184">
+        <label>/tmp/openmm/openmmapi/include/OpenMM.h</label>
+        <link refid="OpenMM_8h_source"/>
+      </node>
+      <node id="1183">
+        <label>/tmp/openmm/serialization/include/openmm/serialization/XmlSerializer.h</label>
+        <link refid="XmlSerializer_8h"/>
+        <childnode refid="1184" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classOpenMM_1_1XmlSerializer" prot="public">OpenMM::XmlSerializer</innerclass>
+    <innernamespace refid="namespaceOpenMM">OpenMM</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/tmp/openmm/serialization/include/openmm/serialization/XmlSerializer.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="NoseHooverChain_8h" kind="file" language="C++">
+    <compoundname>NoseHooverChain.h</compoundname>
+    <includes refid="Force_8h" local="yes">openmm/Force.h</includes>
+    <includes local="no">string</includes>
+    <includes local="no">vector</includes>
+    <includes refid="OpenMMException_8h" local="yes">openmm/OpenMMException.h</includes>
+    <includes local="yes">internal/windowsExport.h</includes>
+    <includedby refid="NoseHooverIntegrator_8h" local="yes">/tmp/openmm/openmmapi/include/openmm/NoseHooverIntegrator.h</includedby>
+    <includedby refid="OpenMM_8h" local="yes">/tmp/openmm/openmmapi/include/OpenMM.h</includedby>
+    <incdepgraph>
+      <node id="454">
+        <label>internal/windowsExport.h</label>
+      </node>
+      <node id="455">
+        <label>string</label>
+      </node>
+      <node id="453">
+        <label>openmm/Force.h</label>
+        <link refid="Force_8h"/>
+        <childnode refid="454" relation="include">
+        </childnode>
+      </node>
+      <node id="458">
+        <label>exception</label>
+      </node>
+      <node id="452">
+        <label>/tmp/openmm/openmmapi/include/openmm/NoseHooverChain.h</label>
+        <link refid="NoseHooverChain_8h"/>
+        <childnode refid="453" relation="include">
+        </childnode>
+        <childnode refid="455" relation="include">
+        </childnode>
+        <childnode refid="456" relation="include">
+        </childnode>
+        <childnode refid="457" relation="include">
+        </childnode>
+        <childnode refid="454" relation="include">
+        </childnode>
+      </node>
+      <node id="457">
+        <label>openmm/OpenMMException.h</label>
+        <link refid="OpenMMException_8h"/>
+        <childnode refid="458" relation="include">
+        </childnode>
+        <childnode refid="455" relation="include">
+        </childnode>
+      </node>
+      <node id="456">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="460">
+        <label>/tmp/openmm/openmmapi/include/openmm/NoseHooverIntegrator.h</label>
+        <link refid="NoseHooverIntegrator_8h"/>
+        <childnode refid="461" relation="include">
+        </childnode>
+      </node>
+      <node id="461">
+        <label>/tmp/openmm/openmmapi/include/OpenMM.h</label>
+        <link refid="OpenMM_8h"/>
+      </node>
+      <node id="459">
+        <label>/tmp/openmm/openmmapi/include/openmm/NoseHooverChain.h</label>
+        <link refid="NoseHooverChain_8h"/>
+        <childnode refid="460" relation="include">
+        </childnode>
+        <childnode refid="461" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classOpenMM_1_1NoseHooverChain" prot="public">OpenMM::NoseHooverChain</innerclass>
+    <innernamespace refid="namespaceOpenMM">OpenMM</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/tmp/openmm/openmmapi/include/openmm/NoseHooverChain.h"/>
+  </compounddef>
+</doxygen>

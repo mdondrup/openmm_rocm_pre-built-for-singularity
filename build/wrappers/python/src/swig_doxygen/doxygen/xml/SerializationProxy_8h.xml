@@ -1,0 +1,247 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="SerializationProxy_8h" kind="file" language="C++">
+    <compoundname>SerializationProxy.h</compoundname>
+    <includes local="yes">openmm/internal/windowsExport.h</includes>
+    <includes local="no">map</includes>
+    <includes local="no">string</includes>
+    <includes local="no">typeinfo</includes>
+    <includedby refid="SerializationNode_8h" local="yes">/tmp/openmm/serialization/include/openmm/serialization/SerializationNode.h</includedby>
+    <includedby refid="XmlSerializer_8h" local="yes">/tmp/openmm/serialization/include/openmm/serialization/XmlSerializer.h</includedby>
+    <incdepgraph>
+      <node id="1141">
+        <label>/tmp/openmm/serialization/include/openmm/serialization/SerializationProxy.h</label>
+        <link refid="SerializationProxy_8h"/>
+        <childnode refid="1142" relation="include">
+        </childnode>
+        <childnode refid="1143" relation="include">
+        </childnode>
+        <childnode refid="1144" relation="include">
+        </childnode>
+        <childnode refid="1145" relation="include">
+        </childnode>
+      </node>
+      <node id="1144">
+        <label>string</label>
+      </node>
+      <node id="1143">
+        <label>map</label>
+      </node>
+      <node id="1145">
+        <label>typeinfo</label>
+      </node>
+      <node id="1142">
+        <label>openmm/internal/windowsExport.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1162">
+        <label>/tmp/openmm/openmmapi/include/openmm/NoseHooverIntegrator.h</label>
+        <link refid="NoseHooverIntegrator_8h_source"/>
+        <childnode refid="1151" relation="include">
+        </childnode>
+        <childnode refid="1163" relation="include">
+        </childnode>
+      </node>
+      <node id="1146">
+        <label>/tmp/openmm/serialization/include/openmm/serialization/SerializationProxy.h</label>
+        <link refid="SerializationProxy_8h"/>
+        <childnode refid="1147" relation="include">
+        </childnode>
+        <childnode refid="1171" relation="include">
+        </childnode>
+      </node>
+      <node id="1156">
+        <label>/tmp/openmm/openmmapi/include/openmm/NonbondedForce.h</label>
+        <link refid="NonbondedForce_8h_source"/>
+        <childnode refid="1151" relation="include">
+        </childnode>
+      </node>
+      <node id="1157">
+        <label>/tmp/openmm/plugins/drude/openmmapi/include/openmm/DrudeForce.h</label>
+        <link refid="DrudeForce_8h_source"/>
+        <childnode refid="1158" relation="include">
+        </childnode>
+      </node>
+      <node id="1149">
+        <label>/tmp/openmm/openmmapi/include/openmm/Integrator.h</label>
+        <link refid="Integrator_8h_source"/>
+        <childnode refid="1150" relation="include">
+        </childnode>
+        <childnode refid="1152" relation="include">
+        </childnode>
+        <childnode refid="1153" relation="include">
+        </childnode>
+        <childnode refid="1159" relation="include">
+        </childnode>
+        <childnode refid="1160" relation="include">
+        </childnode>
+        <childnode refid="1161" relation="include">
+        </childnode>
+        <childnode refid="1162" relation="include">
+        </childnode>
+        <childnode refid="1164" relation="include">
+        </childnode>
+        <childnode refid="1165" relation="include">
+        </childnode>
+        <childnode refid="1166" relation="include">
+        </childnode>
+        <childnode refid="1151" relation="include">
+        </childnode>
+        <childnode refid="1167" relation="include">
+        </childnode>
+        <childnode refid="1168" relation="include">
+        </childnode>
+      </node>
+      <node id="1151">
+        <label>/tmp/openmm/openmmapi/include/OpenMM.h</label>
+        <link refid="OpenMM_8h_source"/>
+      </node>
+      <node id="1169">
+        <label>/tmp/openmm/plugins/drude/openmmapi/include/openmm/DrudeLangevinIntegrator.h</label>
+        <link refid="DrudeLangevinIntegrator_8h_source"/>
+        <childnode refid="1158" relation="include">
+        </childnode>
+      </node>
+      <node id="1154">
+        <label>/tmp/openmm/openmmapi/include/openmm/GayBerneForce.h</label>
+        <link refid="GayBerneForce_8h_source"/>
+        <childnode refid="1151" relation="include">
+        </childnode>
+      </node>
+      <node id="1166">
+        <label>/tmp/openmm/openmmapi/include/openmm/VerletIntegrator.h</label>
+        <link refid="VerletIntegrator_8h_source"/>
+        <childnode refid="1151" relation="include">
+        </childnode>
+      </node>
+      <node id="1148">
+        <label>/tmp/openmm/openmmapi/include/openmm/State.h</label>
+        <link refid="State_8h_source"/>
+        <childnode refid="1149" relation="include">
+        </childnode>
+        <childnode refid="1153" relation="include">
+        </childnode>
+        <childnode refid="1162" relation="include">
+        </childnode>
+        <childnode refid="1151" relation="include">
+        </childnode>
+        <childnode refid="1167" relation="include">
+        </childnode>
+      </node>
+      <node id="1147">
+        <label>/tmp/openmm/serialization/include/openmm/serialization/SerializationNode.h</label>
+        <link refid="SerializationNode_8h_source"/>
+        <childnode refid="1148" relation="include">
+        </childnode>
+        <childnode refid="1149" relation="include">
+        </childnode>
+        <childnode refid="1171" relation="include">
+        </childnode>
+      </node>
+      <node id="1168">
+        <label>/tmp/openmm/plugins/drude/openmmapi/include/openmm/DrudeIntegrator.h</label>
+        <link refid="DrudeIntegrator_8h_source"/>
+        <childnode refid="1169" relation="include">
+        </childnode>
+        <childnode refid="1170" relation="include">
+        </childnode>
+      </node>
+      <node id="1171">
+        <label>/tmp/openmm/serialization/include/openmm/serialization/XmlSerializer.h</label>
+        <link refid="XmlSerializer_8h_source"/>
+        <childnode refid="1151" relation="include">
+        </childnode>
+      </node>
+      <node id="1167">
+        <label>/tmp/openmm/plugins/rpmd/openmmapi/include/openmm/RPMDIntegrator.h</label>
+        <link refid="RPMDIntegrator_8h_source"/>
+      </node>
+      <node id="1164">
+        <label>/tmp/openmm/openmmapi/include/openmm/VariableLangevinIntegrator.h</label>
+        <link refid="VariableLangevinIntegrator_8h_source"/>
+        <childnode refid="1151" relation="include">
+        </childnode>
+      </node>
+      <node id="1150">
+        <label>/tmp/openmm/openmmapi/include/openmm/BrownianIntegrator.h</label>
+        <link refid="BrownianIntegrator_8h_source"/>
+        <childnode refid="1151" relation="include">
+        </childnode>
+      </node>
+      <node id="1158">
+        <label>/tmp/openmm/plugins/drude/openmmapi/include/OpenMMDrude.h</label>
+        <link refid="OpenMMDrude_8h_source"/>
+      </node>
+      <node id="1165">
+        <label>/tmp/openmm/openmmapi/include/openmm/VariableVerletIntegrator.h</label>
+        <link refid="VariableVerletIntegrator_8h_source"/>
+        <childnode refid="1151" relation="include">
+        </childnode>
+      </node>
+      <node id="1152">
+        <label>/tmp/openmm/openmmapi/include/openmm/CompoundIntegrator.h</label>
+        <link refid="CompoundIntegrator_8h_source"/>
+        <childnode refid="1151" relation="include">
+        </childnode>
+      </node>
+      <node id="1153">
+        <label>/tmp/openmm/openmmapi/include/openmm/Context.h</label>
+        <link refid="Context_8h_source"/>
+        <childnode refid="1154" relation="include">
+        </childnode>
+        <childnode refid="1155" relation="include">
+        </childnode>
+        <childnode refid="1156" relation="include">
+        </childnode>
+        <childnode refid="1151" relation="include">
+        </childnode>
+        <childnode refid="1157" relation="include">
+        </childnode>
+      </node>
+      <node id="1163">
+        <label>/tmp/openmm/plugins/drude/openmmapi/include/openmm/DrudeNoseHooverIntegrator.h</label>
+        <link refid="DrudeNoseHooverIntegrator_8h_source"/>
+        <childnode refid="1158" relation="include">
+        </childnode>
+      </node>
+      <node id="1170">
+        <label>/tmp/openmm/plugins/drude/openmmapi/include/openmm/DrudeSCFIntegrator.h</label>
+        <link refid="DrudeSCFIntegrator_8h_source"/>
+        <childnode refid="1158" relation="include">
+        </childnode>
+      </node>
+      <node id="1160">
+        <label>/tmp/openmm/openmmapi/include/openmm/LangevinIntegrator.h</label>
+        <link refid="LangevinIntegrator_8h_source"/>
+        <childnode refid="1151" relation="include">
+        </childnode>
+      </node>
+      <node id="1161">
+        <label>/tmp/openmm/openmmapi/include/openmm/LangevinMiddleIntegrator.h</label>
+        <link refid="LangevinMiddleIntegrator_8h_source"/>
+        <childnode refid="1151" relation="include">
+        </childnode>
+      </node>
+      <node id="1155">
+        <label>/tmp/openmm/openmmapi/include/openmm/LocalEnergyMinimizer.h</label>
+        <link refid="LocalEnergyMinimizer_8h_source"/>
+        <childnode refid="1151" relation="include">
+        </childnode>
+      </node>
+      <node id="1159">
+        <label>/tmp/openmm/openmmapi/include/openmm/CustomIntegrator.h</label>
+        <link refid="CustomIntegrator_8h_source"/>
+        <childnode refid="1151" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classOpenMM_1_1SerializationProxy" prot="public">OpenMM::SerializationProxy</innerclass>
+    <innernamespace refid="namespaceOpenMM">OpenMM</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/tmp/openmm/serialization/include/openmm/serialization/SerializationProxy.h"/>
+  </compounddef>
+</doxygen>

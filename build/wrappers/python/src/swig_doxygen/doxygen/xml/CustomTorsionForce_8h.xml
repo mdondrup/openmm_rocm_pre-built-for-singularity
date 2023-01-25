@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="CustomTorsionForce_8h" kind="file" language="C++">
+    <compoundname>CustomTorsionForce.h</compoundname>
+    <includes refid="Force_8h" local="yes">Force.h</includes>
+    <includes refid="Vec3_8h" local="yes">Vec3.h</includes>
+    <includes local="no">vector</includes>
+    <includes local="yes">internal/windowsExport.h</includes>
+    <includedby refid="OpenMM_8h" local="yes">/tmp/openmm/openmmapi/include/OpenMM.h</includedby>
+    <incdepgraph>
+      <node id="285">
+        <label>internal/windowsExport.h</label>
+      </node>
+      <node id="287">
+        <label>cassert</label>
+      </node>
+      <node id="284">
+        <label>Force.h</label>
+        <link refid="Force_8h_source"/>
+        <childnode refid="285" relation="include">
+        </childnode>
+      </node>
+      <node id="289">
+        <label>vector</label>
+      </node>
+      <node id="283">
+        <label>/tmp/openmm/openmmapi/include/openmm/CustomTorsionForce.h</label>
+        <link refid="CustomTorsionForce_8h"/>
+        <childnode refid="284" relation="include">
+        </childnode>
+        <childnode refid="286" relation="include">
+        </childnode>
+        <childnode refid="289" relation="include">
+        </childnode>
+        <childnode refid="285" relation="include">
+        </childnode>
+      </node>
+      <node id="288">
+        <label>iosfwd</label>
+      </node>
+      <node id="286">
+        <label>Vec3.h</label>
+        <link refid="Vec3_8h_source"/>
+        <childnode refid="287" relation="include">
+        </childnode>
+        <childnode refid="288" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="291">
+        <label>/tmp/openmm/openmmapi/include/OpenMM.h</label>
+        <link refid="OpenMM_8h_source"/>
+      </node>
+      <node id="290">
+        <label>/tmp/openmm/openmmapi/include/openmm/CustomTorsionForce.h</label>
+        <link refid="CustomTorsionForce_8h"/>
+        <childnode refid="291" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classOpenMM_1_1CustomTorsionForce" prot="public">OpenMM::CustomTorsionForce</innerclass>
+    <innerclass refid="classOpenMM_1_1CustomTorsionForce_1_1TorsionInfo" prot="private">OpenMM::CustomTorsionForce::TorsionInfo</innerclass>
+    <innerclass refid="classOpenMM_1_1CustomTorsionForce_1_1TorsionParameterInfo" prot="private">OpenMM::CustomTorsionForce::TorsionParameterInfo</innerclass>
+    <innerclass refid="classOpenMM_1_1CustomTorsionForce_1_1GlobalParameterInfo" prot="private">OpenMM::CustomTorsionForce::GlobalParameterInfo</innerclass>
+    <innernamespace refid="namespaceOpenMM">OpenMM</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/tmp/openmm/openmmapi/include/openmm/CustomTorsionForce.h"/>
+  </compounddef>
+</doxygen>

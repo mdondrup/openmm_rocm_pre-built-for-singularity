@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="OpenMMException_8h" kind="file" language="C++">
+    <compoundname>OpenMMException.h</compoundname>
+    <includes local="no">exception</includes>
+    <includes local="no">string</includes>
+    <includedby refid="NoseHooverChain_8h" local="yes">/tmp/openmm/openmmapi/include/openmm/NoseHooverChain.h</includedby>
+    <includedby refid="OpenMM_8h" local="yes">/tmp/openmm/openmmapi/include/OpenMM.h</includedby>
+    <incdepgraph>
+      <node id="483">
+        <label>string</label>
+      </node>
+      <node id="482">
+        <label>exception</label>
+      </node>
+      <node id="481">
+        <label>/tmp/openmm/openmmapi/include/openmm/OpenMMException.h</label>
+        <link refid="OpenMMException_8h"/>
+        <childnode refid="482" relation="include">
+        </childnode>
+        <childnode refid="483" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="486">
+        <label>/tmp/openmm/openmmapi/include/openmm/NoseHooverIntegrator.h</label>
+        <link refid="NoseHooverIntegrator_8h"/>
+        <childnode refid="487" relation="include">
+        </childnode>
+      </node>
+      <node id="487">
+        <label>/tmp/openmm/openmmapi/include/OpenMM.h</label>
+        <link refid="OpenMM_8h"/>
+      </node>
+      <node id="485">
+        <label>/tmp/openmm/openmmapi/include/openmm/NoseHooverChain.h</label>
+        <link refid="NoseHooverChain_8h"/>
+        <childnode refid="486" relation="include">
+        </childnode>
+        <childnode refid="487" relation="include">
+        </childnode>
+      </node>
+      <node id="484">
+        <label>/tmp/openmm/openmmapi/include/openmm/OpenMMException.h</label>
+        <link refid="OpenMMException_8h"/>
+        <childnode refid="485" relation="include">
+        </childnode>
+        <childnode refid="487" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classOpenMM_1_1OpenMMException" prot="public">OpenMM::OpenMMException</innerclass>
+    <innernamespace refid="namespaceOpenMM">OpenMM</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/tmp/openmm/openmmapi/include/openmm/OpenMMException.h"/>
+  </compounddef>
+</doxygen>

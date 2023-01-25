@@ -1,0 +1,423 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="Vec3_8h" kind="file" language="C++">
+    <compoundname>Vec3.h</compoundname>
+    <includes local="no">cassert</includes>
+    <includes local="no">iosfwd</includes>
+    <includedby refid="State_8h" local="yes">/tmp/openmm/openmmapi/include/openmm/State.h</includedby>
+    <includedby refid="Integrator_8h" local="yes">/tmp/openmm/openmmapi/include/openmm/Integrator.h</includedby>
+    <includedby refid="CMAPTorsionForce_8h" local="yes">/tmp/openmm/openmmapi/include/openmm/CMAPTorsionForce.h</includedby>
+    <includedby refid="System_8h" local="yes">/tmp/openmm/openmmapi/include/openmm/System.h</includedby>
+    <includedby refid="CustomAngleForce_8h" local="yes">/tmp/openmm/openmmapi/include/openmm/CustomAngleForce.h</includedby>
+    <includedby refid="CustomBondForce_8h" local="yes">/tmp/openmm/openmmapi/include/openmm/CustomBondForce.h</includedby>
+    <includedby refid="CustomCentroidBondForce_8h" local="yes">/tmp/openmm/openmmapi/include/openmm/CustomCentroidBondForce.h</includedby>
+    <includedby refid="CustomCompoundBondForce_8h" local="yes">/tmp/openmm/openmmapi/include/openmm/CustomCompoundBondForce.h</includedby>
+    <includedby refid="CustomExternalForce_8h" local="yes">/tmp/openmm/openmmapi/include/openmm/CustomExternalForce.h</includedby>
+    <includedby refid="CustomGBForce_8h" local="yes">/tmp/openmm/openmmapi/include/openmm/CustomGBForce.h</includedby>
+    <includedby refid="CustomHbondForce_8h" local="yes">/tmp/openmm/openmmapi/include/openmm/CustomHbondForce.h</includedby>
+    <includedby refid="CustomIntegrator_8h" local="yes">/tmp/openmm/openmmapi/include/openmm/CustomIntegrator.h</includedby>
+    <includedby refid="CustomNonbondedForce_8h" local="yes">/tmp/openmm/openmmapi/include/openmm/CustomNonbondedForce.h</includedby>
+    <includedby refid="CustomTorsionForce_8h" local="yes">/tmp/openmm/openmmapi/include/openmm/CustomTorsionForce.h</includedby>
+    <includedby refid="HarmonicAngleForce_8h" local="yes">/tmp/openmm/openmmapi/include/openmm/HarmonicAngleForce.h</includedby>
+    <includedby refid="HarmonicBondForce_8h" local="yes">/tmp/openmm/openmmapi/include/openmm/HarmonicBondForce.h</includedby>
+    <includedby refid="MonteCarloAnisotropicBarostat_8h" local="yes">/tmp/openmm/openmmapi/include/openmm/MonteCarloAnisotropicBarostat.h</includedby>
+    <includedby refid="PeriodicTorsionForce_8h" local="yes">/tmp/openmm/openmmapi/include/openmm/PeriodicTorsionForce.h</includedby>
+    <includedby refid="RBTorsionForce_8h" local="yes">/tmp/openmm/openmmapi/include/openmm/RBTorsionForce.h</includedby>
+    <includedby refid="RMSDForce_8h" local="yes">/tmp/openmm/openmmapi/include/openmm/RMSDForce.h</includedby>
+    <includedby refid="VirtualSite_8h" local="no">/tmp/openmm/openmmapi/include/openmm/VirtualSite.h</includedby>
+    <includedby refid="OpenMM_8h" local="yes">/tmp/openmm/openmmapi/include/OpenMM.h</includedby>
+    <includedby refid="AmoebaBondForce_8h" local="yes">/tmp/openmm/plugins/amoeba/openmmapi/include/openmm/AmoebaBondForce.h</includedby>
+    <includedby refid="AmoebaMultipoleForce_8h" local="yes">/tmp/openmm/plugins/amoeba/openmmapi/include/openmm/AmoebaMultipoleForce.h</includedby>
+    <includedby refid="HippoNonbondedForce_8h" local="yes">/tmp/openmm/plugins/amoeba/openmmapi/include/openmm/HippoNonbondedForce.h</includedby>
+    <includedby refid="RPMDIntegrator_8h" local="yes">/tmp/openmm/plugins/rpmd/openmmapi/include/openmm/RPMDIntegrator.h</includedby>
+    <incdepgraph>
+      <node id="734">
+        <label>cassert</label>
+      </node>
+      <node id="735">
+        <label>iosfwd</label>
+      </node>
+      <node id="733">
+        <label>/tmp/openmm/openmmapi/include/openmm/Vec3.h</label>
+        <link refid="Vec3_8h"/>
+        <childnode refid="734" relation="include">
+        </childnode>
+        <childnode refid="735" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="751">
+        <label>/tmp/openmm/openmmapi/include/openmm/NoseHooverIntegrator.h</label>
+        <link refid="NoseHooverIntegrator_8h_source"/>
+        <childnode refid="740" relation="include">
+        </childnode>
+        <childnode refid="752" relation="include">
+        </childnode>
+      </node>
+      <node id="745">
+        <label>/tmp/openmm/openmmapi/include/openmm/NonbondedForce.h</label>
+        <link refid="NonbondedForce_8h_source"/>
+        <childnode refid="740" relation="include">
+        </childnode>
+      </node>
+      <node id="767">
+        <label>/tmp/openmm/openmmapi/include/openmm/CustomGBForce.h</label>
+        <link refid="CustomGBForce_8h_source"/>
+        <childnode refid="740" relation="include">
+        </childnode>
+      </node>
+      <node id="746">
+        <label>/tmp/openmm/plugins/drude/openmmapi/include/openmm/DrudeForce.h</label>
+        <link refid="DrudeForce_8h_source"/>
+        <childnode refid="747" relation="include">
+        </childnode>
+      </node>
+      <node id="738">
+        <label>/tmp/openmm/openmmapi/include/openmm/Integrator.h</label>
+        <link refid="Integrator_8h_source"/>
+        <childnode refid="739" relation="include">
+        </childnode>
+        <childnode refid="741" relation="include">
+        </childnode>
+        <childnode refid="742" relation="include">
+        </childnode>
+        <childnode refid="748" relation="include">
+        </childnode>
+        <childnode refid="749" relation="include">
+        </childnode>
+        <childnode refid="750" relation="include">
+        </childnode>
+        <childnode refid="751" relation="include">
+        </childnode>
+        <childnode refid="753" relation="include">
+        </childnode>
+        <childnode refid="754" relation="include">
+        </childnode>
+        <childnode refid="755" relation="include">
+        </childnode>
+        <childnode refid="740" relation="include">
+        </childnode>
+        <childnode refid="756" relation="include">
+        </childnode>
+        <childnode refid="757" relation="include">
+        </childnode>
+      </node>
+      <node id="775">
+        <label>/tmp/openmm/openmmapi/include/openmm/RBTorsionForce.h</label>
+        <link refid="RBTorsionForce_8h_source"/>
+        <childnode refid="740" relation="include">
+        </childnode>
+      </node>
+      <node id="772">
+        <label>/tmp/openmm/openmmapi/include/openmm/HarmonicBondForce.h</label>
+        <link refid="HarmonicBondForce_8h_source"/>
+        <childnode refid="740" relation="include">
+        </childnode>
+      </node>
+      <node id="740">
+        <label>/tmp/openmm/openmmapi/include/OpenMM.h</label>
+        <link refid="OpenMM_8h_source"/>
+      </node>
+      <node id="758">
+        <label>/tmp/openmm/plugins/drude/openmmapi/include/openmm/DrudeLangevinIntegrator.h</label>
+        <link refid="DrudeLangevinIntegrator_8h_source"/>
+        <childnode refid="747" relation="include">
+        </childnode>
+      </node>
+      <node id="778">
+        <label>/tmp/openmm/plugins/amoeba/openmmapi/include/openmm/AmoebaBondForce.h</label>
+        <link refid="AmoebaBondForce_8h_source"/>
+        <childnode refid="779" relation="include">
+        </childnode>
+      </node>
+      <node id="743">
+        <label>/tmp/openmm/openmmapi/include/openmm/GayBerneForce.h</label>
+        <link refid="GayBerneForce_8h_source"/>
+        <childnode refid="740" relation="include">
+        </childnode>
+      </node>
+      <node id="760">
+        <label>/tmp/openmm/openmmapi/include/openmm/CMAPTorsionForce.h</label>
+        <link refid="CMAPTorsionForce_8h_source"/>
+        <childnode refid="740" relation="include">
+        </childnode>
+      </node>
+      <node id="755">
+        <label>/tmp/openmm/openmmapi/include/openmm/VerletIntegrator.h</label>
+        <link refid="VerletIntegrator_8h_source"/>
+        <childnode refid="740" relation="include">
+        </childnode>
+      </node>
+      <node id="737">
+        <label>/tmp/openmm/openmmapi/include/openmm/State.h</label>
+        <link refid="State_8h_source"/>
+        <childnode refid="738" relation="include">
+        </childnode>
+        <childnode refid="742" relation="include">
+        </childnode>
+        <childnode refid="751" relation="include">
+        </childnode>
+        <childnode refid="740" relation="include">
+        </childnode>
+        <childnode refid="756" relation="include">
+        </childnode>
+      </node>
+      <node id="777">
+        <label>/tmp/openmm/openmmapi/include/openmm/VirtualSite.h</label>
+        <link refid="VirtualSite_8h_source"/>
+        <childnode refid="740" relation="include">
+        </childnode>
+      </node>
+      <node id="765">
+        <label>/tmp/openmm/openmmapi/include/openmm/CustomCompoundBondForce.h</label>
+        <link refid="CustomCompoundBondForce_8h_source"/>
+        <childnode refid="740" relation="include">
+        </childnode>
+      </node>
+      <node id="774">
+        <label>/tmp/openmm/openmmapi/include/openmm/PeriodicTorsionForce.h</label>
+        <link refid="PeriodicTorsionForce_8h_source"/>
+        <childnode refid="740" relation="include">
+        </childnode>
+      </node>
+      <node id="757">
+        <label>/tmp/openmm/plugins/drude/openmmapi/include/openmm/DrudeIntegrator.h</label>
+        <link refid="DrudeIntegrator_8h_source"/>
+        <childnode refid="758" relation="include">
+        </childnode>
+        <childnode refid="759" relation="include">
+        </childnode>
+      </node>
+      <node id="769">
+        <label>/tmp/openmm/openmmapi/include/openmm/CustomNonbondedForce.h</label>
+        <link refid="CustomNonbondedForce_8h_source"/>
+        <childnode refid="740" relation="include">
+        </childnode>
+      </node>
+      <node id="764">
+        <label>/tmp/openmm/openmmapi/include/openmm/CustomCentroidBondForce.h</label>
+        <link refid="CustomCentroidBondForce_8h_source"/>
+        <childnode refid="740" relation="include">
+        </childnode>
+      </node>
+      <node id="776">
+        <label>/tmp/openmm/openmmapi/include/openmm/RMSDForce.h</label>
+        <link refid="RMSDForce_8h_source"/>
+        <childnode refid="740" relation="include">
+        </childnode>
+      </node>
+      <node id="756">
+        <label>/tmp/openmm/plugins/rpmd/openmmapi/include/openmm/RPMDIntegrator.h</label>
+        <link refid="RPMDIntegrator_8h_source"/>
+      </node>
+      <node id="763">
+        <label>/tmp/openmm/openmmapi/include/openmm/CustomBondForce.h</label>
+        <link refid="CustomBondForce_8h_source"/>
+        <childnode refid="740" relation="include">
+        </childnode>
+      </node>
+      <node id="753">
+        <label>/tmp/openmm/openmmapi/include/openmm/VariableLangevinIntegrator.h</label>
+        <link refid="VariableLangevinIntegrator_8h_source"/>
+        <childnode refid="740" relation="include">
+        </childnode>
+      </node>
+      <node id="739">
+        <label>/tmp/openmm/openmmapi/include/openmm/BrownianIntegrator.h</label>
+        <link refid="BrownianIntegrator_8h_source"/>
+        <childnode refid="740" relation="include">
+        </childnode>
+      </node>
+      <node id="747">
+        <label>/tmp/openmm/plugins/drude/openmmapi/include/OpenMMDrude.h</label>
+        <link refid="OpenMMDrude_8h_source"/>
+      </node>
+      <node id="770">
+        <label>/tmp/openmm/openmmapi/include/openmm/CustomTorsionForce.h</label>
+        <link refid="CustomTorsionForce_8h_source"/>
+        <childnode refid="740" relation="include">
+        </childnode>
+      </node>
+      <node id="754">
+        <label>/tmp/openmm/openmmapi/include/openmm/VariableVerletIntegrator.h</label>
+        <link refid="VariableVerletIntegrator_8h_source"/>
+        <childnode refid="740" relation="include">
+        </childnode>
+      </node>
+      <node id="741">
+        <label>/tmp/openmm/openmmapi/include/openmm/CompoundIntegrator.h</label>
+        <link refid="CompoundIntegrator_8h_source"/>
+        <childnode refid="740" relation="include">
+        </childnode>
+      </node>
+      <node id="781">
+        <label>/tmp/openmm/plugins/amoeba/openmmapi/include/openmm/HippoNonbondedForce.h</label>
+        <link refid="HippoNonbondedForce_8h_source"/>
+        <childnode refid="779" relation="include">
+        </childnode>
+      </node>
+      <node id="766">
+        <label>/tmp/openmm/openmmapi/include/openmm/CustomExternalForce.h</label>
+        <link refid="CustomExternalForce_8h_source"/>
+        <childnode refid="740" relation="include">
+        </childnode>
+      </node>
+      <node id="742">
+        <label>/tmp/openmm/openmmapi/include/openmm/Context.h</label>
+        <link refid="Context_8h_source"/>
+        <childnode refid="743" relation="include">
+        </childnode>
+        <childnode refid="744" relation="include">
+        </childnode>
+        <childnode refid="745" relation="include">
+        </childnode>
+        <childnode refid="740" relation="include">
+        </childnode>
+        <childnode refid="746" relation="include">
+        </childnode>
+      </node>
+      <node id="752">
+        <label>/tmp/openmm/plugins/drude/openmmapi/include/openmm/DrudeNoseHooverIntegrator.h</label>
+        <link refid="DrudeNoseHooverIntegrator_8h_source"/>
+        <childnode refid="747" relation="include">
+        </childnode>
+      </node>
+      <node id="759">
+        <label>/tmp/openmm/plugins/drude/openmmapi/include/openmm/DrudeSCFIntegrator.h</label>
+        <link refid="DrudeSCFIntegrator_8h_source"/>
+        <childnode refid="747" relation="include">
+        </childnode>
+      </node>
+      <node id="773">
+        <label>/tmp/openmm/openmmapi/include/openmm/MonteCarloAnisotropicBarostat.h</label>
+        <link refid="MonteCarloAnisotropicBarostat_8h_source"/>
+        <childnode refid="740" relation="include">
+        </childnode>
+      </node>
+      <node id="749">
+        <label>/tmp/openmm/openmmapi/include/openmm/LangevinIntegrator.h</label>
+        <link refid="LangevinIntegrator_8h_source"/>
+        <childnode refid="740" relation="include">
+        </childnode>
+      </node>
+      <node id="762">
+        <label>/tmp/openmm/openmmapi/include/openmm/CustomAngleForce.h</label>
+        <link refid="CustomAngleForce_8h_source"/>
+        <childnode refid="740" relation="include">
+        </childnode>
+      </node>
+      <node id="771">
+        <label>/tmp/openmm/openmmapi/include/openmm/HarmonicAngleForce.h</label>
+        <link refid="HarmonicAngleForce_8h_source"/>
+        <childnode refid="740" relation="include">
+        </childnode>
+      </node>
+      <node id="750">
+        <label>/tmp/openmm/openmmapi/include/openmm/LangevinMiddleIntegrator.h</label>
+        <link refid="LangevinMiddleIntegrator_8h_source"/>
+        <childnode refid="740" relation="include">
+        </childnode>
+      </node>
+      <node id="768">
+        <label>/tmp/openmm/openmmapi/include/openmm/CustomHbondForce.h</label>
+        <link refid="CustomHbondForce_8h_source"/>
+        <childnode refid="740" relation="include">
+        </childnode>
+      </node>
+      <node id="761">
+        <label>/tmp/openmm/openmmapi/include/openmm/System.h</label>
+        <link refid="System_8h_source"/>
+        <childnode refid="742" relation="include">
+        </childnode>
+        <childnode refid="740" relation="include">
+        </childnode>
+      </node>
+      <node id="779">
+        <label>/tmp/openmm/plugins/amoeba/openmmapi/include/OpenMMAmoeba.h</label>
+        <link refid="OpenMMAmoeba_8h_source"/>
+      </node>
+      <node id="744">
+        <label>/tmp/openmm/openmmapi/include/openmm/LocalEnergyMinimizer.h</label>
+        <link refid="LocalEnergyMinimizer_8h_source"/>
+        <childnode refid="740" relation="include">
+        </childnode>
+      </node>
+      <node id="748">
+        <label>/tmp/openmm/openmmapi/include/openmm/CustomIntegrator.h</label>
+        <link refid="CustomIntegrator_8h_source"/>
+        <childnode refid="740" relation="include">
+        </childnode>
+      </node>
+      <node id="736">
+        <label>/tmp/openmm/openmmapi/include/openmm/Vec3.h</label>
+        <link refid="Vec3_8h"/>
+        <childnode refid="737" relation="include">
+        </childnode>
+        <childnode refid="738" relation="include">
+        </childnode>
+        <childnode refid="760" relation="include">
+        </childnode>
+        <childnode refid="761" relation="include">
+        </childnode>
+        <childnode refid="762" relation="include">
+        </childnode>
+        <childnode refid="763" relation="include">
+        </childnode>
+        <childnode refid="764" relation="include">
+        </childnode>
+        <childnode refid="765" relation="include">
+        </childnode>
+        <childnode refid="766" relation="include">
+        </childnode>
+        <childnode refid="767" relation="include">
+        </childnode>
+        <childnode refid="768" relation="include">
+        </childnode>
+        <childnode refid="748" relation="include">
+        </childnode>
+        <childnode refid="769" relation="include">
+        </childnode>
+        <childnode refid="770" relation="include">
+        </childnode>
+        <childnode refid="771" relation="include">
+        </childnode>
+        <childnode refid="772" relation="include">
+        </childnode>
+        <childnode refid="773" relation="include">
+        </childnode>
+        <childnode refid="774" relation="include">
+        </childnode>
+        <childnode refid="775" relation="include">
+        </childnode>
+        <childnode refid="776" relation="include">
+        </childnode>
+        <childnode refid="777" relation="include">
+        </childnode>
+        <childnode refid="740" relation="include">
+        </childnode>
+        <childnode refid="778" relation="include">
+        </childnode>
+        <childnode refid="780" relation="include">
+        </childnode>
+        <childnode refid="781" relation="include">
+        </childnode>
+        <childnode refid="756" relation="include">
+        </childnode>
+      </node>
+      <node id="780">
+        <label>/tmp/openmm/plugins/amoeba/openmmapi/include/openmm/AmoebaMultipoleForce.h</label>
+        <link refid="AmoebaMultipoleForce_8h_source"/>
+        <childnode refid="779" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classOpenMM_1_1Vec3" prot="public">OpenMM::Vec3</innerclass>
+    <innernamespace refid="namespaceOpenMM">OpenMM</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/tmp/openmm/openmmapi/include/openmm/Vec3.h"/>
+  </compounddef>
+</doxygen>

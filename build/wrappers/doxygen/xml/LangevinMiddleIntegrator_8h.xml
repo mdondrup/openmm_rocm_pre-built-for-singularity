@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="LangevinMiddleIntegrator_8h" kind="file" language="C++">
+    <compoundname>LangevinMiddleIntegrator.h</compoundname>
+    <includes refid="Integrator_8h" local="yes">Integrator.h</includes>
+    <includes local="yes">openmm/Kernel.h</includes>
+    <includes local="yes">internal/windowsExport.h</includes>
+    <includedby refid="OpenMM_8h" local="yes">/tmp/openmm/openmmapi/include/OpenMM.h</includedby>
+    <incdepgraph>
+      <node id="392">
+        <label>internal/windowsExport.h</label>
+      </node>
+      <node id="383">
+        <label>Integrator.h</label>
+        <link refid="Integrator_8h"/>
+        <childnode refid="384" relation="include">
+        </childnode>
+        <childnode refid="385" relation="include">
+        </childnode>
+        <childnode refid="388" relation="include">
+        </childnode>
+        <childnode refid="387" relation="include">
+        </childnode>
+        <childnode refid="389" relation="include">
+        </childnode>
+        <childnode refid="391" relation="include">
+        </childnode>
+        <childnode refid="392" relation="include">
+        </childnode>
+      </node>
+      <node id="386">
+        <label>cassert</label>
+      </node>
+      <node id="393">
+        <label>openmm/Kernel.h</label>
+      </node>
+      <node id="390">
+        <label>string</label>
+      </node>
+      <node id="389">
+        <label>map</label>
+      </node>
+      <node id="384">
+        <label>State.h</label>
+        <link refid="State_8h"/>
+        <childnode refid="385" relation="include">
+        </childnode>
+        <childnode refid="388" relation="include">
+        </childnode>
+        <childnode refid="389" relation="include">
+        </childnode>
+        <childnode refid="390" relation="include">
+        </childnode>
+        <childnode refid="391" relation="include">
+        </childnode>
+        <childnode refid="392" relation="include">
+        </childnode>
+      </node>
+      <node id="391">
+        <label>vector</label>
+      </node>
+      <node id="387">
+        <label>iosfwd</label>
+      </node>
+      <node id="388">
+        <label>openmm/serialization/SerializationNode.h</label>
+      </node>
+      <node id="382">
+        <label>/tmp/openmm/openmmapi/include/openmm/LangevinMiddleIntegrator.h</label>
+        <link refid="LangevinMiddleIntegrator_8h"/>
+        <childnode refid="383" relation="include">
+        </childnode>
+        <childnode refid="393" relation="include">
+        </childnode>
+        <childnode refid="392" relation="include">
+        </childnode>
+      </node>
+      <node id="385">
+        <label>Vec3.h</label>
+        <link refid="Vec3_8h"/>
+        <childnode refid="386" relation="include">
+        </childnode>
+        <childnode refid="387" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="395">
+        <label>/tmp/openmm/openmmapi/include/OpenMM.h</label>
+        <link refid="OpenMM_8h"/>
+      </node>
+      <node id="394">
+        <label>/tmp/openmm/openmmapi/include/openmm/LangevinMiddleIntegrator.h</label>
+        <link refid="LangevinMiddleIntegrator_8h"/>
+        <childnode refid="395" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classOpenMM_1_1LangevinMiddleIntegrator" prot="public">OpenMM::LangevinMiddleIntegrator</innerclass>
+    <innernamespace refid="namespaceOpenMM">OpenMM</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/tmp/openmm/openmmapi/include/openmm/LangevinMiddleIntegrator.h"/>
+  </compounddef>
+</doxygen>
