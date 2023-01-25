@@ -1,0 +1,1 @@
+/opt/rocm/bin/amdclang++  -O2 -DNDEBUG  -rdynamic -msse2 -DLEPTON_USE_JIT -Wl,--no-as-needed -lrt CMakeFiles/TestSerializeDrudeForce.dir/TestSerializeDrudeForce.cpp.o  -o ../../../../TestSerializeDrudeForce -Wl,-rpath,/tmp/openmm/build ../../../../libOpenMMDrude.so ../../../../libOpenMM.so.7.5 -ldl -lpthread 

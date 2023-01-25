@@ -1,0 +1,1 @@
+/opt/rocm/bin/amdclang++  -O2 -DNDEBUG  -rdynamic -msse2 -DLEPTON_USE_JIT -Wl,--no-as-needed -lrt CMakeFiles/HelloArgonInC.dir/HelloArgonInC.c.o CMakeFiles/HelloArgonInC.dir/Empty.cpp.o  -o ../HelloArgonInC -Wl,-rpath,/tmp/openmm/build ../libOpenMM.so.7.5 -ldl -lpthread 

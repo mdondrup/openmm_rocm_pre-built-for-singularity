@@ -1,0 +1,1 @@
+/opt/rocm/bin/amdclang++  -O2 -DNDEBUG  -rdynamic -msse2 -DLEPTON_USE_JIT -Wl,--no-as-needed -lrt CMakeFiles/TestReferenceHarmonicBondForce.dir/TestReferenceHarmonicBondForce.cpp.o  -o CMakeFiles/CMakeRelink.dir/TestReferenceHarmonicBondForce ../../../libOpenMM.so.7.5 -ldl -lpthread 

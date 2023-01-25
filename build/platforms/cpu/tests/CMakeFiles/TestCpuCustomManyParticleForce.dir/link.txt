@@ -1,0 +1,1 @@
+/opt/rocm/bin/amdclang++  -O2 -DNDEBUG  -rdynamic -msse2 -DLEPTON_USE_JIT -Wl,--no-as-needed -lrt CMakeFiles/TestCpuCustomManyParticleForce.dir/TestCpuCustomManyParticleForce.cpp.o  -o ../../../TestCpuCustomManyParticleForce -Wl,-rpath,/tmp/openmm/build ../../../libOpenMMCPU.so ../../../libOpenMM.so.7.5 -ldl -lpthread 

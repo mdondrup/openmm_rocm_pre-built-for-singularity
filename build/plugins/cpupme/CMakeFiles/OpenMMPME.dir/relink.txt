@@ -1,0 +1,1 @@
+/opt/rocm/bin/amdclang++ -fPIC -O2 -DNDEBUG -msse2 -DLEPTON_USE_JIT -Wl,--no-as-needed -lrt -shared -Wl,-soname,libOpenMMPME.so -o CMakeFiles/CMakeRelink.dir/libOpenMMPME.so CMakeFiles/OpenMMPME.dir/src/CpuPmeKernelFactory.cpp.o CMakeFiles/OpenMMPME.dir/src/CpuPmeKernels.cpp.o ../../libOpenMM.so.7.5 -lpthread -lfftw3f -lfftw3f_threads -ldl -lpthread 

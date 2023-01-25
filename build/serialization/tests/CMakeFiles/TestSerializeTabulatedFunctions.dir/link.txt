@@ -1,0 +1,1 @@
+/opt/rocm/bin/amdclang++  -O2 -DNDEBUG  -rdynamic -msse2 -DLEPTON_USE_JIT -Wl,--no-as-needed -lrt CMakeFiles/TestSerializeTabulatedFunctions.dir/TestSerializeTabulatedFunctions.cpp.o  -o ../../TestSerializeTabulatedFunctions -Wl,-rpath,/tmp/openmm/build ../../libOpenMM.so.7.5 -ldl -lpthread 

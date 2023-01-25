@@ -442,7 +442,7 @@ OPENMM_GENERATE_API_DOCS:BOOL=OFF
 OPENMM_PYTHON_STAGING_DIR:PATH=/tmp/openmm/build/python
 
 //This is the version of OpenMM which will be built.
-OPENMM_VERSION:STRING=8.0.0
+OPENMM_VERSION:STRING=7.5.1
 
 //Dependencies for the target
 OpenMMAmoebaReference_LIB_DEPENDS:STATIC=general;OpenMM;general;OpenMMAmoeba;
@@ -530,6 +530,8 @@ CMAKE_COLOR_MAKEFILE-ADVANCED:INTERNAL=1
 CMAKE_COMMAND:INTERNAL=/usr/bin/cmake
 //Path to cpack program executable.
 CMAKE_CPACK_COMMAND:INTERNAL=/usr/bin/cpack
+//ADVANCED property for variable: CMAKE_CTEST_COMMAND
+CMAKE_CTEST_COMMAND-ADVANCED:INTERNAL=1
 //Path to ctest program executable.
 CMAKE_CTEST_COMMAND:INTERNAL=/usr/bin/ctest
 //ADVANCED property for variable: CMAKE_CXX_COMPILER
@@ -614,7 +616,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=1
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=28
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -758,7 +760,7 @@ FFTW_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: FFTW_THREADS_LIBRARY
 FFTW_THREADS_LIBRARY-ADVANCED:INTERNAL=1
 //Details about finding Doxygen
-FIND_PACKAGE_MESSAGE_DETAILS_Doxygen:INTERNAL=[/usr/bin/doxygen][cfound components: doxygen missing components: dot][v()]
+FIND_PACKAGE_MESSAGE_DETAILS_Doxygen:INTERNAL=[/usr/bin/doxygen][cfound components:  doxygen missing components:  dot][v1.8.13()]
 //Details about finding OPENCL
 FIND_PACKAGE_MESSAGE_DETAILS_OPENCL:INTERNAL=[/opt/rocm/opencl/lib][/opt/rocm/opencl/include][v()]
 //Details about finding PythonInterp
