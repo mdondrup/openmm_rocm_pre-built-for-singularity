@@ -133,11 +133,11 @@ MODULE OpenMM_Types
         integer*8 :: handle = 0
     end type
 
-    type OpenMM_GBSAOBCForce
+    type OpenMM_GayBerneForce
         integer*8 :: handle = 0
     end type
 
-    type OpenMM_GayBerneForce
+    type OpenMM_GBSAOBCForce
         integer*8 :: handle = 0
     end type
 
@@ -181,15 +181,15 @@ MODULE OpenMM_Types
         integer*8 :: handle = 0
     end type
 
-    type OpenMM_CustomCVForce
-        integer*8 :: handle = 0
-    end type
-
     type OpenMM_CustomCompoundBondForce
         integer*8 :: handle = 0
     end type
 
     type OpenMM_CustomCentroidBondForce
+        integer*8 :: handle = 0
+    end type
+
+    type OpenMM_CustomCVForce
         integer*8 :: handle = 0
     end type
 
@@ -294,13 +294,13 @@ MODULE OpenMM_Types
     integer*4, parameter :: OpenMM_MonteCarloMembraneBarostat_ZFixed = 1
     integer*4, parameter :: OpenMM_MonteCarloMembraneBarostat_ConstantVolume = 2
 
-    integer*4, parameter :: OpenMM_GBSAOBCForce_NoCutoff = 0
-    integer*4, parameter :: OpenMM_GBSAOBCForce_CutoffNonPeriodic = 1
-    integer*4, parameter :: OpenMM_GBSAOBCForce_CutoffPeriodic = 2
-
     integer*4, parameter :: OpenMM_GayBerneForce_NoCutoff = 0
     integer*4, parameter :: OpenMM_GayBerneForce_CutoffNonPeriodic = 1
     integer*4, parameter :: OpenMM_GayBerneForce_CutoffPeriodic = 2
+
+    integer*4, parameter :: OpenMM_GBSAOBCForce_NoCutoff = 0
+    integer*4, parameter :: OpenMM_GBSAOBCForce_CutoffNonPeriodic = 1
+    integer*4, parameter :: OpenMM_GBSAOBCForce_CutoffPeriodic = 2
 
     integer*4, parameter :: OpenMM_CustomNonbondedForce_NoCutoff = 0
     integer*4, parameter :: OpenMM_CustomNonbondedForce_CutoffNonPeriodic = 1
@@ -2788,113 +2788,6 @@ k)
             integer*4 OpenMM_HarmonicAngleForce_usesPeriodicBoundaryConditions
         end function
 
-        ! OpenMM::GBSAOBCForce
-        subroutine OpenMM_GBSAOBCForce_create(result)
-            use OpenMM_Types; implicit none
-            type (OpenMM_GBSAOBCForce) result
-        end subroutine
-        subroutine OpenMM_GBSAOBCForce_destroy(destroy)
-            use OpenMM_Types; implicit none
-            type (OpenMM_GBSAOBCForce) destroy
-        end subroutine
-        function OpenMM_GBSAOBCForce_getNumParticles(target)
-            use OpenMM_Types; implicit none
-            type (OpenMM_GBSAOBCForce) target
-            integer*4 OpenMM_GBSAOBCForce_getNumParticles
-        end function
-        function OpenMM_GBSAOBCForce_addParticle(target, charge, &
-radius, &
-scalingFactor)
-            use OpenMM_Types; implicit none
-            type (OpenMM_GBSAOBCForce) target
-            real*8 charge
-            real*8 radius
-            real*8 scalingFactor
-            integer*4 OpenMM_GBSAOBCForce_addParticle
-        end function
-        subroutine OpenMM_GBSAOBCForce_getParticleParameters(target, index, &
-charge, &
-radius, &
-scalingFactor)
-            use OpenMM_Types; implicit none
-            type (OpenMM_GBSAOBCForce) target
-            integer*4 index
-            real*8 charge
-            real*8 radius
-            real*8 scalingFactor
-        end subroutine
-        subroutine OpenMM_GBSAOBCForce_setParticleParameters(target, index, &
-charge, &
-radius, &
-scalingFactor)
-            use OpenMM_Types; implicit none
-            type (OpenMM_GBSAOBCForce) target
-            integer*4 index
-            real*8 charge
-            real*8 radius
-            real*8 scalingFactor
-        end subroutine
-        function OpenMM_GBSAOBCForce_getSolventDielectric(target)
-            use OpenMM_Types; implicit none
-            type (OpenMM_GBSAOBCForce) target
-            real*8 OpenMM_GBSAOBCForce_getSolventDielectric
-        end function
-        subroutine OpenMM_GBSAOBCForce_setSolventDielectric(target, dielectric)
-            use OpenMM_Types; implicit none
-            type (OpenMM_GBSAOBCForce) target
-            real*8 dielectric
-        end subroutine
-        function OpenMM_GBSAOBCForce_getSoluteDielectric(target)
-            use OpenMM_Types; implicit none
-            type (OpenMM_GBSAOBCForce) target
-            real*8 OpenMM_GBSAOBCForce_getSoluteDielectric
-        end function
-        subroutine OpenMM_GBSAOBCForce_setSoluteDielectric(target, dielectric)
-            use OpenMM_Types; implicit none
-            type (OpenMM_GBSAOBCForce) target
-            real*8 dielectric
-        end subroutine
-        function OpenMM_GBSAOBCForce_getSurfaceAreaEnergy(target)
-            use OpenMM_Types; implicit none
-            type (OpenMM_GBSAOBCForce) target
-            real*8 OpenMM_GBSAOBCForce_getSurfaceAreaEnergy
-        end function
-        subroutine OpenMM_GBSAOBCForce_setSurfaceAreaEnergy(target, energy)
-            use OpenMM_Types; implicit none
-            type (OpenMM_GBSAOBCForce) target
-            real*8 energy
-        end subroutine
-        function OpenMM_GBSAOBCForce_getNonbondedMethod(target)
-            use OpenMM_Types; implicit none
-            type (OpenMM_GBSAOBCForce) target
-            integer*4 OpenMM_GBSAOBCForce_getNonbondedMethod
-        end function
-        subroutine OpenMM_GBSAOBCForce_setNonbondedMethod(target, method)
-            use OpenMM_Types; implicit none
-            type (OpenMM_GBSAOBCForce) target
-            integer*4 method
-        end subroutine
-        function OpenMM_GBSAOBCForce_getCutoffDistance(target)
-            use OpenMM_Types; implicit none
-            type (OpenMM_GBSAOBCForce) target
-            real*8 OpenMM_GBSAOBCForce_getCutoffDistance
-        end function
-        subroutine OpenMM_GBSAOBCForce_setCutoffDistance(target, distance)
-            use OpenMM_Types; implicit none
-            type (OpenMM_GBSAOBCForce) target
-            real*8 distance
-        end subroutine
-        subroutine OpenMM_GBSAOBCForce_updateParametersInContext(target, context)
-            use OpenMM_Types; implicit none
-            type (OpenMM_GBSAOBCForce) target
-            type (OpenMM_Context) context
-        end subroutine
-        function OpenMM_GBSAOBCForce_usesPeriodicBoundaryConditions(target)
-            use OpenMM_Types; implicit none
-            type (OpenMM_GBSAOBCForce) target
-            integer*4 OpenMM_GBSAOBCForce_usesPeriodicBoundaryConditions
-        end function
-
         ! OpenMM::GayBerneForce
         subroutine OpenMM_GayBerneForce_create(result)
             use OpenMM_Types; implicit none
@@ -3077,6 +2970,113 @@ epsilon)
             use OpenMM_Types; implicit none
             type (OpenMM_GayBerneForce) target
             integer*4 OpenMM_GayBerneForce_usesPeriodicBoundaryConditions
+        end function
+
+        ! OpenMM::GBSAOBCForce
+        subroutine OpenMM_GBSAOBCForce_create(result)
+            use OpenMM_Types; implicit none
+            type (OpenMM_GBSAOBCForce) result
+        end subroutine
+        subroutine OpenMM_GBSAOBCForce_destroy(destroy)
+            use OpenMM_Types; implicit none
+            type (OpenMM_GBSAOBCForce) destroy
+        end subroutine
+        function OpenMM_GBSAOBCForce_getNumParticles(target)
+            use OpenMM_Types; implicit none
+            type (OpenMM_GBSAOBCForce) target
+            integer*4 OpenMM_GBSAOBCForce_getNumParticles
+        end function
+        function OpenMM_GBSAOBCForce_addParticle(target, charge, &
+radius, &
+scalingFactor)
+            use OpenMM_Types; implicit none
+            type (OpenMM_GBSAOBCForce) target
+            real*8 charge
+            real*8 radius
+            real*8 scalingFactor
+            integer*4 OpenMM_GBSAOBCForce_addParticle
+        end function
+        subroutine OpenMM_GBSAOBCForce_getParticleParameters(target, index, &
+charge, &
+radius, &
+scalingFactor)
+            use OpenMM_Types; implicit none
+            type (OpenMM_GBSAOBCForce) target
+            integer*4 index
+            real*8 charge
+            real*8 radius
+            real*8 scalingFactor
+        end subroutine
+        subroutine OpenMM_GBSAOBCForce_setParticleParameters(target, index, &
+charge, &
+radius, &
+scalingFactor)
+            use OpenMM_Types; implicit none
+            type (OpenMM_GBSAOBCForce) target
+            integer*4 index
+            real*8 charge
+            real*8 radius
+            real*8 scalingFactor
+        end subroutine
+        function OpenMM_GBSAOBCForce_getSolventDielectric(target)
+            use OpenMM_Types; implicit none
+            type (OpenMM_GBSAOBCForce) target
+            real*8 OpenMM_GBSAOBCForce_getSolventDielectric
+        end function
+        subroutine OpenMM_GBSAOBCForce_setSolventDielectric(target, dielectric)
+            use OpenMM_Types; implicit none
+            type (OpenMM_GBSAOBCForce) target
+            real*8 dielectric
+        end subroutine
+        function OpenMM_GBSAOBCForce_getSoluteDielectric(target)
+            use OpenMM_Types; implicit none
+            type (OpenMM_GBSAOBCForce) target
+            real*8 OpenMM_GBSAOBCForce_getSoluteDielectric
+        end function
+        subroutine OpenMM_GBSAOBCForce_setSoluteDielectric(target, dielectric)
+            use OpenMM_Types; implicit none
+            type (OpenMM_GBSAOBCForce) target
+            real*8 dielectric
+        end subroutine
+        function OpenMM_GBSAOBCForce_getSurfaceAreaEnergy(target)
+            use OpenMM_Types; implicit none
+            type (OpenMM_GBSAOBCForce) target
+            real*8 OpenMM_GBSAOBCForce_getSurfaceAreaEnergy
+        end function
+        subroutine OpenMM_GBSAOBCForce_setSurfaceAreaEnergy(target, energy)
+            use OpenMM_Types; implicit none
+            type (OpenMM_GBSAOBCForce) target
+            real*8 energy
+        end subroutine
+        function OpenMM_GBSAOBCForce_getNonbondedMethod(target)
+            use OpenMM_Types; implicit none
+            type (OpenMM_GBSAOBCForce) target
+            integer*4 OpenMM_GBSAOBCForce_getNonbondedMethod
+        end function
+        subroutine OpenMM_GBSAOBCForce_setNonbondedMethod(target, method)
+            use OpenMM_Types; implicit none
+            type (OpenMM_GBSAOBCForce) target
+            integer*4 method
+        end subroutine
+        function OpenMM_GBSAOBCForce_getCutoffDistance(target)
+            use OpenMM_Types; implicit none
+            type (OpenMM_GBSAOBCForce) target
+            real*8 OpenMM_GBSAOBCForce_getCutoffDistance
+        end function
+        subroutine OpenMM_GBSAOBCForce_setCutoffDistance(target, distance)
+            use OpenMM_Types; implicit none
+            type (OpenMM_GBSAOBCForce) target
+            real*8 distance
+        end subroutine
+        subroutine OpenMM_GBSAOBCForce_updateParametersInContext(target, context)
+            use OpenMM_Types; implicit none
+            type (OpenMM_GBSAOBCForce) target
+            type (OpenMM_Context) context
+        end subroutine
+        function OpenMM_GBSAOBCForce_usesPeriodicBoundaryConditions(target)
+            use OpenMM_Types; implicit none
+            type (OpenMM_GBSAOBCForce) target
+            integer*4 OpenMM_GBSAOBCForce_usesPeriodicBoundaryConditions
         end function
 
         ! OpenMM::Discrete3DFunction
@@ -4901,155 +4901,6 @@ parameters)
             integer*4 OpenMM_CustomExternalForce_usesPeriodicBoundaryConditions
         end function
 
-        ! OpenMM::CustomCVForce
-        subroutine OpenMM_CustomCVForce_create(result, energy)
-            use OpenMM_Types; implicit none
-            type (OpenMM_CustomCVForce) result
-            character(*) energy
-        end subroutine
-        subroutine OpenMM_CustomCVForce_destroy(destroy)
-            use OpenMM_Types; implicit none
-            type (OpenMM_CustomCVForce) destroy
-        end subroutine
-        function OpenMM_CustomCVForce_getNumCollectiveVariables(target)
-            use OpenMM_Types; implicit none
-            type (OpenMM_CustomCVForce) target
-            integer*4 OpenMM_CustomCVForce_getNumCollectiveVariables
-        end function
-        function OpenMM_CustomCVForce_getNumGlobalParameters(target)
-            use OpenMM_Types; implicit none
-            type (OpenMM_CustomCVForce) target
-            integer*4 OpenMM_CustomCVForce_getNumGlobalParameters
-        end function
-        function OpenMM_CustomCVForce_getNumEnergyParameterDerivatives(target)
-            use OpenMM_Types; implicit none
-            type (OpenMM_CustomCVForce) target
-            integer*4 OpenMM_CustomCVForce_getNumEnergyParameterDerivatives
-        end function
-        function OpenMM_CustomCVForce_getNumTabulatedFunctions(target)
-            use OpenMM_Types; implicit none
-            type (OpenMM_CustomCVForce) target
-            integer*4 OpenMM_CustomCVForce_getNumTabulatedFunctions
-        end function
-        subroutine OpenMM_CustomCVForce_getEnergyFunction(target, result)
-            use OpenMM_Types; implicit none
-            type (OpenMM_CustomCVForce) target
-            character(*) result
-        end subroutine
-        subroutine OpenMM_CustomCVForce_setEnergyFunction(target, energy)
-            use OpenMM_Types; implicit none
-            type (OpenMM_CustomCVForce) target
-            character(*) energy
-        end subroutine
-        function OpenMM_CustomCVForce_addCollectiveVariable(target, name, &
-variable)
-            use OpenMM_Types; implicit none
-            type (OpenMM_CustomCVForce) target
-            character(*) name
-            type (OpenMM_Force) variable
-            integer*4 OpenMM_CustomCVForce_addCollectiveVariable
-        end function
-        subroutine OpenMM_CustomCVForce_getCollectiveVariableName(target, index, result)
-            use OpenMM_Types; implicit none
-            type (OpenMM_CustomCVForce) target
-            integer*4 index
-            character(*) result
-        end subroutine
-        subroutine OpenMM_CustomCVForce_getCollectiveVariable(target, index, result)
-            use OpenMM_Types; implicit none
-            type (OpenMM_CustomCVForce) target
-            integer*4 index
-            type (OpenMM_Force) result
-        end subroutine
-        function OpenMM_CustomCVForce_addGlobalParameter(target, name, &
-defaultValue)
-            use OpenMM_Types; implicit none
-            type (OpenMM_CustomCVForce) target
-            character(*) name
-            real*8 defaultValue
-            integer*4 OpenMM_CustomCVForce_addGlobalParameter
-        end function
-        subroutine OpenMM_CustomCVForce_getGlobalParameterName(target, index, result)
-            use OpenMM_Types; implicit none
-            type (OpenMM_CustomCVForce) target
-            integer*4 index
-            character(*) result
-        end subroutine
-        subroutine OpenMM_CustomCVForce_setGlobalParameterName(target, index, &
-name)
-            use OpenMM_Types; implicit none
-            type (OpenMM_CustomCVForce) target
-            integer*4 index
-            character(*) name
-        end subroutine
-        function OpenMM_CustomCVForce_getGlobalParameterDefaultValue(target, index)
-            use OpenMM_Types; implicit none
-            type (OpenMM_CustomCVForce) target
-            integer*4 index
-            real*8 OpenMM_CustomCVForce_getGlobalParameterDefaultValue
-        end function
-        subroutine OpenMM_CustomCVForce_setGlobalParameterDefaultValue(target, index, &
-defaultValue)
-            use OpenMM_Types; implicit none
-            type (OpenMM_CustomCVForce) target
-            integer*4 index
-            real*8 defaultValue
-        end subroutine
-        subroutine OpenMM_CustomCVForce_addEnergyParameterDerivative(target, name)
-            use OpenMM_Types; implicit none
-            type (OpenMM_CustomCVForce) target
-            character(*) name
-        end subroutine
-        subroutine OpenMM_CustomCVForce_getEnergyParameterDerivativeName(target, index, result)
-            use OpenMM_Types; implicit none
-            type (OpenMM_CustomCVForce) target
-            integer*4 index
-            character(*) result
-        end subroutine
-        function OpenMM_CustomCVForce_addTabulatedFunction(target, name, &
-function)
-            use OpenMM_Types; implicit none
-            type (OpenMM_CustomCVForce) target
-            character(*) name
-            type (OpenMM_TabulatedFunction) function
-            integer*4 OpenMM_CustomCVForce_addTabulatedFunction
-        end function
-        subroutine OpenMM_CustomCVForce_getTabulatedFunction(target, index, result)
-            use OpenMM_Types; implicit none
-            type (OpenMM_CustomCVForce) target
-            integer*4 index
-            type (OpenMM_TabulatedFunction) result
-        end subroutine
-        subroutine OpenMM_CustomCVForce_getTabulatedFunctionName(target, index, result)
-            use OpenMM_Types; implicit none
-            type (OpenMM_CustomCVForce) target
-            integer*4 index
-            character(*) result
-        end subroutine
-        subroutine OpenMM_CustomCVForce_getCollectiveVariableValues(target, context, &
-values)
-            use OpenMM_Types; implicit none
-            type (OpenMM_CustomCVForce) target
-            type (OpenMM_Context) context
-            type (OpenMM_DoubleArray) values
-        end subroutine
-        subroutine OpenMM_CustomCVForce_getInnerContext(target, context, result)
-            use OpenMM_Types; implicit none
-            type (OpenMM_CustomCVForce) target
-            type (OpenMM_Context) context
-            type (OpenMM_Context) result
-        end subroutine
-        subroutine OpenMM_CustomCVForce_updateParametersInContext(target, context)
-            use OpenMM_Types; implicit none
-            type (OpenMM_CustomCVForce) target
-            type (OpenMM_Context) context
-        end subroutine
-        function OpenMM_CustomCVForce_usesPeriodicBoundaryConditions(target)
-            use OpenMM_Types; implicit none
-            type (OpenMM_CustomCVForce) target
-            integer*4 OpenMM_CustomCVForce_usesPeriodicBoundaryConditions
-        end function
-
         ! OpenMM::CustomCompoundBondForce
         subroutine OpenMM_CustomCompoundBondForce_create(result, numParticles, &
 energy)
@@ -5483,6 +5334,155 @@ function)
             use OpenMM_Types; implicit none
             type (OpenMM_CustomCentroidBondForce) target
             integer*4 OpenMM_CustomCentroidBondForce_usesPeriodicBoundaryConditions
+        end function
+
+        ! OpenMM::CustomCVForce
+        subroutine OpenMM_CustomCVForce_create(result, energy)
+            use OpenMM_Types; implicit none
+            type (OpenMM_CustomCVForce) result
+            character(*) energy
+        end subroutine
+        subroutine OpenMM_CustomCVForce_destroy(destroy)
+            use OpenMM_Types; implicit none
+            type (OpenMM_CustomCVForce) destroy
+        end subroutine
+        function OpenMM_CustomCVForce_getNumCollectiveVariables(target)
+            use OpenMM_Types; implicit none
+            type (OpenMM_CustomCVForce) target
+            integer*4 OpenMM_CustomCVForce_getNumCollectiveVariables
+        end function
+        function OpenMM_CustomCVForce_getNumGlobalParameters(target)
+            use OpenMM_Types; implicit none
+            type (OpenMM_CustomCVForce) target
+            integer*4 OpenMM_CustomCVForce_getNumGlobalParameters
+        end function
+        function OpenMM_CustomCVForce_getNumEnergyParameterDerivatives(target)
+            use OpenMM_Types; implicit none
+            type (OpenMM_CustomCVForce) target
+            integer*4 OpenMM_CustomCVForce_getNumEnergyParameterDerivatives
+        end function
+        function OpenMM_CustomCVForce_getNumTabulatedFunctions(target)
+            use OpenMM_Types; implicit none
+            type (OpenMM_CustomCVForce) target
+            integer*4 OpenMM_CustomCVForce_getNumTabulatedFunctions
+        end function
+        subroutine OpenMM_CustomCVForce_getEnergyFunction(target, result)
+            use OpenMM_Types; implicit none
+            type (OpenMM_CustomCVForce) target
+            character(*) result
+        end subroutine
+        subroutine OpenMM_CustomCVForce_setEnergyFunction(target, energy)
+            use OpenMM_Types; implicit none
+            type (OpenMM_CustomCVForce) target
+            character(*) energy
+        end subroutine
+        function OpenMM_CustomCVForce_addCollectiveVariable(target, name, &
+variable)
+            use OpenMM_Types; implicit none
+            type (OpenMM_CustomCVForce) target
+            character(*) name
+            type (OpenMM_Force) variable
+            integer*4 OpenMM_CustomCVForce_addCollectiveVariable
+        end function
+        subroutine OpenMM_CustomCVForce_getCollectiveVariableName(target, index, result)
+            use OpenMM_Types; implicit none
+            type (OpenMM_CustomCVForce) target
+            integer*4 index
+            character(*) result
+        end subroutine
+        subroutine OpenMM_CustomCVForce_getCollectiveVariable(target, index, result)
+            use OpenMM_Types; implicit none
+            type (OpenMM_CustomCVForce) target
+            integer*4 index
+            type (OpenMM_Force) result
+        end subroutine
+        function OpenMM_CustomCVForce_addGlobalParameter(target, name, &
+defaultValue)
+            use OpenMM_Types; implicit none
+            type (OpenMM_CustomCVForce) target
+            character(*) name
+            real*8 defaultValue
+            integer*4 OpenMM_CustomCVForce_addGlobalParameter
+        end function
+        subroutine OpenMM_CustomCVForce_getGlobalParameterName(target, index, result)
+            use OpenMM_Types; implicit none
+            type (OpenMM_CustomCVForce) target
+            integer*4 index
+            character(*) result
+        end subroutine
+        subroutine OpenMM_CustomCVForce_setGlobalParameterName(target, index, &
+name)
+            use OpenMM_Types; implicit none
+            type (OpenMM_CustomCVForce) target
+            integer*4 index
+            character(*) name
+        end subroutine
+        function OpenMM_CustomCVForce_getGlobalParameterDefaultValue(target, index)
+            use OpenMM_Types; implicit none
+            type (OpenMM_CustomCVForce) target
+            integer*4 index
+            real*8 OpenMM_CustomCVForce_getGlobalParameterDefaultValue
+        end function
+        subroutine OpenMM_CustomCVForce_setGlobalParameterDefaultValue(target, index, &
+defaultValue)
+            use OpenMM_Types; implicit none
+            type (OpenMM_CustomCVForce) target
+            integer*4 index
+            real*8 defaultValue
+        end subroutine
+        subroutine OpenMM_CustomCVForce_addEnergyParameterDerivative(target, name)
+            use OpenMM_Types; implicit none
+            type (OpenMM_CustomCVForce) target
+            character(*) name
+        end subroutine
+        subroutine OpenMM_CustomCVForce_getEnergyParameterDerivativeName(target, index, result)
+            use OpenMM_Types; implicit none
+            type (OpenMM_CustomCVForce) target
+            integer*4 index
+            character(*) result
+        end subroutine
+        function OpenMM_CustomCVForce_addTabulatedFunction(target, name, &
+function)
+            use OpenMM_Types; implicit none
+            type (OpenMM_CustomCVForce) target
+            character(*) name
+            type (OpenMM_TabulatedFunction) function
+            integer*4 OpenMM_CustomCVForce_addTabulatedFunction
+        end function
+        subroutine OpenMM_CustomCVForce_getTabulatedFunction(target, index, result)
+            use OpenMM_Types; implicit none
+            type (OpenMM_CustomCVForce) target
+            integer*4 index
+            type (OpenMM_TabulatedFunction) result
+        end subroutine
+        subroutine OpenMM_CustomCVForce_getTabulatedFunctionName(target, index, result)
+            use OpenMM_Types; implicit none
+            type (OpenMM_CustomCVForce) target
+            integer*4 index
+            character(*) result
+        end subroutine
+        subroutine OpenMM_CustomCVForce_getCollectiveVariableValues(target, context, &
+values)
+            use OpenMM_Types; implicit none
+            type (OpenMM_CustomCVForce) target
+            type (OpenMM_Context) context
+            type (OpenMM_DoubleArray) values
+        end subroutine
+        subroutine OpenMM_CustomCVForce_getInnerContext(target, context, result)
+            use OpenMM_Types; implicit none
+            type (OpenMM_CustomCVForce) target
+            type (OpenMM_Context) context
+            type (OpenMM_Context) result
+        end subroutine
+        subroutine OpenMM_CustomCVForce_updateParametersInContext(target, context)
+            use OpenMM_Types; implicit none
+            type (OpenMM_CustomCVForce) target
+            type (OpenMM_Context) context
+        end subroutine
+        function OpenMM_CustomCVForce_usesPeriodicBoundaryConditions(target)
+            use OpenMM_Types; implicit none
+            type (OpenMM_CustomCVForce) target
+            integer*4 OpenMM_CustomCVForce_usesPeriodicBoundaryConditions
         end function
 
         ! OpenMM::CustomBondForce

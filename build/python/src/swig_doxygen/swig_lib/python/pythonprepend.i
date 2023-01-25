@@ -136,6 +136,12 @@
              % self.__class__.__name__)
         raise Exception(s)
 %}
+%pythonprepend OpenMM::CustomCompoundBondForce::addTabulatedFunction(const std::string &name, TabulatedFunction *function) %{
+    if not function.thisown:
+        s = ("the %s object does not own its corresponding OpenMM object"
+             % self.__class__.__name__)
+        raise Exception(s)
+%}
 %pythonprepend OpenMM::CustomCVForce::addCollectiveVariable(const std::string &name, Force *variable) %{
     if not variable.thisown:
         s = ("the %s object does not own its corresponding OpenMM object"
@@ -143,12 +149,6 @@
         raise Exception(s)
 %}
 %pythonprepend OpenMM::CustomCVForce::addTabulatedFunction(const std::string &name, TabulatedFunction *function) %{
-    if not function.thisown:
-        s = ("the %s object does not own its corresponding OpenMM object"
-             % self.__class__.__name__)
-        raise Exception(s)
-%}
-%pythonprepend OpenMM::CustomCompoundBondForce::addTabulatedFunction(const std::string &name, TabulatedFunction *function) %{
     if not function.thisown:
         s = ("the %s object does not own its corresponding OpenMM object"
              % self.__class__.__name__)

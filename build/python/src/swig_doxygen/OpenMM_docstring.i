@@ -3407,118 +3407,6 @@ bool
     true if force uses PBC and false otherwise";
 
 
-%feature("docstring") GBSAOBCForce "This class implements an implicit solvation force using the GBSA-OBC model.
-
-To use this class, create a GBSAOBCForce object, then call addParticle() once for each particle in the System to define its parameters. The number of particles for which you define GBSA parameters must be exactly equal to the number of particles in the System, or else an exception will be thrown when you try to create a Context. After a particle has been added, you can modify its force field parameters by calling setParticleParameters(). This will have no effect on Contexts that already exist unless you call updateParametersInContext().
-
-When using this Force, the System should also include a NonbondedForce, and both objects must specify identical charges for all particles. Otherwise, the results will not be correct. Furthermore, if the nonbonded method is set to CutoffNonPeriodic or CutoffPeriodic, you should call setReactionFieldDielectric(1.0) on the NonbondedForce to turn off the reaction field approximation, which does not produce correct results when combined with GBSA.";
-%feature("docstring") OpenMM::GBSAOBCForce::GBSAOBCForce "Create a GBSAOBCForce.";
-
-
-%feature("docstring") OpenMM::GBSAOBCForce::getNumParticles "Get the number of particles in the system.";
-
-
-%feature("docstring") OpenMM::GBSAOBCForce::addParticle "Add the GBSA parameters for a particle. This should be called once for each particle in the System. When it is called for the i'th time, it specifies the parameters for the i'th particle.
-
-Parameters
-----------
-charge : double
-    the charge of the particle, measured in units of the proton charge
-radius : double
-    the GBSA radius of the particle, measured in nm
-scalingFactor : double
-    the OBC scaling factor for the particle
-
-Returns
--------
-int
-    the index of the particle that was added";
-
-
-%feature("docstring") OpenMM::GBSAOBCForce::getParticleParameters "Get the force field parameters for a particle.
-
-Parameters
-----------
-index : int
-    the index of the particle for which to get parameters
-
-Returns
--------
-charge : double
-    the charge of the particle, measured in units of the proton charge
-radius : double
-    the GBSA radius of the particle, measured in nm
-scalingFactor : double
-    the OBC scaling factor for the particle";
-
-
-%feature("docstring") OpenMM::GBSAOBCForce::setParticleParameters "Set the force field parameters for a particle.
-
-Parameters
-----------
-index : int
-    the index of the particle for which to set parameters
-charge : double
-    the charge of the particle, measured in units of the proton charge
-radius : double
-    the GBSA radius of the particle, measured in nm
-scalingFactor : double
-    the OBC scaling factor for the particle";
-
-
-%feature("docstring") OpenMM::GBSAOBCForce::getSolventDielectric "Get the dielectric constant for the solvent.";
-
-
-%feature("docstring") OpenMM::GBSAOBCForce::setSolventDielectric "Set the dielectric constant for the solvent.";
-
-
-%feature("docstring") OpenMM::GBSAOBCForce::getSoluteDielectric "Get the dielectric constant for the solute.";
-
-
-%feature("docstring") OpenMM::GBSAOBCForce::setSoluteDielectric "Set the dielectric constant for the solute.";
-
-
-%feature("docstring") OpenMM::GBSAOBCForce::getSurfaceAreaEnergy "Get the energy scale for the surface energy term, measured in kJ/mol/nm^2.";
-
-
-%feature("docstring") OpenMM::GBSAOBCForce::setSurfaceAreaEnergy "Set the energy scale for the surface energy term, measured in kJ/mol/nm^2.";
-
-
-%feature("docstring") OpenMM::GBSAOBCForce::getNonbondedMethod "Get the method used for handling long range nonbonded interactions.";
-
-
-%feature("docstring") OpenMM::GBSAOBCForce::setNonbondedMethod "Set the method used for handling long range nonbonded interactions.";
-
-
-%feature("docstring") OpenMM::GBSAOBCForce::getCutoffDistance "Get the cutoff distance (in nm) being used for nonbonded interactions. If the NonbondedMethod in use is NoCutoff, this value will have no effect.
-
-Returns
--------
-double
-    the cutoff distance, measured in nm";
-
-
-%feature("docstring") OpenMM::GBSAOBCForce::setCutoffDistance "Set the cutoff distance (in nm) being used for nonbonded interactions. If the NonbondedMethod in use is NoCutoff, this value will have no effect.
-
-Parameters
-----------
-distance : double
-    the cutoff distance, measured in nm";
-
-
-%feature("docstring") OpenMM::GBSAOBCForce::updateParametersInContext "Update the particle parameters in a Context to match those stored in this Force object. This method provides an efficient method to update certain parameters in an existing Context without needing to reinitialize it. Simply call setParticleParameters() to modify this object's parameters, then call updateParametersInContext() to copy them over to the Context.
-
-The only information this method updates is the values of per-particle parameters. All other aspects of the Force (the nonbonded method, the cutoff distance, etc.) are unaffected and can only be changed by reinitializing the Context. Furthermore, this method cannot be used to add new particles, only to change the parameters of existing ones.";
-
-
-%feature("docstring") OpenMM::GBSAOBCForce::usesPeriodicBoundaryConditions "Returns whether or not this force makes use of periodic boundary conditions.
-
-Returns
--------
-bool
-    true if force uses PBC and false otherwise";
-
-
 %feature("docstring") GayBerneForce "This class implements the Gay-Berne anisotropic potential. This is similar to a Lennard-Jones potential, but it represents the particles as ellipsoids rather than point particles. In addition to the standard sigma and epsilon parameters, each particle has three widths sx, sy, and sz that give the diameter of the ellipsoid along each axis. It also has three scale factors ex, ey, and ez that scale the strength of the interaction along each axis. You can think of this force as a Lennard-Jones interaction computed based on the distance between the nearest points on two ellipsoids. The scale factors act as multipliers for epsilon along each axis, so the strength of the interaction along the ellipsoid's x axis is multiplied by ex, and likewise for the other axes. If two particles each have all their widths set to sigma and all their scale factors set to 1, the interaction simplifies to a standard Lennard-Jones force between point particles.
 
 The orientation of a particle's ellipsoid is determined based on the positions of two other particles. The vector to the first particle sets the direction of the x axis. The vector to the second particle (after subtracting out any x component) sets the direction of the y axis. If the ellipsoid is axially symmetric (sy=sz and ey=ez), you can omit the second particle and define only an x axis direction. If the ellipsoid is a sphere (all three widths and all three scale factors are equal), both particles can be omitted.
@@ -3723,6 +3611,118 @@ This method has several limitations. The only information it updates is the para
 
 
 %feature("docstring") OpenMM::GayBerneForce::usesPeriodicBoundaryConditions "Returns whether or not this force makes use of periodic boundary conditions.
+
+Returns
+-------
+bool
+    true if force uses PBC and false otherwise";
+
+
+%feature("docstring") GBSAOBCForce "This class implements an implicit solvation force using the GBSA-OBC model.
+
+To use this class, create a GBSAOBCForce object, then call addParticle() once for each particle in the System to define its parameters. The number of particles for which you define GBSA parameters must be exactly equal to the number of particles in the System, or else an exception will be thrown when you try to create a Context. After a particle has been added, you can modify its force field parameters by calling setParticleParameters(). This will have no effect on Contexts that already exist unless you call updateParametersInContext().
+
+When using this Force, the System should also include a NonbondedForce, and both objects must specify identical charges for all particles. Otherwise, the results will not be correct. Furthermore, if the nonbonded method is set to CutoffNonPeriodic or CutoffPeriodic, you should call setReactionFieldDielectric(1.0) on the NonbondedForce to turn off the reaction field approximation, which does not produce correct results when combined with GBSA.";
+%feature("docstring") OpenMM::GBSAOBCForce::GBSAOBCForce "Create a GBSAOBCForce.";
+
+
+%feature("docstring") OpenMM::GBSAOBCForce::getNumParticles "Get the number of particles in the system.";
+
+
+%feature("docstring") OpenMM::GBSAOBCForce::addParticle "Add the GBSA parameters for a particle. This should be called once for each particle in the System. When it is called for the i'th time, it specifies the parameters for the i'th particle.
+
+Parameters
+----------
+charge : double
+    the charge of the particle, measured in units of the proton charge
+radius : double
+    the GBSA radius of the particle, measured in nm
+scalingFactor : double
+    the OBC scaling factor for the particle
+
+Returns
+-------
+int
+    the index of the particle that was added";
+
+
+%feature("docstring") OpenMM::GBSAOBCForce::getParticleParameters "Get the force field parameters for a particle.
+
+Parameters
+----------
+index : int
+    the index of the particle for which to get parameters
+
+Returns
+-------
+charge : double
+    the charge of the particle, measured in units of the proton charge
+radius : double
+    the GBSA radius of the particle, measured in nm
+scalingFactor : double
+    the OBC scaling factor for the particle";
+
+
+%feature("docstring") OpenMM::GBSAOBCForce::setParticleParameters "Set the force field parameters for a particle.
+
+Parameters
+----------
+index : int
+    the index of the particle for which to set parameters
+charge : double
+    the charge of the particle, measured in units of the proton charge
+radius : double
+    the GBSA radius of the particle, measured in nm
+scalingFactor : double
+    the OBC scaling factor for the particle";
+
+
+%feature("docstring") OpenMM::GBSAOBCForce::getSolventDielectric "Get the dielectric constant for the solvent.";
+
+
+%feature("docstring") OpenMM::GBSAOBCForce::setSolventDielectric "Set the dielectric constant for the solvent.";
+
+
+%feature("docstring") OpenMM::GBSAOBCForce::getSoluteDielectric "Get the dielectric constant for the solute.";
+
+
+%feature("docstring") OpenMM::GBSAOBCForce::setSoluteDielectric "Set the dielectric constant for the solute.";
+
+
+%feature("docstring") OpenMM::GBSAOBCForce::getSurfaceAreaEnergy "Get the energy scale for the surface energy term, measured in kJ/mol/nm^2.";
+
+
+%feature("docstring") OpenMM::GBSAOBCForce::setSurfaceAreaEnergy "Set the energy scale for the surface energy term, measured in kJ/mol/nm^2.";
+
+
+%feature("docstring") OpenMM::GBSAOBCForce::getNonbondedMethod "Get the method used for handling long range nonbonded interactions.";
+
+
+%feature("docstring") OpenMM::GBSAOBCForce::setNonbondedMethod "Set the method used for handling long range nonbonded interactions.";
+
+
+%feature("docstring") OpenMM::GBSAOBCForce::getCutoffDistance "Get the cutoff distance (in nm) being used for nonbonded interactions. If the NonbondedMethod in use is NoCutoff, this value will have no effect.
+
+Returns
+-------
+double
+    the cutoff distance, measured in nm";
+
+
+%feature("docstring") OpenMM::GBSAOBCForce::setCutoffDistance "Set the cutoff distance (in nm) being used for nonbonded interactions. If the NonbondedMethod in use is NoCutoff, this value will have no effect.
+
+Parameters
+----------
+distance : double
+    the cutoff distance, measured in nm";
+
+
+%feature("docstring") OpenMM::GBSAOBCForce::updateParametersInContext "Update the particle parameters in a Context to match those stored in this Force object. This method provides an efficient method to update certain parameters in an existing Context without needing to reinitialize it. Simply call setParticleParameters() to modify this object's parameters, then call updateParametersInContext() to copy them over to the Context.
+
+The only information this method updates is the values of per-particle parameters. All other aspects of the Force (the nonbonded method, the cutoff distance, etc.) are unaffected and can only be changed by reinitializing the Context. Furthermore, this method cannot be used to add new particles, only to change the parameters of existing ones.";
+
+
+%feature("docstring") OpenMM::GBSAOBCForce::usesPeriodicBoundaryConditions "Returns whether or not this force makes use of periodic boundary conditions.
 
 Returns
 -------
@@ -6948,276 +6948,6 @@ bool
     false";
 
 
-%feature("docstring") CustomCVForce "This class supports energy functions that depend on collective variables. To use it, you define a set of collective variables (scalar valued functions that depend on the particle positions), and an algebraic expression for the energy as a function of the collective variables. The expression also may involve tabulated functions, and may depend on arbitrary global parameters.
-
-Each collective variable is defined by a Force object. The Force's potential energy is computed, and that becomes the value of the variable. This provides enormous flexibility in defining collective variables, especially by using custom forces. Anything that can be computed as a potential function can also be used as a collective variable.
-
-To use this class, create a CustomCVForce object, passing an algebraic expression to the constructor that defines the potential energy. Then call addCollectiveVariable() to define collective variables and addGlobalParameter() to define global parameters. The values of global parameters may be modified during a simulation by calling Context::setParameter().
-
-This class also has the ability to compute derivatives of the potential energy with respect to global parameters. Call addEnergyParameterDerivative() to request that the derivative with respect to a particular parameter be computed. You can then query its value in a Context by calling getState() on it.
-
-Expressions may involve the operators + (add), - (subtract), * (multiply), / (divide), and ^ (power), and the following functions: sqrt, exp, log, sin, cos, sec, csc, tan, cot, asin, acos, atan, atan2, sinh, cosh, tanh, erf, erfc, min, max, abs, floor, ceil, step, delta, select. All trigonometric functions are defined in radians, and log is the natural logarithm. step(x) = 0 if x is less than 0, 1 otherwise. delta(x) = 1 if x is 0, 0 otherwise. select(x,y,z) = z if x = 0, y otherwise.
-
-In addition, you can call addTabulatedFunction() to define a new function based on tabulated values. You specify the function by creating a TabulatedFunction object. That function can then appear in the expression.";
-%feature("docstring") OpenMM::CustomCVForce::CustomCVForce "Create a CustomCVForce.
-
-Parameters
-----------
-energy : string
-    an algebraic expression giving the energy of the system as a function of the collective variables and global parameters";
-
-
-
-
-%feature("docstring") OpenMM::CustomCVForce::getNumCollectiveVariables "Get the number of collective variables that the interaction depends on.";
-
-
-%feature("docstring") OpenMM::CustomCVForce::getNumGlobalParameters "Get the number of global parameters that the interaction depends on.";
-
-
-%feature("docstring") OpenMM::CustomCVForce::getNumEnergyParameterDerivatives "Get the number of global parameters with respect to which the derivative of the energy should be computed.";
-
-
-%feature("docstring") OpenMM::CustomCVForce::getNumTabulatedFunctions "Get the number of tabulated functions that have been defined.";
-
-
-%feature("docstring") OpenMM::CustomCVForce::getEnergyFunction "Get the algebraic expression that gives the energy of the system";
-
-
-%feature("docstring") OpenMM::CustomCVForce::setEnergyFunction "Set the algebraic expression that gives the energy of the system";
-
-
-%feature("docstring") OpenMM::CustomCVForce::addCollectiveVariable "Add a collective variable that the force may depend on. The collective variable is represented by a Force object, which should have been created on the heap with the \"new\" operator. The CustomCVForce takes over ownership of it, and deletes the Force when the CustomCVForce itself is deleted.
-
-Parameters
-----------
-name : string
-    the name of the collective variable, as it will appear in the energy expression
-variable : Force *
-    the collective variable, represented by a Force object. The value of the variable is the energy computed by the Force.
-
-Returns
--------
-int
-    the index within the Force of the variable that was added";
-
-
-%feature("docstring") OpenMM::CustomCVForce::getCollectiveVariableName "Get the name of a collective variable.
-
-Parameters
-----------
-index : int
-    the index of the collective variable for which to get the name
-
-Returns
--------
-string
-    the variable name";
-
-
-%feature("docstring") OpenMM::CustomCVForce::getCollectiveVariable "Get a writable reference to the Force object that computes a collective variable.
-
-Parameters
-----------
-index : int
-    the index of the collective variable to get
-
-Returns
--------
-Force
-    the Force object";
-
-
-%feature("docstring") OpenMM::CustomCVForce::getCollectiveVariable "Get a const reference to the Force object that computes a collective variable.
-
-Parameters
-----------
-index : int
-    the index of the collective variable to get
-
-Returns
--------
-Force
-    the Force object";
-
-
-%feature("docstring") OpenMM::CustomCVForce::addGlobalParameter "Add a new global parameter that the interaction may depend on. The default value provided to this method is the initial value of the parameter in newly created Contexts. You can change the value at any time by calling setParameter() on the Context.
-
-Parameters
-----------
-name : string
-    the name of the parameter
-defaultValue : double
-    the default value of the parameter
-
-Returns
--------
-int
-    the index of the parameter that was added";
-
-
-%feature("docstring") OpenMM::CustomCVForce::getGlobalParameterName "Get the name of a global parameter.
-
-Parameters
-----------
-index : int
-    the index of the parameter for which to get the name
-
-Returns
--------
-string
-    the parameter name";
-
-
-%feature("docstring") OpenMM::CustomCVForce::setGlobalParameterName "Set the name of a global parameter.
-
-Parameters
-----------
-index : int
-    the index of the parameter for which to set the name
-name : string
-    the name of the parameter";
-
-
-%feature("docstring") OpenMM::CustomCVForce::getGlobalParameterDefaultValue "Get the default value of a global parameter.
-
-Parameters
-----------
-index : int
-    the index of the parameter for which to get the default value
-
-Returns
--------
-double
-    the parameter default value";
-
-
-%feature("docstring") OpenMM::CustomCVForce::setGlobalParameterDefaultValue "Set the default value of a global parameter.
-
-Parameters
-----------
-index : int
-    the index of the parameter for which to set the default value
-defaultValue : double
-    the default value of the parameter";
-
-
-%feature("docstring") OpenMM::CustomCVForce::addEnergyParameterDerivative "Request that this Force compute the derivative of its energy with respect to a global parameter. The parameter must have already been added with addGlobalParameter().
-
-Parameters
-----------
-name : string
-    the name of the parameter";
-
-
-%feature("docstring") OpenMM::CustomCVForce::getEnergyParameterDerivativeName "Get the name of a global parameter with respect to which this Force should compute the derivative of the energy.
-
-Parameters
-----------
-index : int
-    the index of the parameter derivative, between 0 and getNumEnergyParameterDerivatives()
-
-Returns
--------
-string
-    the parameter name";
-
-
-%feature("docstring") OpenMM::CustomCVForce::addTabulatedFunction "Add a tabulated function that may appear in the energy expression.
-
-Parameters
-----------
-name : string
-    the name of the function as it appears in expressions
-function : TabulatedFunction *
-    a TabulatedFunction object defining the function. The TabulatedFunction should have been created on the heap with the \"new\" operator. The Force takes over ownership of it, and deletes it when the Force itself is deleted.
-
-Returns
--------
-int
-    the index of the function that was added";
-
-
-%feature("docstring") OpenMM::CustomCVForce::getTabulatedFunction "Get a const reference to a tabulated function that may appear in the energy expression.
-
-Parameters
-----------
-index : int
-    the index of the function to get
-
-Returns
--------
-TabulatedFunction
-    the TabulatedFunction object defining the function";
-
-
-%feature("docstring") OpenMM::CustomCVForce::getTabulatedFunction "Get a reference to a tabulated function that may appear in the energy expression.
-
-Parameters
-----------
-index : int
-    the index of the function to get
-
-Returns
--------
-TabulatedFunction
-    the TabulatedFunction object defining the function";
-
-
-%feature("docstring") OpenMM::CustomCVForce::getTabulatedFunctionName "Get the name of a tabulated function that may appear in the energy expression.
-
-Parameters
-----------
-index : int
-    the index of the function to get
-
-Returns
--------
-string
-    the name of the function as it appears in expressions";
-
-
-%feature("docstring") OpenMM::CustomCVForce::getCollectiveVariableValues "Get the current values of the collective variables in a Context.
-
-Parameters
-----------
-context : Context
-    the Context for which to get the values
-
-Returns
--------
-values : vector< double >
-    the values of the collective variables are computed and stored into this";
-
-
-%feature("docstring") OpenMM::CustomCVForce::getInnerContext "Get the inner Context used for evaluating collective variables.
-
-When you create a Context for a System that contains a CustomCVForce, internally it creates a new System, adds the Forces that define the CVs to it, creates a new Context for that System, and uses it to evaluate the variables. In most cases you can ignore all of this. It is just an implementation detail. However, there are a few cases where you need to directly access that internal Context. For example, if you want to modify one of the Forces that defines a collective variable and call updateParametersInContext() on it, you need to pass that inner Context to it. This method returns a reference to it.
-
-Parameters
-----------
-context : Context
-    the Context containing the CustomCVForce
-
-Returns
--------
-Context
-    the inner Context used to evaluate the collective variables";
-
-
-%feature("docstring") OpenMM::CustomCVForce::updateParametersInContext "Update the tabulated function parameters in a Context to match those stored in this Force object. This method provides an efficient method to update certain parameters in an existing Context without needing to reinitialize it. Simply call getTabulatedFunction(index).setFunctionParameters() to modify this object's parameters, then call updateParametersInContext() to copy them over to the Context.
-
-This method is very limited. The only information it updates is the parameters of tabulated functions. All other aspects of the Force (the energy expression, the set of collective variables, etc.) are unaffected and can only be changed by reinitializing the Context.";
-
-
-%feature("docstring") OpenMM::CustomCVForce::usesPeriodicBoundaryConditions "Returns whether or not this force makes use of periodic boundary conditions.
-
-Returns
--------
-bool
-    true if force uses PBC and false otherwise";
-
-
 %feature("docstring") CustomCompoundBondForce "This class supports a wide variety of bonded interactions. It defines a \"bond\" as a single energy term that depends on the positions of a fixed set of particles. The number of particles involved in a bond, and how the energy depends on their positions, is configurable. It may depend on the positions of individual particles, the distances between pairs of particles, the angles formed by sets of three particles, and the dihedral angles formed by sets of four particles.
 
 We refer to the particles in a bond as p1, p2, p3, etc. For each bond, CustomCompoundBondForce evaluates a user supplied algebraic expression to determine the interaction energy. The expression may depend on the following variables and functions:
@@ -7887,6 +7617,276 @@ This method has several limitations. The only information it updates is the valu
 
 
 %feature("docstring") OpenMM::CustomCentroidBondForce::usesPeriodicBoundaryConditions "Returns whether or not this force makes use of periodic boundary conditions.
+
+Returns
+-------
+bool
+    true if force uses PBC and false otherwise";
+
+
+%feature("docstring") CustomCVForce "This class supports energy functions that depend on collective variables. To use it, you define a set of collective variables (scalar valued functions that depend on the particle positions), and an algebraic expression for the energy as a function of the collective variables. The expression also may involve tabulated functions, and may depend on arbitrary global parameters.
+
+Each collective variable is defined by a Force object. The Force's potential energy is computed, and that becomes the value of the variable. This provides enormous flexibility in defining collective variables, especially by using custom forces. Anything that can be computed as a potential function can also be used as a collective variable.
+
+To use this class, create a CustomCVForce object, passing an algebraic expression to the constructor that defines the potential energy. Then call addCollectiveVariable() to define collective variables and addGlobalParameter() to define global parameters. The values of global parameters may be modified during a simulation by calling Context::setParameter().
+
+This class also has the ability to compute derivatives of the potential energy with respect to global parameters. Call addEnergyParameterDerivative() to request that the derivative with respect to a particular parameter be computed. You can then query its value in a Context by calling getState() on it.
+
+Expressions may involve the operators + (add), - (subtract), * (multiply), / (divide), and ^ (power), and the following functions: sqrt, exp, log, sin, cos, sec, csc, tan, cot, asin, acos, atan, atan2, sinh, cosh, tanh, erf, erfc, min, max, abs, floor, ceil, step, delta, select. All trigonometric functions are defined in radians, and log is the natural logarithm. step(x) = 0 if x is less than 0, 1 otherwise. delta(x) = 1 if x is 0, 0 otherwise. select(x,y,z) = z if x = 0, y otherwise.
+
+In addition, you can call addTabulatedFunction() to define a new function based on tabulated values. You specify the function by creating a TabulatedFunction object. That function can then appear in the expression.";
+%feature("docstring") OpenMM::CustomCVForce::CustomCVForce "Create a CustomCVForce.
+
+Parameters
+----------
+energy : string
+    an algebraic expression giving the energy of the system as a function of the collective variables and global parameters";
+
+
+
+
+%feature("docstring") OpenMM::CustomCVForce::getNumCollectiveVariables "Get the number of collective variables that the interaction depends on.";
+
+
+%feature("docstring") OpenMM::CustomCVForce::getNumGlobalParameters "Get the number of global parameters that the interaction depends on.";
+
+
+%feature("docstring") OpenMM::CustomCVForce::getNumEnergyParameterDerivatives "Get the number of global parameters with respect to which the derivative of the energy should be computed.";
+
+
+%feature("docstring") OpenMM::CustomCVForce::getNumTabulatedFunctions "Get the number of tabulated functions that have been defined.";
+
+
+%feature("docstring") OpenMM::CustomCVForce::getEnergyFunction "Get the algebraic expression that gives the energy of the system";
+
+
+%feature("docstring") OpenMM::CustomCVForce::setEnergyFunction "Set the algebraic expression that gives the energy of the system";
+
+
+%feature("docstring") OpenMM::CustomCVForce::addCollectiveVariable "Add a collective variable that the force may depend on. The collective variable is represented by a Force object, which should have been created on the heap with the \"new\" operator. The CustomCVForce takes over ownership of it, and deletes the Force when the CustomCVForce itself is deleted.
+
+Parameters
+----------
+name : string
+    the name of the collective variable, as it will appear in the energy expression
+variable : Force *
+    the collective variable, represented by a Force object. The value of the variable is the energy computed by the Force.
+
+Returns
+-------
+int
+    the index within the Force of the variable that was added";
+
+
+%feature("docstring") OpenMM::CustomCVForce::getCollectiveVariableName "Get the name of a collective variable.
+
+Parameters
+----------
+index : int
+    the index of the collective variable for which to get the name
+
+Returns
+-------
+string
+    the variable name";
+
+
+%feature("docstring") OpenMM::CustomCVForce::getCollectiveVariable "Get a writable reference to the Force object that computes a collective variable.
+
+Parameters
+----------
+index : int
+    the index of the collective variable to get
+
+Returns
+-------
+Force
+    the Force object";
+
+
+%feature("docstring") OpenMM::CustomCVForce::getCollectiveVariable "Get a const reference to the Force object that computes a collective variable.
+
+Parameters
+----------
+index : int
+    the index of the collective variable to get
+
+Returns
+-------
+Force
+    the Force object";
+
+
+%feature("docstring") OpenMM::CustomCVForce::addGlobalParameter "Add a new global parameter that the interaction may depend on. The default value provided to this method is the initial value of the parameter in newly created Contexts. You can change the value at any time by calling setParameter() on the Context.
+
+Parameters
+----------
+name : string
+    the name of the parameter
+defaultValue : double
+    the default value of the parameter
+
+Returns
+-------
+int
+    the index of the parameter that was added";
+
+
+%feature("docstring") OpenMM::CustomCVForce::getGlobalParameterName "Get the name of a global parameter.
+
+Parameters
+----------
+index : int
+    the index of the parameter for which to get the name
+
+Returns
+-------
+string
+    the parameter name";
+
+
+%feature("docstring") OpenMM::CustomCVForce::setGlobalParameterName "Set the name of a global parameter.
+
+Parameters
+----------
+index : int
+    the index of the parameter for which to set the name
+name : string
+    the name of the parameter";
+
+
+%feature("docstring") OpenMM::CustomCVForce::getGlobalParameterDefaultValue "Get the default value of a global parameter.
+
+Parameters
+----------
+index : int
+    the index of the parameter for which to get the default value
+
+Returns
+-------
+double
+    the parameter default value";
+
+
+%feature("docstring") OpenMM::CustomCVForce::setGlobalParameterDefaultValue "Set the default value of a global parameter.
+
+Parameters
+----------
+index : int
+    the index of the parameter for which to set the default value
+defaultValue : double
+    the default value of the parameter";
+
+
+%feature("docstring") OpenMM::CustomCVForce::addEnergyParameterDerivative "Request that this Force compute the derivative of its energy with respect to a global parameter. The parameter must have already been added with addGlobalParameter().
+
+Parameters
+----------
+name : string
+    the name of the parameter";
+
+
+%feature("docstring") OpenMM::CustomCVForce::getEnergyParameterDerivativeName "Get the name of a global parameter with respect to which this Force should compute the derivative of the energy.
+
+Parameters
+----------
+index : int
+    the index of the parameter derivative, between 0 and getNumEnergyParameterDerivatives()
+
+Returns
+-------
+string
+    the parameter name";
+
+
+%feature("docstring") OpenMM::CustomCVForce::addTabulatedFunction "Add a tabulated function that may appear in the energy expression.
+
+Parameters
+----------
+name : string
+    the name of the function as it appears in expressions
+function : TabulatedFunction *
+    a TabulatedFunction object defining the function. The TabulatedFunction should have been created on the heap with the \"new\" operator. The Force takes over ownership of it, and deletes it when the Force itself is deleted.
+
+Returns
+-------
+int
+    the index of the function that was added";
+
+
+%feature("docstring") OpenMM::CustomCVForce::getTabulatedFunction "Get a const reference to a tabulated function that may appear in the energy expression.
+
+Parameters
+----------
+index : int
+    the index of the function to get
+
+Returns
+-------
+TabulatedFunction
+    the TabulatedFunction object defining the function";
+
+
+%feature("docstring") OpenMM::CustomCVForce::getTabulatedFunction "Get a reference to a tabulated function that may appear in the energy expression.
+
+Parameters
+----------
+index : int
+    the index of the function to get
+
+Returns
+-------
+TabulatedFunction
+    the TabulatedFunction object defining the function";
+
+
+%feature("docstring") OpenMM::CustomCVForce::getTabulatedFunctionName "Get the name of a tabulated function that may appear in the energy expression.
+
+Parameters
+----------
+index : int
+    the index of the function to get
+
+Returns
+-------
+string
+    the name of the function as it appears in expressions";
+
+
+%feature("docstring") OpenMM::CustomCVForce::getCollectiveVariableValues "Get the current values of the collective variables in a Context.
+
+Parameters
+----------
+context : Context
+    the Context for which to get the values
+
+Returns
+-------
+values : vector< double >
+    the values of the collective variables are computed and stored into this";
+
+
+%feature("docstring") OpenMM::CustomCVForce::getInnerContext "Get the inner Context used for evaluating collective variables.
+
+When you create a Context for a System that contains a CustomCVForce, internally it creates a new System, adds the Forces that define the CVs to it, creates a new Context for that System, and uses it to evaluate the variables. In most cases you can ignore all of this. It is just an implementation detail. However, there are a few cases where you need to directly access that internal Context. For example, if you want to modify one of the Forces that defines a collective variable and call updateParametersInContext() on it, you need to pass that inner Context to it. This method returns a reference to it.
+
+Parameters
+----------
+context : Context
+    the Context containing the CustomCVForce
+
+Returns
+-------
+Context
+    the inner Context used to evaluate the collective variables";
+
+
+%feature("docstring") OpenMM::CustomCVForce::updateParametersInContext "Update the tabulated function parameters in a Context to match those stored in this Force object. This method provides an efficient method to update certain parameters in an existing Context without needing to reinitialize it. Simply call getTabulatedFunction(index).setFunctionParameters() to modify this object's parameters, then call updateParametersInContext() to copy them over to the Context.
+
+This method is very limited. The only information it updates is the parameters of tabulated functions. All other aspects of the Force (the energy expression, the set of collective variables, etc.) are unaffected and can only be changed by reinitializing the Context.";
+
+
+%feature("docstring") OpenMM::CustomCVForce::usesPeriodicBoundaryConditions "Returns whether or not this force makes use of periodic boundary conditions.
 
 Returns
 -------

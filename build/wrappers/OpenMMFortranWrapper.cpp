@@ -2478,118 +2478,6 @@ OPENMM_EXPORT void OPENMM_HARMONICANGLEFORCE_USESPERIODICBOUNDARYCONDITIONS(cons
     result = OpenMM_HarmonicAngleForce_usesPeriodicBoundaryConditions(target);
 }
 
-/* OpenMM::GBSAOBCForce */
-OPENMM_EXPORT void openmm_gbsaobcforce_create_(OpenMM_GBSAOBCForce*& result) {
-    result = OpenMM_GBSAOBCForce_create();
-}
-OPENMM_EXPORT void OPENMM_GBSAOBCFORCE_CREATE(OpenMM_GBSAOBCForce*& result) {
-    result = OpenMM_GBSAOBCForce_create();
-}
-OPENMM_EXPORT void openmm_gbsaobcforce_destroy_(OpenMM_GBSAOBCForce*& destroy) {
-    OpenMM_GBSAOBCForce_destroy(destroy);
-    destroy = 0;
-}
-OPENMM_EXPORT void OPENMM_GBSAOBCFORCE_DESTROY(OpenMM_GBSAOBCForce*& destroy) {
-    OpenMM_GBSAOBCForce_destroy(destroy);
-    destroy = 0;
-}
-OPENMM_EXPORT int openmm_gbsaobcforce_getnumparticles_(const OpenMM_GBSAOBCForce*& target) {
-    return OpenMM_GBSAOBCForce_getNumParticles(target);
-}
-OPENMM_EXPORT int OPENMM_GBSAOBCFORCE_GETNUMPARTICLES(const OpenMM_GBSAOBCForce*& target) {
-    return OpenMM_GBSAOBCForce_getNumParticles(target);
-}
-OPENMM_EXPORT int openmm_gbsaobcforce_addparticle_(OpenMM_GBSAOBCForce*& target, double const& charge, double const& radius, double const& scalingFactor) {
-    return OpenMM_GBSAOBCForce_addParticle(target, charge, radius, scalingFactor);
-}
-OPENMM_EXPORT int OPENMM_GBSAOBCFORCE_ADDPARTICLE(OpenMM_GBSAOBCForce*& target, double const& charge, double const& radius, double const& scalingFactor) {
-    return OpenMM_GBSAOBCForce_addParticle(target, charge, radius, scalingFactor);
-}
-OPENMM_EXPORT void openmm_gbsaobcforce_getparticleparameters_(const OpenMM_GBSAOBCForce*& target, int const& index, double* charge, double* radius, double* scalingFactor) {
-    OpenMM_GBSAOBCForce_getParticleParameters(target, index, charge, radius, scalingFactor);
-}
-OPENMM_EXPORT void OPENMM_GBSAOBCFORCE_GETPARTICLEPARAMETERS(const OpenMM_GBSAOBCForce*& target, int const& index, double* charge, double* radius, double* scalingFactor) {
-    OpenMM_GBSAOBCForce_getParticleParameters(target, index, charge, radius, scalingFactor);
-}
-OPENMM_EXPORT void openmm_gbsaobcforce_setparticleparameters_(OpenMM_GBSAOBCForce*& target, int const& index, double const& charge, double const& radius, double const& scalingFactor) {
-    OpenMM_GBSAOBCForce_setParticleParameters(target, index, charge, radius, scalingFactor);
-}
-OPENMM_EXPORT void OPENMM_GBSAOBCFORCE_SETPARTICLEPARAMETERS(OpenMM_GBSAOBCForce*& target, int const& index, double const& charge, double const& radius, double const& scalingFactor) {
-    OpenMM_GBSAOBCForce_setParticleParameters(target, index, charge, radius, scalingFactor);
-}
-OPENMM_EXPORT double openmm_gbsaobcforce_getsolventdielectric_(const OpenMM_GBSAOBCForce*& target) {
-    return OpenMM_GBSAOBCForce_getSolventDielectric(target);
-}
-OPENMM_EXPORT double OPENMM_GBSAOBCFORCE_GETSOLVENTDIELECTRIC(const OpenMM_GBSAOBCForce*& target) {
-    return OpenMM_GBSAOBCForce_getSolventDielectric(target);
-}
-OPENMM_EXPORT void openmm_gbsaobcforce_setsolventdielectric_(OpenMM_GBSAOBCForce*& target, double const& dielectric) {
-    OpenMM_GBSAOBCForce_setSolventDielectric(target, dielectric);
-}
-OPENMM_EXPORT void OPENMM_GBSAOBCFORCE_SETSOLVENTDIELECTRIC(OpenMM_GBSAOBCForce*& target, double const& dielectric) {
-    OpenMM_GBSAOBCForce_setSolventDielectric(target, dielectric);
-}
-OPENMM_EXPORT double openmm_gbsaobcforce_getsolutedielectric_(const OpenMM_GBSAOBCForce*& target) {
-    return OpenMM_GBSAOBCForce_getSoluteDielectric(target);
-}
-OPENMM_EXPORT double OPENMM_GBSAOBCFORCE_GETSOLUTEDIELECTRIC(const OpenMM_GBSAOBCForce*& target) {
-    return OpenMM_GBSAOBCForce_getSoluteDielectric(target);
-}
-OPENMM_EXPORT void openmm_gbsaobcforce_setsolutedielectric_(OpenMM_GBSAOBCForce*& target, double const& dielectric) {
-    OpenMM_GBSAOBCForce_setSoluteDielectric(target, dielectric);
-}
-OPENMM_EXPORT void OPENMM_GBSAOBCFORCE_SETSOLUTEDIELECTRIC(OpenMM_GBSAOBCForce*& target, double const& dielectric) {
-    OpenMM_GBSAOBCForce_setSoluteDielectric(target, dielectric);
-}
-OPENMM_EXPORT double openmm_gbsaobcforce_getsurfaceareaenergy_(const OpenMM_GBSAOBCForce*& target) {
-    return OpenMM_GBSAOBCForce_getSurfaceAreaEnergy(target);
-}
-OPENMM_EXPORT double OPENMM_GBSAOBCFORCE_GETSURFACEAREAENERGY(const OpenMM_GBSAOBCForce*& target) {
-    return OpenMM_GBSAOBCForce_getSurfaceAreaEnergy(target);
-}
-OPENMM_EXPORT void openmm_gbsaobcforce_setsurfaceareaenergy_(OpenMM_GBSAOBCForce*& target, double const& energy) {
-    OpenMM_GBSAOBCForce_setSurfaceAreaEnergy(target, energy);
-}
-OPENMM_EXPORT void OPENMM_GBSAOBCFORCE_SETSURFACEAREAENERGY(OpenMM_GBSAOBCForce*& target, double const& energy) {
-    OpenMM_GBSAOBCForce_setSurfaceAreaEnergy(target, energy);
-}
-OPENMM_EXPORT void openmm_gbsaobcforce_getnonbondedmethod_(const OpenMM_GBSAOBCForce*& target, OpenMM_GBSAOBCForce_NonbondedMethod& result) {
-    result = OpenMM_GBSAOBCForce_getNonbondedMethod(target);
-}
-OPENMM_EXPORT void OPENMM_GBSAOBCFORCE_GETNONBONDEDMETHOD(const OpenMM_GBSAOBCForce*& target, OpenMM_GBSAOBCForce_NonbondedMethod& result) {
-    result = OpenMM_GBSAOBCForce_getNonbondedMethod(target);
-}
-OPENMM_EXPORT void openmm_gbsaobcforce_setnonbondedmethod_(OpenMM_GBSAOBCForce*& target, OpenMM_GBSAOBCForce_NonbondedMethod& method) {
-    OpenMM_GBSAOBCForce_setNonbondedMethod(target, method);
-}
-OPENMM_EXPORT void OPENMM_GBSAOBCFORCE_SETNONBONDEDMETHOD(OpenMM_GBSAOBCForce*& target, OpenMM_GBSAOBCForce_NonbondedMethod& method) {
-    OpenMM_GBSAOBCForce_setNonbondedMethod(target, method);
-}
-OPENMM_EXPORT double openmm_gbsaobcforce_getcutoffdistance_(const OpenMM_GBSAOBCForce*& target) {
-    return OpenMM_GBSAOBCForce_getCutoffDistance(target);
-}
-OPENMM_EXPORT double OPENMM_GBSAOBCFORCE_GETCUTOFFDISTANCE(const OpenMM_GBSAOBCForce*& target) {
-    return OpenMM_GBSAOBCForce_getCutoffDistance(target);
-}
-OPENMM_EXPORT void openmm_gbsaobcforce_setcutoffdistance_(OpenMM_GBSAOBCForce*& target, double const& distance) {
-    OpenMM_GBSAOBCForce_setCutoffDistance(target, distance);
-}
-OPENMM_EXPORT void OPENMM_GBSAOBCFORCE_SETCUTOFFDISTANCE(OpenMM_GBSAOBCForce*& target, double const& distance) {
-    OpenMM_GBSAOBCForce_setCutoffDistance(target, distance);
-}
-OPENMM_EXPORT void openmm_gbsaobcforce_updateparametersincontext_(OpenMM_GBSAOBCForce*& target, OpenMM_Context*& context) {
-    OpenMM_GBSAOBCForce_updateParametersInContext(target, context);
-}
-OPENMM_EXPORT void OPENMM_GBSAOBCFORCE_UPDATEPARAMETERSINCONTEXT(OpenMM_GBSAOBCForce*& target, OpenMM_Context*& context) {
-    OpenMM_GBSAOBCForce_updateParametersInContext(target, context);
-}
-OPENMM_EXPORT void openmm_gbsaobcforce_usesperiodicboundaryconditions_(const OpenMM_GBSAOBCForce*& target, OpenMM_Boolean& result) {
-    result = OpenMM_GBSAOBCForce_usesPeriodicBoundaryConditions(target);
-}
-OPENMM_EXPORT void OPENMM_GBSAOBCFORCE_USESPERIODICBOUNDARYCONDITIONS(const OpenMM_GBSAOBCForce*& target, OpenMM_Boolean& result) {
-    result = OpenMM_GBSAOBCForce_usesPeriodicBoundaryConditions(target);
-}
-
 /* OpenMM::GayBerneForce */
 OPENMM_EXPORT void openmm_gayberneforce_create_(OpenMM_GayBerneForce*& result) {
     result = OpenMM_GayBerneForce_create();
@@ -2712,6 +2600,118 @@ OPENMM_EXPORT void openmm_gayberneforce_usesperiodicboundaryconditions_(const Op
 }
 OPENMM_EXPORT void OPENMM_GAYBERNEFORCE_USESPERIODICBOUNDARYCONDITIONS(const OpenMM_GayBerneForce*& target, OpenMM_Boolean& result) {
     result = OpenMM_GayBerneForce_usesPeriodicBoundaryConditions(target);
+}
+
+/* OpenMM::GBSAOBCForce */
+OPENMM_EXPORT void openmm_gbsaobcforce_create_(OpenMM_GBSAOBCForce*& result) {
+    result = OpenMM_GBSAOBCForce_create();
+}
+OPENMM_EXPORT void OPENMM_GBSAOBCFORCE_CREATE(OpenMM_GBSAOBCForce*& result) {
+    result = OpenMM_GBSAOBCForce_create();
+}
+OPENMM_EXPORT void openmm_gbsaobcforce_destroy_(OpenMM_GBSAOBCForce*& destroy) {
+    OpenMM_GBSAOBCForce_destroy(destroy);
+    destroy = 0;
+}
+OPENMM_EXPORT void OPENMM_GBSAOBCFORCE_DESTROY(OpenMM_GBSAOBCForce*& destroy) {
+    OpenMM_GBSAOBCForce_destroy(destroy);
+    destroy = 0;
+}
+OPENMM_EXPORT int openmm_gbsaobcforce_getnumparticles_(const OpenMM_GBSAOBCForce*& target) {
+    return OpenMM_GBSAOBCForce_getNumParticles(target);
+}
+OPENMM_EXPORT int OPENMM_GBSAOBCFORCE_GETNUMPARTICLES(const OpenMM_GBSAOBCForce*& target) {
+    return OpenMM_GBSAOBCForce_getNumParticles(target);
+}
+OPENMM_EXPORT int openmm_gbsaobcforce_addparticle_(OpenMM_GBSAOBCForce*& target, double const& charge, double const& radius, double const& scalingFactor) {
+    return OpenMM_GBSAOBCForce_addParticle(target, charge, radius, scalingFactor);
+}
+OPENMM_EXPORT int OPENMM_GBSAOBCFORCE_ADDPARTICLE(OpenMM_GBSAOBCForce*& target, double const& charge, double const& radius, double const& scalingFactor) {
+    return OpenMM_GBSAOBCForce_addParticle(target, charge, radius, scalingFactor);
+}
+OPENMM_EXPORT void openmm_gbsaobcforce_getparticleparameters_(const OpenMM_GBSAOBCForce*& target, int const& index, double* charge, double* radius, double* scalingFactor) {
+    OpenMM_GBSAOBCForce_getParticleParameters(target, index, charge, radius, scalingFactor);
+}
+OPENMM_EXPORT void OPENMM_GBSAOBCFORCE_GETPARTICLEPARAMETERS(const OpenMM_GBSAOBCForce*& target, int const& index, double* charge, double* radius, double* scalingFactor) {
+    OpenMM_GBSAOBCForce_getParticleParameters(target, index, charge, radius, scalingFactor);
+}
+OPENMM_EXPORT void openmm_gbsaobcforce_setparticleparameters_(OpenMM_GBSAOBCForce*& target, int const& index, double const& charge, double const& radius, double const& scalingFactor) {
+    OpenMM_GBSAOBCForce_setParticleParameters(target, index, charge, radius, scalingFactor);
+}
+OPENMM_EXPORT void OPENMM_GBSAOBCFORCE_SETPARTICLEPARAMETERS(OpenMM_GBSAOBCForce*& target, int const& index, double const& charge, double const& radius, double const& scalingFactor) {
+    OpenMM_GBSAOBCForce_setParticleParameters(target, index, charge, radius, scalingFactor);
+}
+OPENMM_EXPORT double openmm_gbsaobcforce_getsolventdielectric_(const OpenMM_GBSAOBCForce*& target) {
+    return OpenMM_GBSAOBCForce_getSolventDielectric(target);
+}
+OPENMM_EXPORT double OPENMM_GBSAOBCFORCE_GETSOLVENTDIELECTRIC(const OpenMM_GBSAOBCForce*& target) {
+    return OpenMM_GBSAOBCForce_getSolventDielectric(target);
+}
+OPENMM_EXPORT void openmm_gbsaobcforce_setsolventdielectric_(OpenMM_GBSAOBCForce*& target, double const& dielectric) {
+    OpenMM_GBSAOBCForce_setSolventDielectric(target, dielectric);
+}
+OPENMM_EXPORT void OPENMM_GBSAOBCFORCE_SETSOLVENTDIELECTRIC(OpenMM_GBSAOBCForce*& target, double const& dielectric) {
+    OpenMM_GBSAOBCForce_setSolventDielectric(target, dielectric);
+}
+OPENMM_EXPORT double openmm_gbsaobcforce_getsolutedielectric_(const OpenMM_GBSAOBCForce*& target) {
+    return OpenMM_GBSAOBCForce_getSoluteDielectric(target);
+}
+OPENMM_EXPORT double OPENMM_GBSAOBCFORCE_GETSOLUTEDIELECTRIC(const OpenMM_GBSAOBCForce*& target) {
+    return OpenMM_GBSAOBCForce_getSoluteDielectric(target);
+}
+OPENMM_EXPORT void openmm_gbsaobcforce_setsolutedielectric_(OpenMM_GBSAOBCForce*& target, double const& dielectric) {
+    OpenMM_GBSAOBCForce_setSoluteDielectric(target, dielectric);
+}
+OPENMM_EXPORT void OPENMM_GBSAOBCFORCE_SETSOLUTEDIELECTRIC(OpenMM_GBSAOBCForce*& target, double const& dielectric) {
+    OpenMM_GBSAOBCForce_setSoluteDielectric(target, dielectric);
+}
+OPENMM_EXPORT double openmm_gbsaobcforce_getsurfaceareaenergy_(const OpenMM_GBSAOBCForce*& target) {
+    return OpenMM_GBSAOBCForce_getSurfaceAreaEnergy(target);
+}
+OPENMM_EXPORT double OPENMM_GBSAOBCFORCE_GETSURFACEAREAENERGY(const OpenMM_GBSAOBCForce*& target) {
+    return OpenMM_GBSAOBCForce_getSurfaceAreaEnergy(target);
+}
+OPENMM_EXPORT void openmm_gbsaobcforce_setsurfaceareaenergy_(OpenMM_GBSAOBCForce*& target, double const& energy) {
+    OpenMM_GBSAOBCForce_setSurfaceAreaEnergy(target, energy);
+}
+OPENMM_EXPORT void OPENMM_GBSAOBCFORCE_SETSURFACEAREAENERGY(OpenMM_GBSAOBCForce*& target, double const& energy) {
+    OpenMM_GBSAOBCForce_setSurfaceAreaEnergy(target, energy);
+}
+OPENMM_EXPORT void openmm_gbsaobcforce_getnonbondedmethod_(const OpenMM_GBSAOBCForce*& target, OpenMM_GBSAOBCForce_NonbondedMethod& result) {
+    result = OpenMM_GBSAOBCForce_getNonbondedMethod(target);
+}
+OPENMM_EXPORT void OPENMM_GBSAOBCFORCE_GETNONBONDEDMETHOD(const OpenMM_GBSAOBCForce*& target, OpenMM_GBSAOBCForce_NonbondedMethod& result) {
+    result = OpenMM_GBSAOBCForce_getNonbondedMethod(target);
+}
+OPENMM_EXPORT void openmm_gbsaobcforce_setnonbondedmethod_(OpenMM_GBSAOBCForce*& target, OpenMM_GBSAOBCForce_NonbondedMethod& method) {
+    OpenMM_GBSAOBCForce_setNonbondedMethod(target, method);
+}
+OPENMM_EXPORT void OPENMM_GBSAOBCFORCE_SETNONBONDEDMETHOD(OpenMM_GBSAOBCForce*& target, OpenMM_GBSAOBCForce_NonbondedMethod& method) {
+    OpenMM_GBSAOBCForce_setNonbondedMethod(target, method);
+}
+OPENMM_EXPORT double openmm_gbsaobcforce_getcutoffdistance_(const OpenMM_GBSAOBCForce*& target) {
+    return OpenMM_GBSAOBCForce_getCutoffDistance(target);
+}
+OPENMM_EXPORT double OPENMM_GBSAOBCFORCE_GETCUTOFFDISTANCE(const OpenMM_GBSAOBCForce*& target) {
+    return OpenMM_GBSAOBCForce_getCutoffDistance(target);
+}
+OPENMM_EXPORT void openmm_gbsaobcforce_setcutoffdistance_(OpenMM_GBSAOBCForce*& target, double const& distance) {
+    OpenMM_GBSAOBCForce_setCutoffDistance(target, distance);
+}
+OPENMM_EXPORT void OPENMM_GBSAOBCFORCE_SETCUTOFFDISTANCE(OpenMM_GBSAOBCForce*& target, double const& distance) {
+    OpenMM_GBSAOBCForce_setCutoffDistance(target, distance);
+}
+OPENMM_EXPORT void openmm_gbsaobcforce_updateparametersincontext_(OpenMM_GBSAOBCForce*& target, OpenMM_Context*& context) {
+    OpenMM_GBSAOBCForce_updateParametersInContext(target, context);
+}
+OPENMM_EXPORT void OPENMM_GBSAOBCFORCE_UPDATEPARAMETERSINCONTEXT(OpenMM_GBSAOBCForce*& target, OpenMM_Context*& context) {
+    OpenMM_GBSAOBCForce_updateParametersInContext(target, context);
+}
+OPENMM_EXPORT void openmm_gbsaobcforce_usesperiodicboundaryconditions_(const OpenMM_GBSAOBCForce*& target, OpenMM_Boolean& result) {
+    result = OpenMM_GBSAOBCForce_usesPeriodicBoundaryConditions(target);
+}
+OPENMM_EXPORT void OPENMM_GBSAOBCFORCE_USESPERIODICBOUNDARYCONDITIONS(const OpenMM_GBSAOBCForce*& target, OpenMM_Boolean& result) {
+    result = OpenMM_GBSAOBCForce_usesPeriodicBoundaryConditions(target);
 }
 
 /* OpenMM::Discrete3DFunction */
@@ -4450,170 +4450,6 @@ OPENMM_EXPORT void OPENMM_CUSTOMEXTERNALFORCE_USESPERIODICBOUNDARYCONDITIONS(con
     result = OpenMM_CustomExternalForce_usesPeriodicBoundaryConditions(target);
 }
 
-/* OpenMM::CustomCVForce */
-OPENMM_EXPORT void openmm_customcvforce_create_(OpenMM_CustomCVForce*& result, const char* energy, int energy_length) {
-    result = OpenMM_CustomCVForce_create(makeString(energy, energy_length).c_str());
-}
-OPENMM_EXPORT void OPENMM_CUSTOMCVFORCE_CREATE(OpenMM_CustomCVForce*& result, const char* energy, int energy_length) {
-    result = OpenMM_CustomCVForce_create(makeString(energy, energy_length).c_str());
-}
-OPENMM_EXPORT void openmm_customcvforce_destroy_(OpenMM_CustomCVForce*& destroy) {
-    OpenMM_CustomCVForce_destroy(destroy);
-    destroy = 0;
-}
-OPENMM_EXPORT void OPENMM_CUSTOMCVFORCE_DESTROY(OpenMM_CustomCVForce*& destroy) {
-    OpenMM_CustomCVForce_destroy(destroy);
-    destroy = 0;
-}
-OPENMM_EXPORT int openmm_customcvforce_getnumcollectivevariables_(const OpenMM_CustomCVForce*& target) {
-    return OpenMM_CustomCVForce_getNumCollectiveVariables(target);
-}
-OPENMM_EXPORT int OPENMM_CUSTOMCVFORCE_GETNUMCOLLECTIVEVARIABLES(const OpenMM_CustomCVForce*& target) {
-    return OpenMM_CustomCVForce_getNumCollectiveVariables(target);
-}
-OPENMM_EXPORT int openmm_customcvforce_getnumglobalparameters_(const OpenMM_CustomCVForce*& target) {
-    return OpenMM_CustomCVForce_getNumGlobalParameters(target);
-}
-OPENMM_EXPORT int OPENMM_CUSTOMCVFORCE_GETNUMGLOBALPARAMETERS(const OpenMM_CustomCVForce*& target) {
-    return OpenMM_CustomCVForce_getNumGlobalParameters(target);
-}
-OPENMM_EXPORT int openmm_customcvforce_getnumenergyparameterderivatives_(const OpenMM_CustomCVForce*& target) {
-    return OpenMM_CustomCVForce_getNumEnergyParameterDerivatives(target);
-}
-OPENMM_EXPORT int OPENMM_CUSTOMCVFORCE_GETNUMENERGYPARAMETERDERIVATIVES(const OpenMM_CustomCVForce*& target) {
-    return OpenMM_CustomCVForce_getNumEnergyParameterDerivatives(target);
-}
-OPENMM_EXPORT int openmm_customcvforce_getnumtabulatedfunctions_(const OpenMM_CustomCVForce*& target) {
-    return OpenMM_CustomCVForce_getNumTabulatedFunctions(target);
-}
-OPENMM_EXPORT int OPENMM_CUSTOMCVFORCE_GETNUMTABULATEDFUNCTIONS(const OpenMM_CustomCVForce*& target) {
-    return OpenMM_CustomCVForce_getNumTabulatedFunctions(target);
-}
-OPENMM_EXPORT void openmm_customcvforce_getenergyfunction_(const OpenMM_CustomCVForce*& target, char* result, int result_length) {
-    const char* result_chars = OpenMM_CustomCVForce_getEnergyFunction(target);
-    copyAndPadString(result, result_chars, result_length);
-}
-OPENMM_EXPORT void OPENMM_CUSTOMCVFORCE_GETENERGYFUNCTION(const OpenMM_CustomCVForce*& target, char* result, int result_length) {
-    const char* result_chars = OpenMM_CustomCVForce_getEnergyFunction(target);
-    copyAndPadString(result, result_chars, result_length);
-}
-OPENMM_EXPORT void openmm_customcvforce_setenergyfunction_(OpenMM_CustomCVForce*& target, const char* energy, int energy_length) {
-    OpenMM_CustomCVForce_setEnergyFunction(target, makeString(energy, energy_length).c_str());
-}
-OPENMM_EXPORT void OPENMM_CUSTOMCVFORCE_SETENERGYFUNCTION(OpenMM_CustomCVForce*& target, const char* energy, int energy_length) {
-    OpenMM_CustomCVForce_setEnergyFunction(target, makeString(energy, energy_length).c_str());
-}
-OPENMM_EXPORT int openmm_customcvforce_addcollectivevariable_(OpenMM_CustomCVForce*& target, const char* name, OpenMM_Force*& variable, int name_length) {
-    return OpenMM_CustomCVForce_addCollectiveVariable(target, makeString(name, name_length).c_str(), variable);
-}
-OPENMM_EXPORT int OPENMM_CUSTOMCVFORCE_ADDCOLLECTIVEVARIABLE(OpenMM_CustomCVForce*& target, const char* name, OpenMM_Force*& variable, int name_length) {
-    return OpenMM_CustomCVForce_addCollectiveVariable(target, makeString(name, name_length).c_str(), variable);
-}
-OPENMM_EXPORT void openmm_customcvforce_getcollectivevariablename_(const OpenMM_CustomCVForce*& target, int const& index, char* result, int result_length) {
-    const char* result_chars = OpenMM_CustomCVForce_getCollectiveVariableName(target, index);
-    copyAndPadString(result, result_chars, result_length);
-}
-OPENMM_EXPORT void OPENMM_CUSTOMCVFORCE_GETCOLLECTIVEVARIABLENAME(const OpenMM_CustomCVForce*& target, int const& index, char* result, int result_length) {
-    const char* result_chars = OpenMM_CustomCVForce_getCollectiveVariableName(target, index);
-    copyAndPadString(result, result_chars, result_length);
-}
-OPENMM_EXPORT void openmm_customcvforce_getcollectivevariable_(OpenMM_CustomCVForce*& target, int const& index, OpenMM_Force*& result) {
-    result = OpenMM_CustomCVForce_getCollectiveVariable(target, index);
-}
-OPENMM_EXPORT void OPENMM_CUSTOMCVFORCE_GETCOLLECTIVEVARIABLE(OpenMM_CustomCVForce*& target, int const& index, OpenMM_Force*& result) {
-    result = OpenMM_CustomCVForce_getCollectiveVariable(target, index);
-}
-OPENMM_EXPORT int openmm_customcvforce_addglobalparameter_(OpenMM_CustomCVForce*& target, const char* name, double const& defaultValue, int name_length) {
-    return OpenMM_CustomCVForce_addGlobalParameter(target, makeString(name, name_length).c_str(), defaultValue);
-}
-OPENMM_EXPORT int OPENMM_CUSTOMCVFORCE_ADDGLOBALPARAMETER(OpenMM_CustomCVForce*& target, const char* name, double const& defaultValue, int name_length) {
-    return OpenMM_CustomCVForce_addGlobalParameter(target, makeString(name, name_length).c_str(), defaultValue);
-}
-OPENMM_EXPORT void openmm_customcvforce_getglobalparametername_(const OpenMM_CustomCVForce*& target, int const& index, char* result, int result_length) {
-    const char* result_chars = OpenMM_CustomCVForce_getGlobalParameterName(target, index);
-    copyAndPadString(result, result_chars, result_length);
-}
-OPENMM_EXPORT void OPENMM_CUSTOMCVFORCE_GETGLOBALPARAMETERNAME(const OpenMM_CustomCVForce*& target, int const& index, char* result, int result_length) {
-    const char* result_chars = OpenMM_CustomCVForce_getGlobalParameterName(target, index);
-    copyAndPadString(result, result_chars, result_length);
-}
-OPENMM_EXPORT void openmm_customcvforce_setglobalparametername_(OpenMM_CustomCVForce*& target, int const& index, const char* name, int name_length) {
-    OpenMM_CustomCVForce_setGlobalParameterName(target, index, makeString(name, name_length).c_str());
-}
-OPENMM_EXPORT void OPENMM_CUSTOMCVFORCE_SETGLOBALPARAMETERNAME(OpenMM_CustomCVForce*& target, int const& index, const char* name, int name_length) {
-    OpenMM_CustomCVForce_setGlobalParameterName(target, index, makeString(name, name_length).c_str());
-}
-OPENMM_EXPORT double openmm_customcvforce_getglobalparameterdefaultvalue_(const OpenMM_CustomCVForce*& target, int const& index) {
-    return OpenMM_CustomCVForce_getGlobalParameterDefaultValue(target, index);
-}
-OPENMM_EXPORT double OPENMM_CUSTOMCVFORCE_GETGLOBALPARAMETERDEFAULTVALUE(const OpenMM_CustomCVForce*& target, int const& index) {
-    return OpenMM_CustomCVForce_getGlobalParameterDefaultValue(target, index);
-}
-OPENMM_EXPORT void openmm_customcvforce_setglobalparameterdefaultvalue_(OpenMM_CustomCVForce*& target, int const& index, double const& defaultValue) {
-    OpenMM_CustomCVForce_setGlobalParameterDefaultValue(target, index, defaultValue);
-}
-OPENMM_EXPORT void OPENMM_CUSTOMCVFORCE_SETGLOBALPARAMETERDEFAULTVALUE(OpenMM_CustomCVForce*& target, int const& index, double const& defaultValue) {
-    OpenMM_CustomCVForce_setGlobalParameterDefaultValue(target, index, defaultValue);
-}
-OPENMM_EXPORT void openmm_customcvforce_addenergyparameterderivative_(OpenMM_CustomCVForce*& target, const char* name, int name_length) {
-    OpenMM_CustomCVForce_addEnergyParameterDerivative(target, makeString(name, name_length).c_str());
-}
-OPENMM_EXPORT void OPENMM_CUSTOMCVFORCE_ADDENERGYPARAMETERDERIVATIVE(OpenMM_CustomCVForce*& target, const char* name, int name_length) {
-    OpenMM_CustomCVForce_addEnergyParameterDerivative(target, makeString(name, name_length).c_str());
-}
-OPENMM_EXPORT void openmm_customcvforce_getenergyparameterderivativename_(const OpenMM_CustomCVForce*& target, int const& index, char* result, int result_length) {
-    const char* result_chars = OpenMM_CustomCVForce_getEnergyParameterDerivativeName(target, index);
-    copyAndPadString(result, result_chars, result_length);
-}
-OPENMM_EXPORT void OPENMM_CUSTOMCVFORCE_GETENERGYPARAMETERDERIVATIVENAME(const OpenMM_CustomCVForce*& target, int const& index, char* result, int result_length) {
-    const char* result_chars = OpenMM_CustomCVForce_getEnergyParameterDerivativeName(target, index);
-    copyAndPadString(result, result_chars, result_length);
-}
-OPENMM_EXPORT int openmm_customcvforce_addtabulatedfunction_(OpenMM_CustomCVForce*& target, const char* name, OpenMM_TabulatedFunction*& function, int name_length) {
-    return OpenMM_CustomCVForce_addTabulatedFunction(target, makeString(name, name_length).c_str(), function);
-}
-OPENMM_EXPORT int OPENMM_CUSTOMCVFORCE_ADDTABULATEDFUNCTION(OpenMM_CustomCVForce*& target, const char* name, OpenMM_TabulatedFunction*& function, int name_length) {
-    return OpenMM_CustomCVForce_addTabulatedFunction(target, makeString(name, name_length).c_str(), function);
-}
-OPENMM_EXPORT void openmm_customcvforce_gettabulatedfunction_(OpenMM_CustomCVForce*& target, int const& index, OpenMM_TabulatedFunction*& result) {
-    result = OpenMM_CustomCVForce_getTabulatedFunction(target, index);
-}
-OPENMM_EXPORT void OPENMM_CUSTOMCVFORCE_GETTABULATEDFUNCTION(OpenMM_CustomCVForce*& target, int const& index, OpenMM_TabulatedFunction*& result) {
-    result = OpenMM_CustomCVForce_getTabulatedFunction(target, index);
-}
-OPENMM_EXPORT void openmm_customcvforce_gettabulatedfunctionname_(const OpenMM_CustomCVForce*& target, int const& index, char* result, int result_length) {
-    const char* result_chars = OpenMM_CustomCVForce_getTabulatedFunctionName(target, index);
-    copyAndPadString(result, result_chars, result_length);
-}
-OPENMM_EXPORT void OPENMM_CUSTOMCVFORCE_GETTABULATEDFUNCTIONNAME(const OpenMM_CustomCVForce*& target, int const& index, char* result, int result_length) {
-    const char* result_chars = OpenMM_CustomCVForce_getTabulatedFunctionName(target, index);
-    copyAndPadString(result, result_chars, result_length);
-}
-OPENMM_EXPORT void openmm_customcvforce_getcollectivevariablevalues_(OpenMM_CustomCVForce*& target, OpenMM_Context*& context, OpenMM_DoubleArray*& values) {
-    OpenMM_CustomCVForce_getCollectiveVariableValues(target, context, values);
-}
-OPENMM_EXPORT void OPENMM_CUSTOMCVFORCE_GETCOLLECTIVEVARIABLEVALUES(OpenMM_CustomCVForce*& target, OpenMM_Context*& context, OpenMM_DoubleArray*& values) {
-    OpenMM_CustomCVForce_getCollectiveVariableValues(target, context, values);
-}
-OPENMM_EXPORT void openmm_customcvforce_getinnercontext_(OpenMM_CustomCVForce*& target, OpenMM_Context*& context, OpenMM_Context*& result) {
-    result = OpenMM_CustomCVForce_getInnerContext(target, context);
-}
-OPENMM_EXPORT void OPENMM_CUSTOMCVFORCE_GETINNERCONTEXT(OpenMM_CustomCVForce*& target, OpenMM_Context*& context, OpenMM_Context*& result) {
-    result = OpenMM_CustomCVForce_getInnerContext(target, context);
-}
-OPENMM_EXPORT void openmm_customcvforce_updateparametersincontext_(OpenMM_CustomCVForce*& target, OpenMM_Context*& context) {
-    OpenMM_CustomCVForce_updateParametersInContext(target, context);
-}
-OPENMM_EXPORT void OPENMM_CUSTOMCVFORCE_UPDATEPARAMETERSINCONTEXT(OpenMM_CustomCVForce*& target, OpenMM_Context*& context) {
-    OpenMM_CustomCVForce_updateParametersInContext(target, context);
-}
-OPENMM_EXPORT void openmm_customcvforce_usesperiodicboundaryconditions_(const OpenMM_CustomCVForce*& target, OpenMM_Boolean& result) {
-    result = OpenMM_CustomCVForce_usesPeriodicBoundaryConditions(target);
-}
-OPENMM_EXPORT void OPENMM_CUSTOMCVFORCE_USESPERIODICBOUNDARYCONDITIONS(const OpenMM_CustomCVForce*& target, OpenMM_Boolean& result) {
-    result = OpenMM_CustomCVForce_usesPeriodicBoundaryConditions(target);
-}
-
 /* OpenMM::CustomCompoundBondForce */
 OPENMM_EXPORT void openmm_customcompoundbondforce_create_(OpenMM_CustomCompoundBondForce*& result, int const& numParticles, const char* energy, int energy_length) {
     result = OpenMM_CustomCompoundBondForce_create(numParticles, makeString(energy, energy_length).c_str());
@@ -5042,6 +4878,170 @@ OPENMM_EXPORT void openmm_customcentroidbondforce_usesperiodicboundaryconditions
 }
 OPENMM_EXPORT void OPENMM_CUSTOMCENTROIDBONDFORCE_USESPERIODICBOUNDARYCONDITIONS(const OpenMM_CustomCentroidBondForce*& target, OpenMM_Boolean& result) {
     result = OpenMM_CustomCentroidBondForce_usesPeriodicBoundaryConditions(target);
+}
+
+/* OpenMM::CustomCVForce */
+OPENMM_EXPORT void openmm_customcvforce_create_(OpenMM_CustomCVForce*& result, const char* energy, int energy_length) {
+    result = OpenMM_CustomCVForce_create(makeString(energy, energy_length).c_str());
+}
+OPENMM_EXPORT void OPENMM_CUSTOMCVFORCE_CREATE(OpenMM_CustomCVForce*& result, const char* energy, int energy_length) {
+    result = OpenMM_CustomCVForce_create(makeString(energy, energy_length).c_str());
+}
+OPENMM_EXPORT void openmm_customcvforce_destroy_(OpenMM_CustomCVForce*& destroy) {
+    OpenMM_CustomCVForce_destroy(destroy);
+    destroy = 0;
+}
+OPENMM_EXPORT void OPENMM_CUSTOMCVFORCE_DESTROY(OpenMM_CustomCVForce*& destroy) {
+    OpenMM_CustomCVForce_destroy(destroy);
+    destroy = 0;
+}
+OPENMM_EXPORT int openmm_customcvforce_getnumcollectivevariables_(const OpenMM_CustomCVForce*& target) {
+    return OpenMM_CustomCVForce_getNumCollectiveVariables(target);
+}
+OPENMM_EXPORT int OPENMM_CUSTOMCVFORCE_GETNUMCOLLECTIVEVARIABLES(const OpenMM_CustomCVForce*& target) {
+    return OpenMM_CustomCVForce_getNumCollectiveVariables(target);
+}
+OPENMM_EXPORT int openmm_customcvforce_getnumglobalparameters_(const OpenMM_CustomCVForce*& target) {
+    return OpenMM_CustomCVForce_getNumGlobalParameters(target);
+}
+OPENMM_EXPORT int OPENMM_CUSTOMCVFORCE_GETNUMGLOBALPARAMETERS(const OpenMM_CustomCVForce*& target) {
+    return OpenMM_CustomCVForce_getNumGlobalParameters(target);
+}
+OPENMM_EXPORT int openmm_customcvforce_getnumenergyparameterderivatives_(const OpenMM_CustomCVForce*& target) {
+    return OpenMM_CustomCVForce_getNumEnergyParameterDerivatives(target);
+}
+OPENMM_EXPORT int OPENMM_CUSTOMCVFORCE_GETNUMENERGYPARAMETERDERIVATIVES(const OpenMM_CustomCVForce*& target) {
+    return OpenMM_CustomCVForce_getNumEnergyParameterDerivatives(target);
+}
+OPENMM_EXPORT int openmm_customcvforce_getnumtabulatedfunctions_(const OpenMM_CustomCVForce*& target) {
+    return OpenMM_CustomCVForce_getNumTabulatedFunctions(target);
+}
+OPENMM_EXPORT int OPENMM_CUSTOMCVFORCE_GETNUMTABULATEDFUNCTIONS(const OpenMM_CustomCVForce*& target) {
+    return OpenMM_CustomCVForce_getNumTabulatedFunctions(target);
+}
+OPENMM_EXPORT void openmm_customcvforce_getenergyfunction_(const OpenMM_CustomCVForce*& target, char* result, int result_length) {
+    const char* result_chars = OpenMM_CustomCVForce_getEnergyFunction(target);
+    copyAndPadString(result, result_chars, result_length);
+}
+OPENMM_EXPORT void OPENMM_CUSTOMCVFORCE_GETENERGYFUNCTION(const OpenMM_CustomCVForce*& target, char* result, int result_length) {
+    const char* result_chars = OpenMM_CustomCVForce_getEnergyFunction(target);
+    copyAndPadString(result, result_chars, result_length);
+}
+OPENMM_EXPORT void openmm_customcvforce_setenergyfunction_(OpenMM_CustomCVForce*& target, const char* energy, int energy_length) {
+    OpenMM_CustomCVForce_setEnergyFunction(target, makeString(energy, energy_length).c_str());
+}
+OPENMM_EXPORT void OPENMM_CUSTOMCVFORCE_SETENERGYFUNCTION(OpenMM_CustomCVForce*& target, const char* energy, int energy_length) {
+    OpenMM_CustomCVForce_setEnergyFunction(target, makeString(energy, energy_length).c_str());
+}
+OPENMM_EXPORT int openmm_customcvforce_addcollectivevariable_(OpenMM_CustomCVForce*& target, const char* name, OpenMM_Force*& variable, int name_length) {
+    return OpenMM_CustomCVForce_addCollectiveVariable(target, makeString(name, name_length).c_str(), variable);
+}
+OPENMM_EXPORT int OPENMM_CUSTOMCVFORCE_ADDCOLLECTIVEVARIABLE(OpenMM_CustomCVForce*& target, const char* name, OpenMM_Force*& variable, int name_length) {
+    return OpenMM_CustomCVForce_addCollectiveVariable(target, makeString(name, name_length).c_str(), variable);
+}
+OPENMM_EXPORT void openmm_customcvforce_getcollectivevariablename_(const OpenMM_CustomCVForce*& target, int const& index, char* result, int result_length) {
+    const char* result_chars = OpenMM_CustomCVForce_getCollectiveVariableName(target, index);
+    copyAndPadString(result, result_chars, result_length);
+}
+OPENMM_EXPORT void OPENMM_CUSTOMCVFORCE_GETCOLLECTIVEVARIABLENAME(const OpenMM_CustomCVForce*& target, int const& index, char* result, int result_length) {
+    const char* result_chars = OpenMM_CustomCVForce_getCollectiveVariableName(target, index);
+    copyAndPadString(result, result_chars, result_length);
+}
+OPENMM_EXPORT void openmm_customcvforce_getcollectivevariable_(OpenMM_CustomCVForce*& target, int const& index, OpenMM_Force*& result) {
+    result = OpenMM_CustomCVForce_getCollectiveVariable(target, index);
+}
+OPENMM_EXPORT void OPENMM_CUSTOMCVFORCE_GETCOLLECTIVEVARIABLE(OpenMM_CustomCVForce*& target, int const& index, OpenMM_Force*& result) {
+    result = OpenMM_CustomCVForce_getCollectiveVariable(target, index);
+}
+OPENMM_EXPORT int openmm_customcvforce_addglobalparameter_(OpenMM_CustomCVForce*& target, const char* name, double const& defaultValue, int name_length) {
+    return OpenMM_CustomCVForce_addGlobalParameter(target, makeString(name, name_length).c_str(), defaultValue);
+}
+OPENMM_EXPORT int OPENMM_CUSTOMCVFORCE_ADDGLOBALPARAMETER(OpenMM_CustomCVForce*& target, const char* name, double const& defaultValue, int name_length) {
+    return OpenMM_CustomCVForce_addGlobalParameter(target, makeString(name, name_length).c_str(), defaultValue);
+}
+OPENMM_EXPORT void openmm_customcvforce_getglobalparametername_(const OpenMM_CustomCVForce*& target, int const& index, char* result, int result_length) {
+    const char* result_chars = OpenMM_CustomCVForce_getGlobalParameterName(target, index);
+    copyAndPadString(result, result_chars, result_length);
+}
+OPENMM_EXPORT void OPENMM_CUSTOMCVFORCE_GETGLOBALPARAMETERNAME(const OpenMM_CustomCVForce*& target, int const& index, char* result, int result_length) {
+    const char* result_chars = OpenMM_CustomCVForce_getGlobalParameterName(target, index);
+    copyAndPadString(result, result_chars, result_length);
+}
+OPENMM_EXPORT void openmm_customcvforce_setglobalparametername_(OpenMM_CustomCVForce*& target, int const& index, const char* name, int name_length) {
+    OpenMM_CustomCVForce_setGlobalParameterName(target, index, makeString(name, name_length).c_str());
+}
+OPENMM_EXPORT void OPENMM_CUSTOMCVFORCE_SETGLOBALPARAMETERNAME(OpenMM_CustomCVForce*& target, int const& index, const char* name, int name_length) {
+    OpenMM_CustomCVForce_setGlobalParameterName(target, index, makeString(name, name_length).c_str());
+}
+OPENMM_EXPORT double openmm_customcvforce_getglobalparameterdefaultvalue_(const OpenMM_CustomCVForce*& target, int const& index) {
+    return OpenMM_CustomCVForce_getGlobalParameterDefaultValue(target, index);
+}
+OPENMM_EXPORT double OPENMM_CUSTOMCVFORCE_GETGLOBALPARAMETERDEFAULTVALUE(const OpenMM_CustomCVForce*& target, int const& index) {
+    return OpenMM_CustomCVForce_getGlobalParameterDefaultValue(target, index);
+}
+OPENMM_EXPORT void openmm_customcvforce_setglobalparameterdefaultvalue_(OpenMM_CustomCVForce*& target, int const& index, double const& defaultValue) {
+    OpenMM_CustomCVForce_setGlobalParameterDefaultValue(target, index, defaultValue);
+}
+OPENMM_EXPORT void OPENMM_CUSTOMCVFORCE_SETGLOBALPARAMETERDEFAULTVALUE(OpenMM_CustomCVForce*& target, int const& index, double const& defaultValue) {
+    OpenMM_CustomCVForce_setGlobalParameterDefaultValue(target, index, defaultValue);
+}
+OPENMM_EXPORT void openmm_customcvforce_addenergyparameterderivative_(OpenMM_CustomCVForce*& target, const char* name, int name_length) {
+    OpenMM_CustomCVForce_addEnergyParameterDerivative(target, makeString(name, name_length).c_str());
+}
+OPENMM_EXPORT void OPENMM_CUSTOMCVFORCE_ADDENERGYPARAMETERDERIVATIVE(OpenMM_CustomCVForce*& target, const char* name, int name_length) {
+    OpenMM_CustomCVForce_addEnergyParameterDerivative(target, makeString(name, name_length).c_str());
+}
+OPENMM_EXPORT void openmm_customcvforce_getenergyparameterderivativename_(const OpenMM_CustomCVForce*& target, int const& index, char* result, int result_length) {
+    const char* result_chars = OpenMM_CustomCVForce_getEnergyParameterDerivativeName(target, index);
+    copyAndPadString(result, result_chars, result_length);
+}
+OPENMM_EXPORT void OPENMM_CUSTOMCVFORCE_GETENERGYPARAMETERDERIVATIVENAME(const OpenMM_CustomCVForce*& target, int const& index, char* result, int result_length) {
+    const char* result_chars = OpenMM_CustomCVForce_getEnergyParameterDerivativeName(target, index);
+    copyAndPadString(result, result_chars, result_length);
+}
+OPENMM_EXPORT int openmm_customcvforce_addtabulatedfunction_(OpenMM_CustomCVForce*& target, const char* name, OpenMM_TabulatedFunction*& function, int name_length) {
+    return OpenMM_CustomCVForce_addTabulatedFunction(target, makeString(name, name_length).c_str(), function);
+}
+OPENMM_EXPORT int OPENMM_CUSTOMCVFORCE_ADDTABULATEDFUNCTION(OpenMM_CustomCVForce*& target, const char* name, OpenMM_TabulatedFunction*& function, int name_length) {
+    return OpenMM_CustomCVForce_addTabulatedFunction(target, makeString(name, name_length).c_str(), function);
+}
+OPENMM_EXPORT void openmm_customcvforce_gettabulatedfunction_(OpenMM_CustomCVForce*& target, int const& index, OpenMM_TabulatedFunction*& result) {
+    result = OpenMM_CustomCVForce_getTabulatedFunction(target, index);
+}
+OPENMM_EXPORT void OPENMM_CUSTOMCVFORCE_GETTABULATEDFUNCTION(OpenMM_CustomCVForce*& target, int const& index, OpenMM_TabulatedFunction*& result) {
+    result = OpenMM_CustomCVForce_getTabulatedFunction(target, index);
+}
+OPENMM_EXPORT void openmm_customcvforce_gettabulatedfunctionname_(const OpenMM_CustomCVForce*& target, int const& index, char* result, int result_length) {
+    const char* result_chars = OpenMM_CustomCVForce_getTabulatedFunctionName(target, index);
+    copyAndPadString(result, result_chars, result_length);
+}
+OPENMM_EXPORT void OPENMM_CUSTOMCVFORCE_GETTABULATEDFUNCTIONNAME(const OpenMM_CustomCVForce*& target, int const& index, char* result, int result_length) {
+    const char* result_chars = OpenMM_CustomCVForce_getTabulatedFunctionName(target, index);
+    copyAndPadString(result, result_chars, result_length);
+}
+OPENMM_EXPORT void openmm_customcvforce_getcollectivevariablevalues_(OpenMM_CustomCVForce*& target, OpenMM_Context*& context, OpenMM_DoubleArray*& values) {
+    OpenMM_CustomCVForce_getCollectiveVariableValues(target, context, values);
+}
+OPENMM_EXPORT void OPENMM_CUSTOMCVFORCE_GETCOLLECTIVEVARIABLEVALUES(OpenMM_CustomCVForce*& target, OpenMM_Context*& context, OpenMM_DoubleArray*& values) {
+    OpenMM_CustomCVForce_getCollectiveVariableValues(target, context, values);
+}
+OPENMM_EXPORT void openmm_customcvforce_getinnercontext_(OpenMM_CustomCVForce*& target, OpenMM_Context*& context, OpenMM_Context*& result) {
+    result = OpenMM_CustomCVForce_getInnerContext(target, context);
+}
+OPENMM_EXPORT void OPENMM_CUSTOMCVFORCE_GETINNERCONTEXT(OpenMM_CustomCVForce*& target, OpenMM_Context*& context, OpenMM_Context*& result) {
+    result = OpenMM_CustomCVForce_getInnerContext(target, context);
+}
+OPENMM_EXPORT void openmm_customcvforce_updateparametersincontext_(OpenMM_CustomCVForce*& target, OpenMM_Context*& context) {
+    OpenMM_CustomCVForce_updateParametersInContext(target, context);
+}
+OPENMM_EXPORT void OPENMM_CUSTOMCVFORCE_UPDATEPARAMETERSINCONTEXT(OpenMM_CustomCVForce*& target, OpenMM_Context*& context) {
+    OpenMM_CustomCVForce_updateParametersInContext(target, context);
+}
+OPENMM_EXPORT void openmm_customcvforce_usesperiodicboundaryconditions_(const OpenMM_CustomCVForce*& target, OpenMM_Boolean& result) {
+    result = OpenMM_CustomCVForce_usesPeriodicBoundaryConditions(target);
+}
+OPENMM_EXPORT void OPENMM_CUSTOMCVFORCE_USESPERIODICBOUNDARYCONDITIONS(const OpenMM_CustomCVForce*& target, OpenMM_Boolean& result) {
+    result = OpenMM_CustomCVForce_usesPeriodicBoundaryConditions(target);
 }
 
 /* OpenMM::CustomBondForce */

@@ -235,19 +235,6 @@
    val[4]=unit.Quantity(val[4], unit.kilojoule_per_mole/(unit.radian*unit.radian))
 %}
 
-%pythonappend OpenMM::GBSAOBCForce::getParticleParameters(int index, double & charge, double & radius, double & scalingFactor) const %{
-   val[0]=unit.Quantity(val[0], unit.elementary_charge)
-   val[1]=unit.Quantity(val[1], unit.nanometer)
-%}
-
-%pythonappend OpenMM::GBSAOBCForce::getSurfaceAreaEnergy() const %{
-   val=unit.Quantity(val, unit.kilojoule_per_mole/unit.nanometer/unit.nanometer)
-%}
-
-%pythonappend OpenMM::GBSAOBCForce::getCutoffDistance() const %{
-   val=unit.Quantity(val, unit.nanometers)
-%}
-
 %pythonappend OpenMM::GayBerneForce::getCutoffDistance() const %{
    val=unit.Quantity(val, unit.nanometers)
 %}
@@ -262,6 +249,19 @@
    val[4]=unit.Quantity(val[4], unit.nanometer)
    val[5]=unit.Quantity(val[5], unit.nanometer)
    val[6]=unit.Quantity(val[6], unit.nanometer)
+%}
+
+%pythonappend OpenMM::GBSAOBCForce::getParticleParameters(int index, double & charge, double & radius, double & scalingFactor) const %{
+   val[0]=unit.Quantity(val[0], unit.elementary_charge)
+   val[1]=unit.Quantity(val[1], unit.nanometer)
+%}
+
+%pythonappend OpenMM::GBSAOBCForce::getSurfaceAreaEnergy() const %{
+   val=unit.Quantity(val, unit.kilojoule_per_mole/unit.nanometer/unit.nanometer)
+%}
+
+%pythonappend OpenMM::GBSAOBCForce::getCutoffDistance() const %{
+   val=unit.Quantity(val, unit.nanometers)
 %}
 
 %pythonappend OpenMM::DrudeIntegrator::getDrudeTemperature() const %{
@@ -341,15 +341,15 @@
    function.thisown=0
 %}
 
+%pythonappend OpenMM::CustomCompoundBondForce::addTabulatedFunction(const std::string & name, TabulatedFunction * function) %{
+   function.thisown=0
+%}
+
 %pythonappend OpenMM::CustomCVForce::addCollectiveVariable(const std::string & name, Force * variable) %{
    variable.thisown=0
 %}
 
 %pythonappend OpenMM::CustomCVForce::addTabulatedFunction(const std::string & name, TabulatedFunction * function) %{
-   function.thisown=0
-%}
-
-%pythonappend OpenMM::CustomCompoundBondForce::addTabulatedFunction(const std::string & name, TabulatedFunction * function) %{
    function.thisown=0
 %}
 

@@ -8951,261 +8951,6 @@ class HarmonicAngleForce(Force):
 HarmonicAngleForce_swigregister = _openmm.HarmonicAngleForce_swigregister
 HarmonicAngleForce_swigregister(HarmonicAngleForce)
 
-class GBSAOBCForce(Force):
-    """
-    This class implements an implicit solvation force using the GBSA-OBC model.
-
-    To use this class, create a GBSAOBCForce object, then call addParticle() once for each particle in the System to define its parameters. The number of particles for which you define GBSA parameters must be exactly equal to the number of particles in the System, or else an exception will be thrown when you try to create a Context. After a particle has been added, you can modify its force field parameters by calling setParticleParameters(). This will have no effect on Contexts that already exist unless you call updateParametersInContext().
-
-    When using this Force, the System should also include a NonbondedForce, and both objects must specify identical charges for all particles. Otherwise, the results will not be correct. Furthermore, if the nonbonded method is set to CutoffNonPeriodic or CutoffPeriodic, you should call setReactionFieldDielectric(1.0) on the NonbondedForce to turn off the reaction field approximation, which does not produce correct results when combined with GBSA.
-    """
-
-    __swig_setmethods__ = {}
-    for _s in [Force]:
-        __swig_setmethods__.update(getattr(_s, '__swig_setmethods__', {}))
-    __setattr__ = lambda self, name, value: _swig_setattr(self, GBSAOBCForce, name, value)
-    __swig_getmethods__ = {}
-    for _s in [Force]:
-        __swig_getmethods__.update(getattr(_s, '__swig_getmethods__', {}))
-    __getattr__ = lambda self, name: _swig_getattr(self, GBSAOBCForce, name)
-    __repr__ = _swig_repr
-    NoCutoff = _openmm.GBSAOBCForce_NoCutoff
-    CutoffNonPeriodic = _openmm.GBSAOBCForce_CutoffNonPeriodic
-    CutoffPeriodic = _openmm.GBSAOBCForce_CutoffPeriodic
-
-    def getNumParticles(self):
-        """
-        getNumParticles(self) -> int
-
-        Get the number of particles in the system.
-        """
-        return _openmm.GBSAOBCForce_getNumParticles(self)
-
-
-    def addParticle(self, charge, radius, scalingFactor):
-        """
-        addParticle(self, charge, radius, scalingFactor) -> int
-
-        Add the GBSA parameters for a particle. This should be called once for each particle in the System. When it is called for the i'th time, it specifies the parameters for the i'th particle.
-
-        Parameters
-        ----------
-        charge : double
-            the charge of the particle, measured in units of the proton charge
-        radius : double
-            the GBSA radius of the particle, measured in nm
-        scalingFactor : double
-            the OBC scaling factor for the particle
-
-        Returns
-        -------
-        int
-            the index of the particle that was added
-        """
-        return _openmm.GBSAOBCForce_addParticle(self, charge, radius, scalingFactor)
-
-
-    def getParticleParameters(self, index):
-        """
-        getParticleParameters(self, index)
-
-        Get the force field parameters for a particle.
-
-        Parameters
-        ----------
-        index : int
-            the index of the particle for which to get parameters
-
-        Returns
-        -------
-        charge : double
-            the charge of the particle, measured in units of the proton charge
-        radius : double
-            the GBSA radius of the particle, measured in nm
-        scalingFactor : double
-            the OBC scaling factor for the particle
-        """
-        val = _openmm.GBSAOBCForce_getParticleParameters(self, index)
-
-        val[0]=unit.Quantity(val[0], unit.elementary_charge)
-        val[1]=unit.Quantity(val[1], unit.nanometer)
-
-
-        return val
-
-
-    def setParticleParameters(self, index, charge, radius, scalingFactor):
-        """
-        setParticleParameters(self, index, charge, radius, scalingFactor)
-
-        Set the force field parameters for a particle.
-
-        Parameters
-        ----------
-        index : int
-            the index of the particle for which to set parameters
-        charge : double
-            the charge of the particle, measured in units of the proton charge
-        radius : double
-            the GBSA radius of the particle, measured in nm
-        scalingFactor : double
-            the OBC scaling factor for the particle
-        """
-        return _openmm.GBSAOBCForce_setParticleParameters(self, index, charge, radius, scalingFactor)
-
-
-    def getSolventDielectric(self):
-        """
-        getSolventDielectric(self) -> double
-
-        Get the dielectric constant for the solvent.
-        """
-        return _openmm.GBSAOBCForce_getSolventDielectric(self)
-
-
-    def setSolventDielectric(self, dielectric):
-        """
-        setSolventDielectric(self, dielectric)
-
-        Set the dielectric constant for the solvent.
-        """
-        return _openmm.GBSAOBCForce_setSolventDielectric(self, dielectric)
-
-
-    def getSoluteDielectric(self):
-        """
-        getSoluteDielectric(self) -> double
-
-        Get the dielectric constant for the solute.
-        """
-        return _openmm.GBSAOBCForce_getSoluteDielectric(self)
-
-
-    def setSoluteDielectric(self, dielectric):
-        """
-        setSoluteDielectric(self, dielectric)
-
-        Set the dielectric constant for the solute.
-        """
-        return _openmm.GBSAOBCForce_setSoluteDielectric(self, dielectric)
-
-
-    def getSurfaceAreaEnergy(self):
-        """
-        getSurfaceAreaEnergy(self) -> double
-
-        Get the energy scale for the surface energy term, measured in kJ/mol/nm^2.
-        """
-        val = _openmm.GBSAOBCForce_getSurfaceAreaEnergy(self)
-
-        val=unit.Quantity(val, unit.kilojoule_per_mole/unit.nanometer/unit.nanometer)
-
-
-        return val
-
-
-    def setSurfaceAreaEnergy(self, energy):
-        """
-        setSurfaceAreaEnergy(self, energy)
-
-        Set the energy scale for the surface energy term, measured in kJ/mol/nm^2.
-        """
-        return _openmm.GBSAOBCForce_setSurfaceAreaEnergy(self, energy)
-
-
-    def getNonbondedMethod(self):
-        """
-        getNonbondedMethod(self) -> OpenMM::GBSAOBCForce::NonbondedMethod
-
-        Get the method used for handling long range nonbonded interactions.
-        """
-        return _openmm.GBSAOBCForce_getNonbondedMethod(self)
-
-
-    def setNonbondedMethod(self, method):
-        """
-        setNonbondedMethod(self, method)
-
-        Set the method used for handling long range nonbonded interactions.
-        """
-        return _openmm.GBSAOBCForce_setNonbondedMethod(self, method)
-
-
-    def getCutoffDistance(self):
-        """
-        getCutoffDistance(self) -> double
-
-        Get the cutoff distance (in nm) being used for nonbonded interactions. If the NonbondedMethod in use is NoCutoff, this value will have no effect.
-
-        Returns
-        -------
-        double
-            the cutoff distance, measured in nm
-        """
-        val = _openmm.GBSAOBCForce_getCutoffDistance(self)
-
-        val=unit.Quantity(val, unit.nanometers)
-
-
-        return val
-
-
-    def setCutoffDistance(self, distance):
-        """
-        setCutoffDistance(self, distance)
-
-        Set the cutoff distance (in nm) being used for nonbonded interactions. If the NonbondedMethod in use is NoCutoff, this value will have no effect.
-
-        Parameters
-        ----------
-        distance : double
-            the cutoff distance, measured in nm
-        """
-        return _openmm.GBSAOBCForce_setCutoffDistance(self, distance)
-
-
-    def updateParametersInContext(self, context):
-        """
-        updateParametersInContext(self, context)
-
-        Update the particle parameters in a Context to match those stored in this Force object. This method provides an efficient method to update certain parameters in an existing Context without needing to reinitialize it. Simply call setParticleParameters() to modify this object's parameters, then call updateParametersInContext() to copy them over to the Context.
-
-        The only information this method updates is the values of per-particle parameters. All other aspects of the Force (the nonbonded method, the cutoff distance, etc.) are unaffected and can only be changed by reinitializing the Context. Furthermore, this method cannot be used to add new particles, only to change the parameters of existing ones.
-        """
-        return _openmm.GBSAOBCForce_updateParametersInContext(self, context)
-
-
-    def usesPeriodicBoundaryConditions(self):
-        """
-        usesPeriodicBoundaryConditions(self) -> bool
-
-        Returns whether or not this force makes use of periodic boundary conditions.
-
-        Returns
-        -------
-        bool
-            true if force uses PBC and false otherwise
-        """
-        return _openmm.GBSAOBCForce_usesPeriodicBoundaryConditions(self)
-
-
-    def __init__(self, *args):
-        """
-        __init__(self) -> GBSAOBCForce
-        __init__(self, other) -> GBSAOBCForce
-
-        Create a GBSAOBCForce.
-        """
-        this = _openmm.new_GBSAOBCForce(*args)
-        try:
-            self.this.append(this)
-        except __builtin__.Exception:
-            self.this = this
-    __swig_destroy__ = _openmm.delete_GBSAOBCForce
-    __del__ = lambda self: None
-GBSAOBCForce_swigregister = _openmm.GBSAOBCForce_swigregister
-GBSAOBCForce_swigregister(GBSAOBCForce)
-
 class GayBerneForce(Force):
     """
     This class implements the Gay-Berne anisotropic potential. This is similar to a Lennard-Jones potential, but it represents the particles as ellipsoids rather than point particles. In addition to the standard sigma and epsilon parameters, each particle has three widths sx, sy, and sz that give the diameter of the ellipsoid along each axis. It also has three scale factors ex, ey, and ez that scale the strength of the interaction along each axis. You can think of this force as a Lennard-Jones interaction computed based on the distance between the nearest points on two ellipsoids. The scale factors act as multipliers for epsilon along each axis, so the strength of the interaction along the ellipsoid's x axis is multiplied by ex, and likewise for the other axes. If two particles each have all their widths set to sigma and all their scale factors set to 1, the interaction simplifies to a standard Lennard-Jones force between point particles.
@@ -9575,6 +9320,261 @@ class GayBerneForce(Force):
     __del__ = lambda self: None
 GayBerneForce_swigregister = _openmm.GayBerneForce_swigregister
 GayBerneForce_swigregister(GayBerneForce)
+
+class GBSAOBCForce(Force):
+    """
+    This class implements an implicit solvation force using the GBSA-OBC model.
+
+    To use this class, create a GBSAOBCForce object, then call addParticle() once for each particle in the System to define its parameters. The number of particles for which you define GBSA parameters must be exactly equal to the number of particles in the System, or else an exception will be thrown when you try to create a Context. After a particle has been added, you can modify its force field parameters by calling setParticleParameters(). This will have no effect on Contexts that already exist unless you call updateParametersInContext().
+
+    When using this Force, the System should also include a NonbondedForce, and both objects must specify identical charges for all particles. Otherwise, the results will not be correct. Furthermore, if the nonbonded method is set to CutoffNonPeriodic or CutoffPeriodic, you should call setReactionFieldDielectric(1.0) on the NonbondedForce to turn off the reaction field approximation, which does not produce correct results when combined with GBSA.
+    """
+
+    __swig_setmethods__ = {}
+    for _s in [Force]:
+        __swig_setmethods__.update(getattr(_s, '__swig_setmethods__', {}))
+    __setattr__ = lambda self, name, value: _swig_setattr(self, GBSAOBCForce, name, value)
+    __swig_getmethods__ = {}
+    for _s in [Force]:
+        __swig_getmethods__.update(getattr(_s, '__swig_getmethods__', {}))
+    __getattr__ = lambda self, name: _swig_getattr(self, GBSAOBCForce, name)
+    __repr__ = _swig_repr
+    NoCutoff = _openmm.GBSAOBCForce_NoCutoff
+    CutoffNonPeriodic = _openmm.GBSAOBCForce_CutoffNonPeriodic
+    CutoffPeriodic = _openmm.GBSAOBCForce_CutoffPeriodic
+
+    def getNumParticles(self):
+        """
+        getNumParticles(self) -> int
+
+        Get the number of particles in the system.
+        """
+        return _openmm.GBSAOBCForce_getNumParticles(self)
+
+
+    def addParticle(self, charge, radius, scalingFactor):
+        """
+        addParticle(self, charge, radius, scalingFactor) -> int
+
+        Add the GBSA parameters for a particle. This should be called once for each particle in the System. When it is called for the i'th time, it specifies the parameters for the i'th particle.
+
+        Parameters
+        ----------
+        charge : double
+            the charge of the particle, measured in units of the proton charge
+        radius : double
+            the GBSA radius of the particle, measured in nm
+        scalingFactor : double
+            the OBC scaling factor for the particle
+
+        Returns
+        -------
+        int
+            the index of the particle that was added
+        """
+        return _openmm.GBSAOBCForce_addParticle(self, charge, radius, scalingFactor)
+
+
+    def getParticleParameters(self, index):
+        """
+        getParticleParameters(self, index)
+
+        Get the force field parameters for a particle.
+
+        Parameters
+        ----------
+        index : int
+            the index of the particle for which to get parameters
+
+        Returns
+        -------
+        charge : double
+            the charge of the particle, measured in units of the proton charge
+        radius : double
+            the GBSA radius of the particle, measured in nm
+        scalingFactor : double
+            the OBC scaling factor for the particle
+        """
+        val = _openmm.GBSAOBCForce_getParticleParameters(self, index)
+
+        val[0]=unit.Quantity(val[0], unit.elementary_charge)
+        val[1]=unit.Quantity(val[1], unit.nanometer)
+
+
+        return val
+
+
+    def setParticleParameters(self, index, charge, radius, scalingFactor):
+        """
+        setParticleParameters(self, index, charge, radius, scalingFactor)
+
+        Set the force field parameters for a particle.
+
+        Parameters
+        ----------
+        index : int
+            the index of the particle for which to set parameters
+        charge : double
+            the charge of the particle, measured in units of the proton charge
+        radius : double
+            the GBSA radius of the particle, measured in nm
+        scalingFactor : double
+            the OBC scaling factor for the particle
+        """
+        return _openmm.GBSAOBCForce_setParticleParameters(self, index, charge, radius, scalingFactor)
+
+
+    def getSolventDielectric(self):
+        """
+        getSolventDielectric(self) -> double
+
+        Get the dielectric constant for the solvent.
+        """
+        return _openmm.GBSAOBCForce_getSolventDielectric(self)
+
+
+    def setSolventDielectric(self, dielectric):
+        """
+        setSolventDielectric(self, dielectric)
+
+        Set the dielectric constant for the solvent.
+        """
+        return _openmm.GBSAOBCForce_setSolventDielectric(self, dielectric)
+
+
+    def getSoluteDielectric(self):
+        """
+        getSoluteDielectric(self) -> double
+
+        Get the dielectric constant for the solute.
+        """
+        return _openmm.GBSAOBCForce_getSoluteDielectric(self)
+
+
+    def setSoluteDielectric(self, dielectric):
+        """
+        setSoluteDielectric(self, dielectric)
+
+        Set the dielectric constant for the solute.
+        """
+        return _openmm.GBSAOBCForce_setSoluteDielectric(self, dielectric)
+
+
+    def getSurfaceAreaEnergy(self):
+        """
+        getSurfaceAreaEnergy(self) -> double
+
+        Get the energy scale for the surface energy term, measured in kJ/mol/nm^2.
+        """
+        val = _openmm.GBSAOBCForce_getSurfaceAreaEnergy(self)
+
+        val=unit.Quantity(val, unit.kilojoule_per_mole/unit.nanometer/unit.nanometer)
+
+
+        return val
+
+
+    def setSurfaceAreaEnergy(self, energy):
+        """
+        setSurfaceAreaEnergy(self, energy)
+
+        Set the energy scale for the surface energy term, measured in kJ/mol/nm^2.
+        """
+        return _openmm.GBSAOBCForce_setSurfaceAreaEnergy(self, energy)
+
+
+    def getNonbondedMethod(self):
+        """
+        getNonbondedMethod(self) -> OpenMM::GBSAOBCForce::NonbondedMethod
+
+        Get the method used for handling long range nonbonded interactions.
+        """
+        return _openmm.GBSAOBCForce_getNonbondedMethod(self)
+
+
+    def setNonbondedMethod(self, method):
+        """
+        setNonbondedMethod(self, method)
+
+        Set the method used for handling long range nonbonded interactions.
+        """
+        return _openmm.GBSAOBCForce_setNonbondedMethod(self, method)
+
+
+    def getCutoffDistance(self):
+        """
+        getCutoffDistance(self) -> double
+
+        Get the cutoff distance (in nm) being used for nonbonded interactions. If the NonbondedMethod in use is NoCutoff, this value will have no effect.
+
+        Returns
+        -------
+        double
+            the cutoff distance, measured in nm
+        """
+        val = _openmm.GBSAOBCForce_getCutoffDistance(self)
+
+        val=unit.Quantity(val, unit.nanometers)
+
+
+        return val
+
+
+    def setCutoffDistance(self, distance):
+        """
+        setCutoffDistance(self, distance)
+
+        Set the cutoff distance (in nm) being used for nonbonded interactions. If the NonbondedMethod in use is NoCutoff, this value will have no effect.
+
+        Parameters
+        ----------
+        distance : double
+            the cutoff distance, measured in nm
+        """
+        return _openmm.GBSAOBCForce_setCutoffDistance(self, distance)
+
+
+    def updateParametersInContext(self, context):
+        """
+        updateParametersInContext(self, context)
+
+        Update the particle parameters in a Context to match those stored in this Force object. This method provides an efficient method to update certain parameters in an existing Context without needing to reinitialize it. Simply call setParticleParameters() to modify this object's parameters, then call updateParametersInContext() to copy them over to the Context.
+
+        The only information this method updates is the values of per-particle parameters. All other aspects of the Force (the nonbonded method, the cutoff distance, etc.) are unaffected and can only be changed by reinitializing the Context. Furthermore, this method cannot be used to add new particles, only to change the parameters of existing ones.
+        """
+        return _openmm.GBSAOBCForce_updateParametersInContext(self, context)
+
+
+    def usesPeriodicBoundaryConditions(self):
+        """
+        usesPeriodicBoundaryConditions(self) -> bool
+
+        Returns whether or not this force makes use of periodic boundary conditions.
+
+        Returns
+        -------
+        bool
+            true if force uses PBC and false otherwise
+        """
+        return _openmm.GBSAOBCForce_usesPeriodicBoundaryConditions(self)
+
+
+    def __init__(self, *args):
+        """
+        __init__(self) -> GBSAOBCForce
+        __init__(self, other) -> GBSAOBCForce
+
+        Create a GBSAOBCForce.
+        """
+        this = _openmm.new_GBSAOBCForce(*args)
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+    __swig_destroy__ = _openmm.delete_GBSAOBCForce
+    __del__ = lambda self: None
+GBSAOBCForce_swigregister = _openmm.GBSAOBCForce_swigregister
+GBSAOBCForce_swigregister(GBSAOBCForce)
 
 class DrudeIntegrator(Integrator):
     """A base class to encapsulate features common to Drude integrators."""
@@ -14913,440 +14913,6 @@ class CustomExternalForce(Force):
 CustomExternalForce_swigregister = _openmm.CustomExternalForce_swigregister
 CustomExternalForce_swigregister(CustomExternalForce)
 
-class CustomCVForce(Force):
-    """
-    This class supports energy functions that depend on collective variables. To use it, you define a set of collective variables (scalar valued functions that depend on the particle positions), and an algebraic expression for the energy as a function of the collective variables. The expression also may involve tabulated functions, and may depend on arbitrary global parameters.
-
-    Each collective variable is defined by a Force object. The Force's potential energy is computed, and that becomes the value of the variable. This provides enormous flexibility in defining collective variables, especially by using custom forces. Anything that can be computed as a potential function can also be used as a collective variable.
-
-    To use this class, create a CustomCVForce object, passing an algebraic expression to the constructor that defines the potential energy. Then call addCollectiveVariable() to define collective variables and addGlobalParameter() to define global parameters. The values of global parameters may be modified during a simulation by calling Context::setParameter().
-
-    This class also has the ability to compute derivatives of the potential energy with respect to global parameters. Call addEnergyParameterDerivative() to request that the derivative with respect to a particular parameter be computed. You can then query its value in a Context by calling getState() on it.
-
-    Expressions may involve the operators + (add), - (subtract), * (multiply), / (divide), and ^ (power), and the following functions: sqrt, exp, log, sin, cos, sec, csc, tan, cot, asin, acos, atan, atan2, sinh, cosh, tanh, erf, erfc, min, max, abs, floor, ceil, step, delta, select. All trigonometric functions are defined in radians, and log is the natural logarithm. step(x) = 0 if x is less than 0, 1 otherwise. delta(x) = 1 if x is 0, 0 otherwise. select(x,y,z) = z if x = 0, y otherwise.
-
-    In addition, you can call addTabulatedFunction() to define a new function based on tabulated values. You specify the function by creating a TabulatedFunction object. That function can then appear in the expression.
-    """
-
-    __swig_setmethods__ = {}
-    for _s in [Force]:
-        __swig_setmethods__.update(getattr(_s, '__swig_setmethods__', {}))
-    __setattr__ = lambda self, name, value: _swig_setattr(self, CustomCVForce, name, value)
-    __swig_getmethods__ = {}
-    for _s in [Force]:
-        __swig_getmethods__.update(getattr(_s, '__swig_getmethods__', {}))
-    __getattr__ = lambda self, name: _swig_getattr(self, CustomCVForce, name)
-    __repr__ = _swig_repr
-    __swig_destroy__ = _openmm.delete_CustomCVForce
-    __del__ = lambda self: None
-
-    def getNumCollectiveVariables(self):
-        """
-        getNumCollectiveVariables(self) -> int
-
-        Get the number of collective variables that the interaction depends on.
-        """
-        return _openmm.CustomCVForce_getNumCollectiveVariables(self)
-
-
-    def getNumGlobalParameters(self):
-        """
-        getNumGlobalParameters(self) -> int
-
-        Get the number of global parameters that the interaction depends on.
-        """
-        return _openmm.CustomCVForce_getNumGlobalParameters(self)
-
-
-    def getNumEnergyParameterDerivatives(self):
-        """
-        getNumEnergyParameterDerivatives(self) -> int
-
-        Get the number of global parameters with respect to which the derivative of the energy should be computed.
-        """
-        return _openmm.CustomCVForce_getNumEnergyParameterDerivatives(self)
-
-
-    def getNumTabulatedFunctions(self):
-        """
-        getNumTabulatedFunctions(self) -> int
-
-        Get the number of tabulated functions that have been defined.
-        """
-        return _openmm.CustomCVForce_getNumTabulatedFunctions(self)
-
-
-    def getEnergyFunction(self):
-        """
-        getEnergyFunction(self) -> std::string const &
-
-        Get the algebraic expression that gives the energy of the system
-        """
-        return _openmm.CustomCVForce_getEnergyFunction(self)
-
-
-    def setEnergyFunction(self, energy):
-        """
-        setEnergyFunction(self, energy)
-
-        Set the algebraic expression that gives the energy of the system
-        """
-        return _openmm.CustomCVForce_setEnergyFunction(self, energy)
-
-
-    def addCollectiveVariable(self, name, variable):
-        """
-        addCollectiveVariable(self, name, variable) -> int
-
-        Add a collective variable that the force may depend on. The collective variable is represented by a Force object, which should have been created on the heap with the "new" operator. The CustomCVForce takes over ownership of it, and deletes the Force when the CustomCVForce itself is deleted.
-
-        Parameters
-        ----------
-        name : string
-            the name of the collective variable, as it will appear in the energy expression
-        variable : Force *
-            the collective variable, represented by a Force object. The value of the variable is the energy computed by the Force.
-
-        Returns
-        -------
-        int
-            the index within the Force of the variable that was added
-        """
-
-        if not variable.thisown:
-            s = ("the %s object does not own its corresponding OpenMM object"
-                 % self.__class__.__name__)
-            raise Exception(s)
-
-
-        val = _openmm.CustomCVForce_addCollectiveVariable(self, name, variable)
-
-        variable.thisown=0
-
-
-        return val
-
-
-    def getCollectiveVariableName(self, index):
-        """
-        getCollectiveVariableName(self, index) -> std::string const &
-
-        Get the name of a collective variable.
-
-        Parameters
-        ----------
-        index : int
-            the index of the collective variable for which to get the name
-
-        Returns
-        -------
-        string
-            the variable name
-        """
-        return _openmm.CustomCVForce_getCollectiveVariableName(self, index)
-
-
-    def getCollectiveVariable(self, *args):
-        """
-        getCollectiveVariable(self, index) -> Force
-        getCollectiveVariable(self, index) -> Force
-
-        Get a const reference to the Force object that computes a collective variable.
-
-        Parameters
-        ----------
-        index : int
-            the index of the collective variable to get
-
-        Returns
-        -------
-        Force
-            the Force object
-        """
-        return _openmm.CustomCVForce_getCollectiveVariable(self, *args)
-
-
-    def addGlobalParameter(self, name, defaultValue):
-        """
-        addGlobalParameter(self, name, defaultValue) -> int
-
-        Add a new global parameter that the interaction may depend on. The default value provided to this method is the initial value of the parameter in newly created Contexts. You can change the value at any time by calling setParameter() on the Context.
-
-        Parameters
-        ----------
-        name : string
-            the name of the parameter
-        defaultValue : double
-            the default value of the parameter
-
-        Returns
-        -------
-        int
-            the index of the parameter that was added
-        """
-        return _openmm.CustomCVForce_addGlobalParameter(self, name, defaultValue)
-
-
-    def getGlobalParameterName(self, index):
-        """
-        getGlobalParameterName(self, index) -> std::string const &
-
-        Get the name of a global parameter.
-
-        Parameters
-        ----------
-        index : int
-            the index of the parameter for which to get the name
-
-        Returns
-        -------
-        string
-            the parameter name
-        """
-        return _openmm.CustomCVForce_getGlobalParameterName(self, index)
-
-
-    def setGlobalParameterName(self, index, name):
-        """
-        setGlobalParameterName(self, index, name)
-
-        Set the name of a global parameter.
-
-        Parameters
-        ----------
-        index : int
-            the index of the parameter for which to set the name
-        name : string
-            the name of the parameter
-        """
-        return _openmm.CustomCVForce_setGlobalParameterName(self, index, name)
-
-
-    def getGlobalParameterDefaultValue(self, index):
-        """
-        getGlobalParameterDefaultValue(self, index) -> double
-
-        Get the default value of a global parameter.
-
-        Parameters
-        ----------
-        index : int
-            the index of the parameter for which to get the default value
-
-        Returns
-        -------
-        double
-            the parameter default value
-        """
-        return _openmm.CustomCVForce_getGlobalParameterDefaultValue(self, index)
-
-
-    def setGlobalParameterDefaultValue(self, index, defaultValue):
-        """
-        setGlobalParameterDefaultValue(self, index, defaultValue)
-
-        Set the default value of a global parameter.
-
-        Parameters
-        ----------
-        index : int
-            the index of the parameter for which to set the default value
-        defaultValue : double
-            the default value of the parameter
-        """
-        return _openmm.CustomCVForce_setGlobalParameterDefaultValue(self, index, defaultValue)
-
-
-    def addEnergyParameterDerivative(self, name):
-        """
-        addEnergyParameterDerivative(self, name)
-
-        Request that this Force compute the derivative of its energy with respect to a global parameter. The parameter must have already been added with addGlobalParameter().
-
-        Parameters
-        ----------
-        name : string
-            the name of the parameter
-        """
-        return _openmm.CustomCVForce_addEnergyParameterDerivative(self, name)
-
-
-    def getEnergyParameterDerivativeName(self, index):
-        """
-        getEnergyParameterDerivativeName(self, index) -> std::string const &
-
-        Get the name of a global parameter with respect to which this Force should compute the derivative of the energy.
-
-        Parameters
-        ----------
-        index : int
-            the index of the parameter derivative, between 0 and getNumEnergyParameterDerivatives()
-
-        Returns
-        -------
-        string
-            the parameter name
-        """
-        return _openmm.CustomCVForce_getEnergyParameterDerivativeName(self, index)
-
-
-    def addTabulatedFunction(self, name, function):
-        """
-        addTabulatedFunction(self, name, function) -> int
-
-        Add a tabulated function that may appear in the energy expression.
-
-        Parameters
-        ----------
-        name : string
-            the name of the function as it appears in expressions
-        function : TabulatedFunction *
-            a TabulatedFunction object defining the function. The TabulatedFunction should have been created on the heap with the "new" operator. The Force takes over ownership of it, and deletes it when the Force itself is deleted.
-
-        Returns
-        -------
-        int
-            the index of the function that was added
-        """
-
-        if not function.thisown:
-            s = ("the %s object does not own its corresponding OpenMM object"
-                 % self.__class__.__name__)
-            raise Exception(s)
-
-
-        val = _openmm.CustomCVForce_addTabulatedFunction(self, name, function)
-
-        function.thisown=0
-
-
-        return val
-
-
-    def getTabulatedFunction(self, *args):
-        """
-        getTabulatedFunction(self, index) -> TabulatedFunction
-        getTabulatedFunction(self, index) -> TabulatedFunction
-
-        Get a reference to a tabulated function that may appear in the energy expression.
-
-        Parameters
-        ----------
-        index : int
-            the index of the function to get
-
-        Returns
-        -------
-        TabulatedFunction
-            the TabulatedFunction object defining the function
-        """
-        return _openmm.CustomCVForce_getTabulatedFunction(self, *args)
-
-
-    def getTabulatedFunctionName(self, index):
-        """
-        getTabulatedFunctionName(self, index) -> std::string const &
-
-        Get the name of a tabulated function that may appear in the energy expression.
-
-        Parameters
-        ----------
-        index : int
-            the index of the function to get
-
-        Returns
-        -------
-        string
-            the name of the function as it appears in expressions
-        """
-        return _openmm.CustomCVForce_getTabulatedFunctionName(self, index)
-
-
-    def getCollectiveVariableValues(self, context):
-        """
-        getCollectiveVariableValues(self, context)
-
-        Get the current values of the collective variables in a Context.
-
-        Parameters
-        ----------
-        context : Context
-            the Context for which to get the values
-
-        Returns
-        -------
-        values : vector< double >
-            the values of the collective variables are computed and stored into this
-        """
-        return _openmm.CustomCVForce_getCollectiveVariableValues(self, context)
-
-
-    def getInnerContext(self, context):
-        """
-        getInnerContext(self, context) -> Context
-
-        Get the inner Context used for evaluating collective variables.
-
-        When you create a Context for a System that contains a CustomCVForce, internally it creates a new System, adds the Forces that define the CVs to it, creates a new Context for that System, and uses it to evaluate the variables. In most cases you can ignore all of this. It is just an implementation detail. However, there are a few cases where you need to directly access that internal Context. For example, if you want to modify one of the Forces that defines a collective variable and call updateParametersInContext() on it, you need to pass that inner Context to it. This method returns a reference to it.
-
-        Parameters
-        ----------
-        context : Context
-            the Context containing the CustomCVForce
-
-        Returns
-        -------
-        Context
-            the inner Context used to evaluate the collective variables
-        """
-        return _openmm.CustomCVForce_getInnerContext(self, context)
-
-
-    def updateParametersInContext(self, context):
-        """
-        updateParametersInContext(self, context)
-
-        Update the tabulated function parameters in a Context to match those stored in this Force object. This method provides an efficient method to update certain parameters in an existing Context without needing to reinitialize it. Simply call getTabulatedFunction(index).setFunctionParameters() to modify this object's parameters, then call updateParametersInContext() to copy them over to the Context.
-
-        This method is very limited. The only information it updates is the parameters of tabulated functions. All other aspects of the Force (the energy expression, the set of collective variables, etc.) are unaffected and can only be changed by reinitializing the Context.
-        """
-        return _openmm.CustomCVForce_updateParametersInContext(self, context)
-
-
-    def usesPeriodicBoundaryConditions(self):
-        """
-        usesPeriodicBoundaryConditions(self) -> bool
-
-        Returns whether or not this force makes use of periodic boundary conditions.
-
-        Returns
-        -------
-        bool
-            true if force uses PBC and false otherwise
-        """
-        return _openmm.CustomCVForce_usesPeriodicBoundaryConditions(self)
-
-
-    def __init__(self, *args):
-        """
-        __init__(self, energy) -> CustomCVForce
-        __init__(self, other) -> CustomCVForce
-
-        Create a CustomCVForce.
-
-        Parameters
-        ----------
-        energy : string
-            an algebraic expression giving the energy of the system as a function of the collective variables and global parameters
-        """
-        this = _openmm.new_CustomCVForce(*args)
-        try:
-            self.this.append(this)
-        except __builtin__.Exception:
-            self.this = this
-CustomCVForce_swigregister = _openmm.CustomCVForce_swigregister
-CustomCVForce_swigregister(CustomCVForce)
-
 class CustomCompoundBondForce(Force):
     """
     This class supports a wide variety of bonded interactions. It defines a "bond" as a single energy term that depends on the positions of a fixed set of particles. The number of particles involved in a bond, and how the energy depends on their positions, is configurable. It may depend on the positions of individual particles, the distances between pairs of particles, the angles formed by sets of three particles, and the dihedral angles formed by sets of four particles.
@@ -16446,6 +16012,440 @@ class CustomCentroidBondForce(Force):
             self.this = this
 CustomCentroidBondForce_swigregister = _openmm.CustomCentroidBondForce_swigregister
 CustomCentroidBondForce_swigregister(CustomCentroidBondForce)
+
+class CustomCVForce(Force):
+    """
+    This class supports energy functions that depend on collective variables. To use it, you define a set of collective variables (scalar valued functions that depend on the particle positions), and an algebraic expression for the energy as a function of the collective variables. The expression also may involve tabulated functions, and may depend on arbitrary global parameters.
+
+    Each collective variable is defined by a Force object. The Force's potential energy is computed, and that becomes the value of the variable. This provides enormous flexibility in defining collective variables, especially by using custom forces. Anything that can be computed as a potential function can also be used as a collective variable.
+
+    To use this class, create a CustomCVForce object, passing an algebraic expression to the constructor that defines the potential energy. Then call addCollectiveVariable() to define collective variables and addGlobalParameter() to define global parameters. The values of global parameters may be modified during a simulation by calling Context::setParameter().
+
+    This class also has the ability to compute derivatives of the potential energy with respect to global parameters. Call addEnergyParameterDerivative() to request that the derivative with respect to a particular parameter be computed. You can then query its value in a Context by calling getState() on it.
+
+    Expressions may involve the operators + (add), - (subtract), * (multiply), / (divide), and ^ (power), and the following functions: sqrt, exp, log, sin, cos, sec, csc, tan, cot, asin, acos, atan, atan2, sinh, cosh, tanh, erf, erfc, min, max, abs, floor, ceil, step, delta, select. All trigonometric functions are defined in radians, and log is the natural logarithm. step(x) = 0 if x is less than 0, 1 otherwise. delta(x) = 1 if x is 0, 0 otherwise. select(x,y,z) = z if x = 0, y otherwise.
+
+    In addition, you can call addTabulatedFunction() to define a new function based on tabulated values. You specify the function by creating a TabulatedFunction object. That function can then appear in the expression.
+    """
+
+    __swig_setmethods__ = {}
+    for _s in [Force]:
+        __swig_setmethods__.update(getattr(_s, '__swig_setmethods__', {}))
+    __setattr__ = lambda self, name, value: _swig_setattr(self, CustomCVForce, name, value)
+    __swig_getmethods__ = {}
+    for _s in [Force]:
+        __swig_getmethods__.update(getattr(_s, '__swig_getmethods__', {}))
+    __getattr__ = lambda self, name: _swig_getattr(self, CustomCVForce, name)
+    __repr__ = _swig_repr
+    __swig_destroy__ = _openmm.delete_CustomCVForce
+    __del__ = lambda self: None
+
+    def getNumCollectiveVariables(self):
+        """
+        getNumCollectiveVariables(self) -> int
+
+        Get the number of collective variables that the interaction depends on.
+        """
+        return _openmm.CustomCVForce_getNumCollectiveVariables(self)
+
+
+    def getNumGlobalParameters(self):
+        """
+        getNumGlobalParameters(self) -> int
+
+        Get the number of global parameters that the interaction depends on.
+        """
+        return _openmm.CustomCVForce_getNumGlobalParameters(self)
+
+
+    def getNumEnergyParameterDerivatives(self):
+        """
+        getNumEnergyParameterDerivatives(self) -> int
+
+        Get the number of global parameters with respect to which the derivative of the energy should be computed.
+        """
+        return _openmm.CustomCVForce_getNumEnergyParameterDerivatives(self)
+
+
+    def getNumTabulatedFunctions(self):
+        """
+        getNumTabulatedFunctions(self) -> int
+
+        Get the number of tabulated functions that have been defined.
+        """
+        return _openmm.CustomCVForce_getNumTabulatedFunctions(self)
+
+
+    def getEnergyFunction(self):
+        """
+        getEnergyFunction(self) -> std::string const &
+
+        Get the algebraic expression that gives the energy of the system
+        """
+        return _openmm.CustomCVForce_getEnergyFunction(self)
+
+
+    def setEnergyFunction(self, energy):
+        """
+        setEnergyFunction(self, energy)
+
+        Set the algebraic expression that gives the energy of the system
+        """
+        return _openmm.CustomCVForce_setEnergyFunction(self, energy)
+
+
+    def addCollectiveVariable(self, name, variable):
+        """
+        addCollectiveVariable(self, name, variable) -> int
+
+        Add a collective variable that the force may depend on. The collective variable is represented by a Force object, which should have been created on the heap with the "new" operator. The CustomCVForce takes over ownership of it, and deletes the Force when the CustomCVForce itself is deleted.
+
+        Parameters
+        ----------
+        name : string
+            the name of the collective variable, as it will appear in the energy expression
+        variable : Force *
+            the collective variable, represented by a Force object. The value of the variable is the energy computed by the Force.
+
+        Returns
+        -------
+        int
+            the index within the Force of the variable that was added
+        """
+
+        if not variable.thisown:
+            s = ("the %s object does not own its corresponding OpenMM object"
+                 % self.__class__.__name__)
+            raise Exception(s)
+
+
+        val = _openmm.CustomCVForce_addCollectiveVariable(self, name, variable)
+
+        variable.thisown=0
+
+
+        return val
+
+
+    def getCollectiveVariableName(self, index):
+        """
+        getCollectiveVariableName(self, index) -> std::string const &
+
+        Get the name of a collective variable.
+
+        Parameters
+        ----------
+        index : int
+            the index of the collective variable for which to get the name
+
+        Returns
+        -------
+        string
+            the variable name
+        """
+        return _openmm.CustomCVForce_getCollectiveVariableName(self, index)
+
+
+    def getCollectiveVariable(self, *args):
+        """
+        getCollectiveVariable(self, index) -> Force
+        getCollectiveVariable(self, index) -> Force
+
+        Get a const reference to the Force object that computes a collective variable.
+
+        Parameters
+        ----------
+        index : int
+            the index of the collective variable to get
+
+        Returns
+        -------
+        Force
+            the Force object
+        """
+        return _openmm.CustomCVForce_getCollectiveVariable(self, *args)
+
+
+    def addGlobalParameter(self, name, defaultValue):
+        """
+        addGlobalParameter(self, name, defaultValue) -> int
+
+        Add a new global parameter that the interaction may depend on. The default value provided to this method is the initial value of the parameter in newly created Contexts. You can change the value at any time by calling setParameter() on the Context.
+
+        Parameters
+        ----------
+        name : string
+            the name of the parameter
+        defaultValue : double
+            the default value of the parameter
+
+        Returns
+        -------
+        int
+            the index of the parameter that was added
+        """
+        return _openmm.CustomCVForce_addGlobalParameter(self, name, defaultValue)
+
+
+    def getGlobalParameterName(self, index):
+        """
+        getGlobalParameterName(self, index) -> std::string const &
+
+        Get the name of a global parameter.
+
+        Parameters
+        ----------
+        index : int
+            the index of the parameter for which to get the name
+
+        Returns
+        -------
+        string
+            the parameter name
+        """
+        return _openmm.CustomCVForce_getGlobalParameterName(self, index)
+
+
+    def setGlobalParameterName(self, index, name):
+        """
+        setGlobalParameterName(self, index, name)
+
+        Set the name of a global parameter.
+
+        Parameters
+        ----------
+        index : int
+            the index of the parameter for which to set the name
+        name : string
+            the name of the parameter
+        """
+        return _openmm.CustomCVForce_setGlobalParameterName(self, index, name)
+
+
+    def getGlobalParameterDefaultValue(self, index):
+        """
+        getGlobalParameterDefaultValue(self, index) -> double
+
+        Get the default value of a global parameter.
+
+        Parameters
+        ----------
+        index : int
+            the index of the parameter for which to get the default value
+
+        Returns
+        -------
+        double
+            the parameter default value
+        """
+        return _openmm.CustomCVForce_getGlobalParameterDefaultValue(self, index)
+
+
+    def setGlobalParameterDefaultValue(self, index, defaultValue):
+        """
+        setGlobalParameterDefaultValue(self, index, defaultValue)
+
+        Set the default value of a global parameter.
+
+        Parameters
+        ----------
+        index : int
+            the index of the parameter for which to set the default value
+        defaultValue : double
+            the default value of the parameter
+        """
+        return _openmm.CustomCVForce_setGlobalParameterDefaultValue(self, index, defaultValue)
+
+
+    def addEnergyParameterDerivative(self, name):
+        """
+        addEnergyParameterDerivative(self, name)
+
+        Request that this Force compute the derivative of its energy with respect to a global parameter. The parameter must have already been added with addGlobalParameter().
+
+        Parameters
+        ----------
+        name : string
+            the name of the parameter
+        """
+        return _openmm.CustomCVForce_addEnergyParameterDerivative(self, name)
+
+
+    def getEnergyParameterDerivativeName(self, index):
+        """
+        getEnergyParameterDerivativeName(self, index) -> std::string const &
+
+        Get the name of a global parameter with respect to which this Force should compute the derivative of the energy.
+
+        Parameters
+        ----------
+        index : int
+            the index of the parameter derivative, between 0 and getNumEnergyParameterDerivatives()
+
+        Returns
+        -------
+        string
+            the parameter name
+        """
+        return _openmm.CustomCVForce_getEnergyParameterDerivativeName(self, index)
+
+
+    def addTabulatedFunction(self, name, function):
+        """
+        addTabulatedFunction(self, name, function) -> int
+
+        Add a tabulated function that may appear in the energy expression.
+
+        Parameters
+        ----------
+        name : string
+            the name of the function as it appears in expressions
+        function : TabulatedFunction *
+            a TabulatedFunction object defining the function. The TabulatedFunction should have been created on the heap with the "new" operator. The Force takes over ownership of it, and deletes it when the Force itself is deleted.
+
+        Returns
+        -------
+        int
+            the index of the function that was added
+        """
+
+        if not function.thisown:
+            s = ("the %s object does not own its corresponding OpenMM object"
+                 % self.__class__.__name__)
+            raise Exception(s)
+
+
+        val = _openmm.CustomCVForce_addTabulatedFunction(self, name, function)
+
+        function.thisown=0
+
+
+        return val
+
+
+    def getTabulatedFunction(self, *args):
+        """
+        getTabulatedFunction(self, index) -> TabulatedFunction
+        getTabulatedFunction(self, index) -> TabulatedFunction
+
+        Get a reference to a tabulated function that may appear in the energy expression.
+
+        Parameters
+        ----------
+        index : int
+            the index of the function to get
+
+        Returns
+        -------
+        TabulatedFunction
+            the TabulatedFunction object defining the function
+        """
+        return _openmm.CustomCVForce_getTabulatedFunction(self, *args)
+
+
+    def getTabulatedFunctionName(self, index):
+        """
+        getTabulatedFunctionName(self, index) -> std::string const &
+
+        Get the name of a tabulated function that may appear in the energy expression.
+
+        Parameters
+        ----------
+        index : int
+            the index of the function to get
+
+        Returns
+        -------
+        string
+            the name of the function as it appears in expressions
+        """
+        return _openmm.CustomCVForce_getTabulatedFunctionName(self, index)
+
+
+    def getCollectiveVariableValues(self, context):
+        """
+        getCollectiveVariableValues(self, context)
+
+        Get the current values of the collective variables in a Context.
+
+        Parameters
+        ----------
+        context : Context
+            the Context for which to get the values
+
+        Returns
+        -------
+        values : vector< double >
+            the values of the collective variables are computed and stored into this
+        """
+        return _openmm.CustomCVForce_getCollectiveVariableValues(self, context)
+
+
+    def getInnerContext(self, context):
+        """
+        getInnerContext(self, context) -> Context
+
+        Get the inner Context used for evaluating collective variables.
+
+        When you create a Context for a System that contains a CustomCVForce, internally it creates a new System, adds the Forces that define the CVs to it, creates a new Context for that System, and uses it to evaluate the variables. In most cases you can ignore all of this. It is just an implementation detail. However, there are a few cases where you need to directly access that internal Context. For example, if you want to modify one of the Forces that defines a collective variable and call updateParametersInContext() on it, you need to pass that inner Context to it. This method returns a reference to it.
+
+        Parameters
+        ----------
+        context : Context
+            the Context containing the CustomCVForce
+
+        Returns
+        -------
+        Context
+            the inner Context used to evaluate the collective variables
+        """
+        return _openmm.CustomCVForce_getInnerContext(self, context)
+
+
+    def updateParametersInContext(self, context):
+        """
+        updateParametersInContext(self, context)
+
+        Update the tabulated function parameters in a Context to match those stored in this Force object. This method provides an efficient method to update certain parameters in an existing Context without needing to reinitialize it. Simply call getTabulatedFunction(index).setFunctionParameters() to modify this object's parameters, then call updateParametersInContext() to copy them over to the Context.
+
+        This method is very limited. The only information it updates is the parameters of tabulated functions. All other aspects of the Force (the energy expression, the set of collective variables, etc.) are unaffected and can only be changed by reinitializing the Context.
+        """
+        return _openmm.CustomCVForce_updateParametersInContext(self, context)
+
+
+    def usesPeriodicBoundaryConditions(self):
+        """
+        usesPeriodicBoundaryConditions(self) -> bool
+
+        Returns whether or not this force makes use of periodic boundary conditions.
+
+        Returns
+        -------
+        bool
+            true if force uses PBC and false otherwise
+        """
+        return _openmm.CustomCVForce_usesPeriodicBoundaryConditions(self)
+
+
+    def __init__(self, *args):
+        """
+        __init__(self, energy) -> CustomCVForce
+        __init__(self, other) -> CustomCVForce
+
+        Create a CustomCVForce.
+
+        Parameters
+        ----------
+        energy : string
+            an algebraic expression giving the energy of the system as a function of the collective variables and global parameters
+        """
+        this = _openmm.new_CustomCVForce(*args)
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+CustomCVForce_swigregister = _openmm.CustomCVForce_swigregister
+CustomCVForce_swigregister(CustomCVForce)
 
 class CustomBondForce(Force):
     """

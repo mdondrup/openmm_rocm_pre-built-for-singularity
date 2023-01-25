@@ -1408,70 +1408,6 @@ OPENMM_EXPORT OpenMM_Boolean OpenMM_HarmonicAngleForce_usesPeriodicBoundaryCondi
     return (result ? OpenMM_True : OpenMM_False);
 }
 
-/* OpenMM::GBSAOBCForce */
-OPENMM_EXPORT OpenMM_GBSAOBCForce* OpenMM_GBSAOBCForce_create() {
-    return reinterpret_cast<OpenMM_GBSAOBCForce*>(new OpenMM::GBSAOBCForce());
-}
-OPENMM_EXPORT void OpenMM_GBSAOBCForce_destroy(OpenMM_GBSAOBCForce* target) {
-    delete reinterpret_cast<OpenMM::GBSAOBCForce*>(target);
-}
-OPENMM_EXPORT int OpenMM_GBSAOBCForce_getNumParticles(const OpenMM_GBSAOBCForce* target) {
-    int result = reinterpret_cast<const OpenMM::GBSAOBCForce*>(target)->getNumParticles();
-    return result;
-}
-OPENMM_EXPORT int OpenMM_GBSAOBCForce_addParticle(OpenMM_GBSAOBCForce* target, double charge, double radius, double scalingFactor) {
-    int result = reinterpret_cast<OpenMM::GBSAOBCForce*>(target)->addParticle(charge, radius, scalingFactor);
-    return result;
-}
-OPENMM_EXPORT void OpenMM_GBSAOBCForce_getParticleParameters(const OpenMM_GBSAOBCForce* target, int index, double* charge, double* radius, double* scalingFactor) {
-    reinterpret_cast<const OpenMM::GBSAOBCForce*>(target)->getParticleParameters(index, *reinterpret_cast<double*>(charge), *reinterpret_cast<double*>(radius), *reinterpret_cast<double*>(scalingFactor));
-}
-OPENMM_EXPORT void OpenMM_GBSAOBCForce_setParticleParameters(OpenMM_GBSAOBCForce* target, int index, double charge, double radius, double scalingFactor) {
-    reinterpret_cast<OpenMM::GBSAOBCForce*>(target)->setParticleParameters(index, charge, radius, scalingFactor);
-}
-OPENMM_EXPORT double OpenMM_GBSAOBCForce_getSolventDielectric(const OpenMM_GBSAOBCForce* target) {
-    double result = reinterpret_cast<const OpenMM::GBSAOBCForce*>(target)->getSolventDielectric();
-    return result;
-}
-OPENMM_EXPORT void OpenMM_GBSAOBCForce_setSolventDielectric(OpenMM_GBSAOBCForce* target, double dielectric) {
-    reinterpret_cast<OpenMM::GBSAOBCForce*>(target)->setSolventDielectric(dielectric);
-}
-OPENMM_EXPORT double OpenMM_GBSAOBCForce_getSoluteDielectric(const OpenMM_GBSAOBCForce* target) {
-    double result = reinterpret_cast<const OpenMM::GBSAOBCForce*>(target)->getSoluteDielectric();
-    return result;
-}
-OPENMM_EXPORT void OpenMM_GBSAOBCForce_setSoluteDielectric(OpenMM_GBSAOBCForce* target, double dielectric) {
-    reinterpret_cast<OpenMM::GBSAOBCForce*>(target)->setSoluteDielectric(dielectric);
-}
-OPENMM_EXPORT double OpenMM_GBSAOBCForce_getSurfaceAreaEnergy(const OpenMM_GBSAOBCForce* target) {
-    double result = reinterpret_cast<const OpenMM::GBSAOBCForce*>(target)->getSurfaceAreaEnergy();
-    return result;
-}
-OPENMM_EXPORT void OpenMM_GBSAOBCForce_setSurfaceAreaEnergy(OpenMM_GBSAOBCForce* target, double energy) {
-    reinterpret_cast<OpenMM::GBSAOBCForce*>(target)->setSurfaceAreaEnergy(energy);
-}
-OPENMM_EXPORT OpenMM_GBSAOBCForce_NonbondedMethod OpenMM_GBSAOBCForce_getNonbondedMethod(const OpenMM_GBSAOBCForce* target) {
-    OpenMM::GBSAOBCForce::NonbondedMethod result = reinterpret_cast<const OpenMM::GBSAOBCForce*>(target)->getNonbondedMethod();
-    return static_cast<OpenMM_GBSAOBCForce_NonbondedMethod>(result);
-}
-OPENMM_EXPORT void OpenMM_GBSAOBCForce_setNonbondedMethod(OpenMM_GBSAOBCForce* target, OpenMM_GBSAOBCForce_NonbondedMethod method) {
-    reinterpret_cast<OpenMM::GBSAOBCForce*>(target)->setNonbondedMethod(static_cast<OpenMM::GBSAOBCForce::NonbondedMethod>(method));
-}
-OPENMM_EXPORT double OpenMM_GBSAOBCForce_getCutoffDistance(const OpenMM_GBSAOBCForce* target) {
-    double result = reinterpret_cast<const OpenMM::GBSAOBCForce*>(target)->getCutoffDistance();
-    return result;
-}
-OPENMM_EXPORT void OpenMM_GBSAOBCForce_setCutoffDistance(OpenMM_GBSAOBCForce* target, double distance) {
-    reinterpret_cast<OpenMM::GBSAOBCForce*>(target)->setCutoffDistance(distance);
-}
-OPENMM_EXPORT void OpenMM_GBSAOBCForce_updateParametersInContext(OpenMM_GBSAOBCForce* target, OpenMM_Context* context) {
-    reinterpret_cast<OpenMM::GBSAOBCForce*>(target)->updateParametersInContext(*reinterpret_cast<OpenMM::Context*>(context));
-}
-OPENMM_EXPORT OpenMM_Boolean OpenMM_GBSAOBCForce_usesPeriodicBoundaryConditions(const OpenMM_GBSAOBCForce* target) {
-    bool result = reinterpret_cast<const OpenMM::GBSAOBCForce*>(target)->usesPeriodicBoundaryConditions();
-    return (result ? OpenMM_True : OpenMM_False);
-}
-
 /* OpenMM::GayBerneForce */
 OPENMM_EXPORT OpenMM_GayBerneForce* OpenMM_GayBerneForce_create() {
     return reinterpret_cast<OpenMM_GayBerneForce*>(new OpenMM::GayBerneForce());
@@ -1540,6 +1476,70 @@ OPENMM_EXPORT void OpenMM_GayBerneForce_updateParametersInContext(OpenMM_GayBern
 }
 OPENMM_EXPORT OpenMM_Boolean OpenMM_GayBerneForce_usesPeriodicBoundaryConditions(const OpenMM_GayBerneForce* target) {
     bool result = reinterpret_cast<const OpenMM::GayBerneForce*>(target)->usesPeriodicBoundaryConditions();
+    return (result ? OpenMM_True : OpenMM_False);
+}
+
+/* OpenMM::GBSAOBCForce */
+OPENMM_EXPORT OpenMM_GBSAOBCForce* OpenMM_GBSAOBCForce_create() {
+    return reinterpret_cast<OpenMM_GBSAOBCForce*>(new OpenMM::GBSAOBCForce());
+}
+OPENMM_EXPORT void OpenMM_GBSAOBCForce_destroy(OpenMM_GBSAOBCForce* target) {
+    delete reinterpret_cast<OpenMM::GBSAOBCForce*>(target);
+}
+OPENMM_EXPORT int OpenMM_GBSAOBCForce_getNumParticles(const OpenMM_GBSAOBCForce* target) {
+    int result = reinterpret_cast<const OpenMM::GBSAOBCForce*>(target)->getNumParticles();
+    return result;
+}
+OPENMM_EXPORT int OpenMM_GBSAOBCForce_addParticle(OpenMM_GBSAOBCForce* target, double charge, double radius, double scalingFactor) {
+    int result = reinterpret_cast<OpenMM::GBSAOBCForce*>(target)->addParticle(charge, radius, scalingFactor);
+    return result;
+}
+OPENMM_EXPORT void OpenMM_GBSAOBCForce_getParticleParameters(const OpenMM_GBSAOBCForce* target, int index, double* charge, double* radius, double* scalingFactor) {
+    reinterpret_cast<const OpenMM::GBSAOBCForce*>(target)->getParticleParameters(index, *reinterpret_cast<double*>(charge), *reinterpret_cast<double*>(radius), *reinterpret_cast<double*>(scalingFactor));
+}
+OPENMM_EXPORT void OpenMM_GBSAOBCForce_setParticleParameters(OpenMM_GBSAOBCForce* target, int index, double charge, double radius, double scalingFactor) {
+    reinterpret_cast<OpenMM::GBSAOBCForce*>(target)->setParticleParameters(index, charge, radius, scalingFactor);
+}
+OPENMM_EXPORT double OpenMM_GBSAOBCForce_getSolventDielectric(const OpenMM_GBSAOBCForce* target) {
+    double result = reinterpret_cast<const OpenMM::GBSAOBCForce*>(target)->getSolventDielectric();
+    return result;
+}
+OPENMM_EXPORT void OpenMM_GBSAOBCForce_setSolventDielectric(OpenMM_GBSAOBCForce* target, double dielectric) {
+    reinterpret_cast<OpenMM::GBSAOBCForce*>(target)->setSolventDielectric(dielectric);
+}
+OPENMM_EXPORT double OpenMM_GBSAOBCForce_getSoluteDielectric(const OpenMM_GBSAOBCForce* target) {
+    double result = reinterpret_cast<const OpenMM::GBSAOBCForce*>(target)->getSoluteDielectric();
+    return result;
+}
+OPENMM_EXPORT void OpenMM_GBSAOBCForce_setSoluteDielectric(OpenMM_GBSAOBCForce* target, double dielectric) {
+    reinterpret_cast<OpenMM::GBSAOBCForce*>(target)->setSoluteDielectric(dielectric);
+}
+OPENMM_EXPORT double OpenMM_GBSAOBCForce_getSurfaceAreaEnergy(const OpenMM_GBSAOBCForce* target) {
+    double result = reinterpret_cast<const OpenMM::GBSAOBCForce*>(target)->getSurfaceAreaEnergy();
+    return result;
+}
+OPENMM_EXPORT void OpenMM_GBSAOBCForce_setSurfaceAreaEnergy(OpenMM_GBSAOBCForce* target, double energy) {
+    reinterpret_cast<OpenMM::GBSAOBCForce*>(target)->setSurfaceAreaEnergy(energy);
+}
+OPENMM_EXPORT OpenMM_GBSAOBCForce_NonbondedMethod OpenMM_GBSAOBCForce_getNonbondedMethod(const OpenMM_GBSAOBCForce* target) {
+    OpenMM::GBSAOBCForce::NonbondedMethod result = reinterpret_cast<const OpenMM::GBSAOBCForce*>(target)->getNonbondedMethod();
+    return static_cast<OpenMM_GBSAOBCForce_NonbondedMethod>(result);
+}
+OPENMM_EXPORT void OpenMM_GBSAOBCForce_setNonbondedMethod(OpenMM_GBSAOBCForce* target, OpenMM_GBSAOBCForce_NonbondedMethod method) {
+    reinterpret_cast<OpenMM::GBSAOBCForce*>(target)->setNonbondedMethod(static_cast<OpenMM::GBSAOBCForce::NonbondedMethod>(method));
+}
+OPENMM_EXPORT double OpenMM_GBSAOBCForce_getCutoffDistance(const OpenMM_GBSAOBCForce* target) {
+    double result = reinterpret_cast<const OpenMM::GBSAOBCForce*>(target)->getCutoffDistance();
+    return result;
+}
+OPENMM_EXPORT void OpenMM_GBSAOBCForce_setCutoffDistance(OpenMM_GBSAOBCForce* target, double distance) {
+    reinterpret_cast<OpenMM::GBSAOBCForce*>(target)->setCutoffDistance(distance);
+}
+OPENMM_EXPORT void OpenMM_GBSAOBCForce_updateParametersInContext(OpenMM_GBSAOBCForce* target, OpenMM_Context* context) {
+    reinterpret_cast<OpenMM::GBSAOBCForce*>(target)->updateParametersInContext(*reinterpret_cast<OpenMM::Context*>(context));
+}
+OPENMM_EXPORT OpenMM_Boolean OpenMM_GBSAOBCForce_usesPeriodicBoundaryConditions(const OpenMM_GBSAOBCForce* target) {
+    bool result = reinterpret_cast<const OpenMM::GBSAOBCForce*>(target)->usesPeriodicBoundaryConditions();
     return (result ? OpenMM_True : OpenMM_False);
 }
 
@@ -2534,100 +2534,6 @@ OPENMM_EXPORT OpenMM_Boolean OpenMM_CustomExternalForce_usesPeriodicBoundaryCond
     return (result ? OpenMM_True : OpenMM_False);
 }
 
-/* OpenMM::CustomCVForce */
-OPENMM_EXPORT OpenMM_CustomCVForce* OpenMM_CustomCVForce_create(const char* energy) {
-    return reinterpret_cast<OpenMM_CustomCVForce*>(new OpenMM::CustomCVForce(std::string(energy)));
-}
-OPENMM_EXPORT void OpenMM_CustomCVForce_destroy(OpenMM_CustomCVForce* target) {
-    delete reinterpret_cast<OpenMM::CustomCVForce*>(target);
-}
-OPENMM_EXPORT int OpenMM_CustomCVForce_getNumCollectiveVariables(const OpenMM_CustomCVForce* target) {
-    int result = reinterpret_cast<const OpenMM::CustomCVForce*>(target)->getNumCollectiveVariables();
-    return result;
-}
-OPENMM_EXPORT int OpenMM_CustomCVForce_getNumGlobalParameters(const OpenMM_CustomCVForce* target) {
-    int result = reinterpret_cast<const OpenMM::CustomCVForce*>(target)->getNumGlobalParameters();
-    return result;
-}
-OPENMM_EXPORT int OpenMM_CustomCVForce_getNumEnergyParameterDerivatives(const OpenMM_CustomCVForce* target) {
-    int result = reinterpret_cast<const OpenMM::CustomCVForce*>(target)->getNumEnergyParameterDerivatives();
-    return result;
-}
-OPENMM_EXPORT int OpenMM_CustomCVForce_getNumTabulatedFunctions(const OpenMM_CustomCVForce* target) {
-    int result = reinterpret_cast<const OpenMM::CustomCVForce*>(target)->getNumTabulatedFunctions();
-    return result;
-}
-OPENMM_EXPORT const char* OpenMM_CustomCVForce_getEnergyFunction(const OpenMM_CustomCVForce* target) {
-    const std::string* result = &reinterpret_cast<const OpenMM::CustomCVForce*>(target)->getEnergyFunction();
-    return result->c_str();
-}
-OPENMM_EXPORT void OpenMM_CustomCVForce_setEnergyFunction(OpenMM_CustomCVForce* target, const char* energy) {
-    reinterpret_cast<OpenMM::CustomCVForce*>(target)->setEnergyFunction(std::string(energy));
-}
-OPENMM_EXPORT int OpenMM_CustomCVForce_addCollectiveVariable(OpenMM_CustomCVForce* target, const char* name, OpenMM_Force* variable) {
-    int result = reinterpret_cast<OpenMM::CustomCVForce*>(target)->addCollectiveVariable(std::string(name), reinterpret_cast<Force *>(variable));
-    return result;
-}
-OPENMM_EXPORT const char* OpenMM_CustomCVForce_getCollectiveVariableName(const OpenMM_CustomCVForce* target, int index) {
-    const std::string* result = &reinterpret_cast<const OpenMM::CustomCVForce*>(target)->getCollectiveVariableName(index);
-    return result->c_str();
-}
-OPENMM_EXPORT OpenMM_Force* OpenMM_CustomCVForce_getCollectiveVariable(OpenMM_CustomCVForce* target, int index) {
-    Force* result = &reinterpret_cast<OpenMM::CustomCVForce*>(target)->getCollectiveVariable(index);
-    return reinterpret_cast<OpenMM_Force*>(result);
-}
-OPENMM_EXPORT int OpenMM_CustomCVForce_addGlobalParameter(OpenMM_CustomCVForce* target, const char* name, double defaultValue) {
-    int result = reinterpret_cast<OpenMM::CustomCVForce*>(target)->addGlobalParameter(std::string(name), defaultValue);
-    return result;
-}
-OPENMM_EXPORT const char* OpenMM_CustomCVForce_getGlobalParameterName(const OpenMM_CustomCVForce* target, int index) {
-    const std::string* result = &reinterpret_cast<const OpenMM::CustomCVForce*>(target)->getGlobalParameterName(index);
-    return result->c_str();
-}
-OPENMM_EXPORT void OpenMM_CustomCVForce_setGlobalParameterName(OpenMM_CustomCVForce* target, int index, const char* name) {
-    reinterpret_cast<OpenMM::CustomCVForce*>(target)->setGlobalParameterName(index, std::string(name));
-}
-OPENMM_EXPORT double OpenMM_CustomCVForce_getGlobalParameterDefaultValue(const OpenMM_CustomCVForce* target, int index) {
-    double result = reinterpret_cast<const OpenMM::CustomCVForce*>(target)->getGlobalParameterDefaultValue(index);
-    return result;
-}
-OPENMM_EXPORT void OpenMM_CustomCVForce_setGlobalParameterDefaultValue(OpenMM_CustomCVForce* target, int index, double defaultValue) {
-    reinterpret_cast<OpenMM::CustomCVForce*>(target)->setGlobalParameterDefaultValue(index, defaultValue);
-}
-OPENMM_EXPORT void OpenMM_CustomCVForce_addEnergyParameterDerivative(OpenMM_CustomCVForce* target, const char* name) {
-    reinterpret_cast<OpenMM::CustomCVForce*>(target)->addEnergyParameterDerivative(std::string(name));
-}
-OPENMM_EXPORT const char* OpenMM_CustomCVForce_getEnergyParameterDerivativeName(const OpenMM_CustomCVForce* target, int index) {
-    const std::string* result = &reinterpret_cast<const OpenMM::CustomCVForce*>(target)->getEnergyParameterDerivativeName(index);
-    return result->c_str();
-}
-OPENMM_EXPORT int OpenMM_CustomCVForce_addTabulatedFunction(OpenMM_CustomCVForce* target, const char* name, OpenMM_TabulatedFunction* function) {
-    int result = reinterpret_cast<OpenMM::CustomCVForce*>(target)->addTabulatedFunction(std::string(name), reinterpret_cast<TabulatedFunction *>(function));
-    return result;
-}
-OPENMM_EXPORT OpenMM_TabulatedFunction* OpenMM_CustomCVForce_getTabulatedFunction(OpenMM_CustomCVForce* target, int index) {
-    TabulatedFunction* result = &reinterpret_cast<OpenMM::CustomCVForce*>(target)->getTabulatedFunction(index);
-    return reinterpret_cast<OpenMM_TabulatedFunction*>(result);
-}
-OPENMM_EXPORT const char* OpenMM_CustomCVForce_getTabulatedFunctionName(const OpenMM_CustomCVForce* target, int index) {
-    const std::string* result = &reinterpret_cast<const OpenMM::CustomCVForce*>(target)->getTabulatedFunctionName(index);
-    return result->c_str();
-}
-OPENMM_EXPORT void OpenMM_CustomCVForce_getCollectiveVariableValues(OpenMM_CustomCVForce* target, OpenMM_Context* context, OpenMM_DoubleArray* values) {
-    reinterpret_cast<OpenMM::CustomCVForce*>(target)->getCollectiveVariableValues(*reinterpret_cast<OpenMM::Context*>(context), *reinterpret_cast<std::vector< double >*>(values));
-}
-OPENMM_EXPORT OpenMM_Context* OpenMM_CustomCVForce_getInnerContext(OpenMM_CustomCVForce* target, OpenMM_Context* context) {
-    Context* result = &reinterpret_cast<OpenMM::CustomCVForce*>(target)->getInnerContext(*reinterpret_cast<OpenMM::Context*>(context));
-    return reinterpret_cast<OpenMM_Context*>(result);
-}
-OPENMM_EXPORT void OpenMM_CustomCVForce_updateParametersInContext(OpenMM_CustomCVForce* target, OpenMM_Context* context) {
-    reinterpret_cast<OpenMM::CustomCVForce*>(target)->updateParametersInContext(*reinterpret_cast<OpenMM::Context*>(context));
-}
-OPENMM_EXPORT OpenMM_Boolean OpenMM_CustomCVForce_usesPeriodicBoundaryConditions(const OpenMM_CustomCVForce* target) {
-    bool result = reinterpret_cast<const OpenMM::CustomCVForce*>(target)->usesPeriodicBoundaryConditions();
-    return (result ? OpenMM_True : OpenMM_False);
-}
-
 /* OpenMM::CustomCompoundBondForce */
 OPENMM_EXPORT OpenMM_CustomCompoundBondForce* OpenMM_CustomCompoundBondForce_create(int numParticles, const char* energy) {
     return reinterpret_cast<OpenMM_CustomCompoundBondForce*>(new OpenMM::CustomCompoundBondForce(numParticles, std::string(energy)));
@@ -2871,6 +2777,100 @@ OPENMM_EXPORT void OpenMM_CustomCentroidBondForce_setUsesPeriodicBoundaryConditi
 }
 OPENMM_EXPORT OpenMM_Boolean OpenMM_CustomCentroidBondForce_usesPeriodicBoundaryConditions(const OpenMM_CustomCentroidBondForce* target) {
     bool result = reinterpret_cast<const OpenMM::CustomCentroidBondForce*>(target)->usesPeriodicBoundaryConditions();
+    return (result ? OpenMM_True : OpenMM_False);
+}
+
+/* OpenMM::CustomCVForce */
+OPENMM_EXPORT OpenMM_CustomCVForce* OpenMM_CustomCVForce_create(const char* energy) {
+    return reinterpret_cast<OpenMM_CustomCVForce*>(new OpenMM::CustomCVForce(std::string(energy)));
+}
+OPENMM_EXPORT void OpenMM_CustomCVForce_destroy(OpenMM_CustomCVForce* target) {
+    delete reinterpret_cast<OpenMM::CustomCVForce*>(target);
+}
+OPENMM_EXPORT int OpenMM_CustomCVForce_getNumCollectiveVariables(const OpenMM_CustomCVForce* target) {
+    int result = reinterpret_cast<const OpenMM::CustomCVForce*>(target)->getNumCollectiveVariables();
+    return result;
+}
+OPENMM_EXPORT int OpenMM_CustomCVForce_getNumGlobalParameters(const OpenMM_CustomCVForce* target) {
+    int result = reinterpret_cast<const OpenMM::CustomCVForce*>(target)->getNumGlobalParameters();
+    return result;
+}
+OPENMM_EXPORT int OpenMM_CustomCVForce_getNumEnergyParameterDerivatives(const OpenMM_CustomCVForce* target) {
+    int result = reinterpret_cast<const OpenMM::CustomCVForce*>(target)->getNumEnergyParameterDerivatives();
+    return result;
+}
+OPENMM_EXPORT int OpenMM_CustomCVForce_getNumTabulatedFunctions(const OpenMM_CustomCVForce* target) {
+    int result = reinterpret_cast<const OpenMM::CustomCVForce*>(target)->getNumTabulatedFunctions();
+    return result;
+}
+OPENMM_EXPORT const char* OpenMM_CustomCVForce_getEnergyFunction(const OpenMM_CustomCVForce* target) {
+    const std::string* result = &reinterpret_cast<const OpenMM::CustomCVForce*>(target)->getEnergyFunction();
+    return result->c_str();
+}
+OPENMM_EXPORT void OpenMM_CustomCVForce_setEnergyFunction(OpenMM_CustomCVForce* target, const char* energy) {
+    reinterpret_cast<OpenMM::CustomCVForce*>(target)->setEnergyFunction(std::string(energy));
+}
+OPENMM_EXPORT int OpenMM_CustomCVForce_addCollectiveVariable(OpenMM_CustomCVForce* target, const char* name, OpenMM_Force* variable) {
+    int result = reinterpret_cast<OpenMM::CustomCVForce*>(target)->addCollectiveVariable(std::string(name), reinterpret_cast<Force *>(variable));
+    return result;
+}
+OPENMM_EXPORT const char* OpenMM_CustomCVForce_getCollectiveVariableName(const OpenMM_CustomCVForce* target, int index) {
+    const std::string* result = &reinterpret_cast<const OpenMM::CustomCVForce*>(target)->getCollectiveVariableName(index);
+    return result->c_str();
+}
+OPENMM_EXPORT OpenMM_Force* OpenMM_CustomCVForce_getCollectiveVariable(OpenMM_CustomCVForce* target, int index) {
+    Force* result = &reinterpret_cast<OpenMM::CustomCVForce*>(target)->getCollectiveVariable(index);
+    return reinterpret_cast<OpenMM_Force*>(result);
+}
+OPENMM_EXPORT int OpenMM_CustomCVForce_addGlobalParameter(OpenMM_CustomCVForce* target, const char* name, double defaultValue) {
+    int result = reinterpret_cast<OpenMM::CustomCVForce*>(target)->addGlobalParameter(std::string(name), defaultValue);
+    return result;
+}
+OPENMM_EXPORT const char* OpenMM_CustomCVForce_getGlobalParameterName(const OpenMM_CustomCVForce* target, int index) {
+    const std::string* result = &reinterpret_cast<const OpenMM::CustomCVForce*>(target)->getGlobalParameterName(index);
+    return result->c_str();
+}
+OPENMM_EXPORT void OpenMM_CustomCVForce_setGlobalParameterName(OpenMM_CustomCVForce* target, int index, const char* name) {
+    reinterpret_cast<OpenMM::CustomCVForce*>(target)->setGlobalParameterName(index, std::string(name));
+}
+OPENMM_EXPORT double OpenMM_CustomCVForce_getGlobalParameterDefaultValue(const OpenMM_CustomCVForce* target, int index) {
+    double result = reinterpret_cast<const OpenMM::CustomCVForce*>(target)->getGlobalParameterDefaultValue(index);
+    return result;
+}
+OPENMM_EXPORT void OpenMM_CustomCVForce_setGlobalParameterDefaultValue(OpenMM_CustomCVForce* target, int index, double defaultValue) {
+    reinterpret_cast<OpenMM::CustomCVForce*>(target)->setGlobalParameterDefaultValue(index, defaultValue);
+}
+OPENMM_EXPORT void OpenMM_CustomCVForce_addEnergyParameterDerivative(OpenMM_CustomCVForce* target, const char* name) {
+    reinterpret_cast<OpenMM::CustomCVForce*>(target)->addEnergyParameterDerivative(std::string(name));
+}
+OPENMM_EXPORT const char* OpenMM_CustomCVForce_getEnergyParameterDerivativeName(const OpenMM_CustomCVForce* target, int index) {
+    const std::string* result = &reinterpret_cast<const OpenMM::CustomCVForce*>(target)->getEnergyParameterDerivativeName(index);
+    return result->c_str();
+}
+OPENMM_EXPORT int OpenMM_CustomCVForce_addTabulatedFunction(OpenMM_CustomCVForce* target, const char* name, OpenMM_TabulatedFunction* function) {
+    int result = reinterpret_cast<OpenMM::CustomCVForce*>(target)->addTabulatedFunction(std::string(name), reinterpret_cast<TabulatedFunction *>(function));
+    return result;
+}
+OPENMM_EXPORT OpenMM_TabulatedFunction* OpenMM_CustomCVForce_getTabulatedFunction(OpenMM_CustomCVForce* target, int index) {
+    TabulatedFunction* result = &reinterpret_cast<OpenMM::CustomCVForce*>(target)->getTabulatedFunction(index);
+    return reinterpret_cast<OpenMM_TabulatedFunction*>(result);
+}
+OPENMM_EXPORT const char* OpenMM_CustomCVForce_getTabulatedFunctionName(const OpenMM_CustomCVForce* target, int index) {
+    const std::string* result = &reinterpret_cast<const OpenMM::CustomCVForce*>(target)->getTabulatedFunctionName(index);
+    return result->c_str();
+}
+OPENMM_EXPORT void OpenMM_CustomCVForce_getCollectiveVariableValues(OpenMM_CustomCVForce* target, OpenMM_Context* context, OpenMM_DoubleArray* values) {
+    reinterpret_cast<OpenMM::CustomCVForce*>(target)->getCollectiveVariableValues(*reinterpret_cast<OpenMM::Context*>(context), *reinterpret_cast<std::vector< double >*>(values));
+}
+OPENMM_EXPORT OpenMM_Context* OpenMM_CustomCVForce_getInnerContext(OpenMM_CustomCVForce* target, OpenMM_Context* context) {
+    Context* result = &reinterpret_cast<OpenMM::CustomCVForce*>(target)->getInnerContext(*reinterpret_cast<OpenMM::Context*>(context));
+    return reinterpret_cast<OpenMM_Context*>(result);
+}
+OPENMM_EXPORT void OpenMM_CustomCVForce_updateParametersInContext(OpenMM_CustomCVForce* target, OpenMM_Context* context) {
+    reinterpret_cast<OpenMM::CustomCVForce*>(target)->updateParametersInContext(*reinterpret_cast<OpenMM::Context*>(context));
+}
+OPENMM_EXPORT OpenMM_Boolean OpenMM_CustomCVForce_usesPeriodicBoundaryConditions(const OpenMM_CustomCVForce* target) {
+    bool result = reinterpret_cast<const OpenMM::CustomCVForce*>(target)->usesPeriodicBoundaryConditions();
     return (result ? OpenMM_True : OpenMM_False);
 }
 
